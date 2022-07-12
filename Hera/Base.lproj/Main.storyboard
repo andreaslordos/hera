@@ -1,24 +1,90 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Terms And ConditionsVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="TermsAndConditionsVC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="DRN-bd-frG">
+                                <rect key="frame" x="30" y="771" width="368" height="71"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gts-GM-cvW" userLabel="t&amp;cs">
+                                        <rect key="frame" x="91.666666666666686" y="0.0" width="185" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Terms and Privacy Policy"/>
+                                        <connections>
+                                            <action selector="didTapTerms:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Kz8-85-Jll"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nMO-vQ-TyW" userLabel="continue">
+                                        <rect key="frame" x="0.0" y="31" width="368" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="7RH-ZP-qrq"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Continue">
+                                                    <attributes>
+                                                        <font key="NSFont" size="19" name="SFProText-Semibold"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </buttonConfiguration>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="nMO-vQ-TyW" firstAttribute="leading" secondItem="DRN-bd-frG" secondAttribute="leading" id="63p-bH-Jyk"/>
+                                    <constraint firstAttribute="trailing" secondItem="nMO-vQ-TyW" secondAttribute="trailing" id="n3Z-s7-6NF"/>
+                                </constraints>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="meditation" translatesAutoresizingMaskIntoConstraints="NO" id="O4r-vv-tsi">
+                                <rect key="frame" x="0.0" y="44" width="428" height="375"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Carry privacy in your pocket." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hcw-s9-WGb" userLabel="message">
+                                <rect key="frame" x="30" y="419" width="368" height="88.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="37"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hcw-s9-WGb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2JX-1H-TTV"/>
+                            <constraint firstItem="DRN-bd-frG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FCN-Sg-Dn2"/>
+                            <constraint firstItem="DRN-bd-frG" firstAttribute="leading" secondItem="hcw-s9-WGb" secondAttribute="leading" id="NcF-XM-u0B"/>
+                            <constraint firstItem="hcw-s9-WGb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="TuC-Tq-KU7"/>
+                            <constraint firstItem="hcw-s9-WGb" firstAttribute="top" secondItem="O4r-vv-tsi" secondAttribute="bottom" id="Wty-8e-wLl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="O4r-vv-tsi" secondAttribute="trailing" id="ZWr-0K-e9X"/>
+                            <constraint firstItem="O4r-vv-tsi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="eHj-G2-0TN"/>
+                            <constraint firstItem="DRN-bd-frG" firstAttribute="trailing" secondItem="hcw-s9-WGb" secondAttribute="trailing" id="i4k-4b-Vvx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hcw-s9-WGb" secondAttribute="trailing" constant="30" id="ixo-zy-JU1"/>
+                            <constraint firstItem="hcw-s9-WGb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="oho-1n-0dp"/>
+                            <constraint firstItem="O4r-vv-tsi" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="zVP-Mh-tmc"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="131.77570093457942" y="94.600431965442766"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="meditation" width="512" height="512"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

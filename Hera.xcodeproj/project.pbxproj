@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF9054A7287E2F5A0061001C /* TermsAndConditionsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9054A6287E2F5A0061001C /* TermsAndConditionsVC.m */; };
 		BFD3184E287E2279003E85F3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BFD3184D287E2279003E85F3 /* AppDelegate.m */; };
 		BFD31851287E2279003E85F3 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BFD31850287E2279003E85F3 /* SceneDelegate.m */; };
 		BFD31854287E2279003E85F3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFD31853287E2279003E85F3 /* ViewController.m */; };
@@ -38,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BF9054A5287E2F5A0061001C /* TermsAndConditionsVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TermsAndConditionsVC.h; sourceTree = "<group>"; };
+		BF9054A6287E2F5A0061001C /* TermsAndConditionsVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TermsAndConditionsVC.m; sourceTree = "<group>"; };
 		BFD31849287E2279003E85F3 /* Hera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFD3184C287E2279003E85F3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BFD3184D287E2279003E85F3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -83,6 +86,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BF9054A4287E2F220061001C /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				BF9054A5287E2F5A0061001C /* TermsAndConditionsVC.h */,
+				BF9054A6287E2F5A0061001C /* TermsAndConditionsVC.m */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		BFD31840287E2279003E85F3 = {
 			isa = PBXGroup;
 			children = (
@@ -106,6 +118,7 @@
 		BFD3184B287E2279003E85F3 /* Hera */ = {
 			isa = PBXGroup;
 			children = (
+				BF9054A4287E2F220061001C /* ViewControllers */,
 				BFD3184C287E2279003E85F3 /* AppDelegate.h */,
 				BFD3184D287E2279003E85F3 /* AppDelegate.m */,
 				BFD3184F287E2279003E85F3 /* SceneDelegate.h */,
@@ -270,6 +283,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BFD31862287E227A003E85F3 /* main.m in Sources */,
+				BF9054A7287E2F5A0061001C /* TermsAndConditionsVC.m in Sources */,
 				BFD31854287E2279003E85F3 /* ViewController.m in Sources */,
 				BFD3185A287E2279003E85F3 /* Hera.xcdatamodeld in Sources */,
 				BFD3184E287E2279003E85F3 /* AppDelegate.m in Sources */,
@@ -452,6 +466,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -473,12 +488,13 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4TPXP6N79S;
+				DEVELOPMENT_TEAM = 3P2W72R536;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Hera/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
