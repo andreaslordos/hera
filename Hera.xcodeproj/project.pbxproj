@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B599417BBDCEA3D154F3B71 /* Pods_Hera.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B11FF632FBF9EB7B982B28D /* Pods_Hera.framework */; };
 		BF9054A7287E2F5A0061001C /* TermsAndConditionsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9054A6287E2F5A0061001C /* TermsAndConditionsVC.m */; };
 		BFD3184E287E2279003E85F3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BFD3184D287E2279003E85F3 /* AppDelegate.m */; };
 		BFD31851287E2279003E85F3 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BFD31850287E2279003E85F3 /* SceneDelegate.m */; };
@@ -19,6 +20,8 @@
 		BFD3186C287E227A003E85F3 /* HeraTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BFD3186B287E227A003E85F3 /* HeraTests.m */; };
 		BFD31876287E227A003E85F3 /* HeraUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BFD31875287E227A003E85F3 /* HeraUITests.m */; };
 		BFD31878287E227A003E85F3 /* HeraUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BFD31877287E227A003E85F3 /* HeraUITestsLaunchTests.m */; };
+		CB0A90FB4C7452EDACF1B0D7 /* Pods_HeraTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FD058C25D2CF928A6CAE9A4 /* Pods_HeraTests.framework */; };
+		FED66EDFDCE37F291A58636D /* Pods_Hera_HeraUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A07E095FA461189870EB3B7E /* Pods_Hera_HeraUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +42,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		38A0C0FE7E60875DF73BECBD /* Pods-HeraTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeraTests.release.xcconfig"; path = "Target Support Files/Pods-HeraTests/Pods-HeraTests.release.xcconfig"; sourceTree = "<group>"; };
+		47E0EDD900263C9EF3D88B22 /* Pods-Hera-HeraUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hera-HeraUITests.release.xcconfig"; path = "Target Support Files/Pods-Hera-HeraUITests/Pods-Hera-HeraUITests.release.xcconfig"; sourceTree = "<group>"; };
+		4CC8DA341A70E853C5141322 /* Pods-HeraTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeraTests.debug.xcconfig"; path = "Target Support Files/Pods-HeraTests/Pods-HeraTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7B11FF632FBF9EB7B982B28D /* Pods_Hera.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hera.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7FD058C25D2CF928A6CAE9A4 /* Pods_HeraTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HeraTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		97DD85EDE5D69E867BC3EE0C /* Pods-Hera.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hera.release.xcconfig"; path = "Target Support Files/Pods-Hera/Pods-Hera.release.xcconfig"; sourceTree = "<group>"; };
+		9D42E31291F33E5D132AC0AD /* Pods-Hera.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hera.debug.xcconfig"; path = "Target Support Files/Pods-Hera/Pods-Hera.debug.xcconfig"; sourceTree = "<group>"; };
+		A07E095FA461189870EB3B7E /* Pods_Hera_HeraUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hera_HeraUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF9054A5287E2F5A0061001C /* TermsAndConditionsVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TermsAndConditionsVC.h; sourceTree = "<group>"; };
 		BF9054A6287E2F5A0061001C /* TermsAndConditionsVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TermsAndConditionsVC.m; sourceTree = "<group>"; };
 		BFD31849287E2279003E85F3 /* Hera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hera.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -59,6 +70,7 @@
 		BFD31871287E227A003E85F3 /* HeraUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HeraUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFD31875287E227A003E85F3 /* HeraUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HeraUITests.m; sourceTree = "<group>"; };
 		BFD31877287E227A003E85F3 /* HeraUITestsLaunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HeraUITestsLaunchTests.m; sourceTree = "<group>"; };
+		E0D0B7BC09F14B4438396508 /* Pods-Hera-HeraUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hera-HeraUITests.debug.xcconfig"; path = "Target Support Files/Pods-Hera-HeraUITests/Pods-Hera-HeraUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B599417BBDCEA3D154F3B71 /* Pods_Hera.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB0A90FB4C7452EDACF1B0D7 /* Pods_HeraTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,12 +94,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FED66EDFDCE37F291A58636D /* Pods_Hera_HeraUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4D85406E4BDD8D1BFD9D9597 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9D42E31291F33E5D132AC0AD /* Pods-Hera.debug.xcconfig */,
+				97DD85EDE5D69E867BC3EE0C /* Pods-Hera.release.xcconfig */,
+				E0D0B7BC09F14B4438396508 /* Pods-Hera-HeraUITests.debug.xcconfig */,
+				47E0EDD900263C9EF3D88B22 /* Pods-Hera-HeraUITests.release.xcconfig */,
+				4CC8DA341A70E853C5141322 /* Pods-HeraTests.debug.xcconfig */,
+				38A0C0FE7E60875DF73BECBD /* Pods-HeraTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B4C8D0CB45FF41B26AFA7032 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7B11FF632FBF9EB7B982B28D /* Pods_Hera.framework */,
+				A07E095FA461189870EB3B7E /* Pods_Hera_HeraUITests.framework */,
+				7FD058C25D2CF928A6CAE9A4 /* Pods_HeraTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BF9054A4287E2F220061001C /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +141,8 @@
 				BFD3186A287E227A003E85F3 /* HeraTests */,
 				BFD31874287E227A003E85F3 /* HeraUITests */,
 				BFD3184A287E2279003E85F3 /* Products */,
+				4D85406E4BDD8D1BFD9D9597 /* Pods */,
+				B4C8D0CB45FF41B26AFA7032 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -159,6 +200,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BFD3187B287E227A003E85F3 /* Build configuration list for PBXNativeTarget "Hera" */;
 			buildPhases = (
+				FDF276E7BCFD6AF80D65B3EE /* [CP] Check Pods Manifest.lock */,
 				BFD31845287E2279003E85F3 /* Sources */,
 				BFD31846287E2279003E85F3 /* Frameworks */,
 				BFD31847287E2279003E85F3 /* Resources */,
@@ -176,6 +218,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BFD3187E287E227A003E85F3 /* Build configuration list for PBXNativeTarget "HeraTests" */;
 			buildPhases = (
+				7A0CABFE294D26002B2E4925 /* [CP] Check Pods Manifest.lock */,
 				BFD31863287E227A003E85F3 /* Sources */,
 				BFD31864287E227A003E85F3 /* Frameworks */,
 				BFD31865287E227A003E85F3 /* Resources */,
@@ -194,6 +237,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BFD31881287E227A003E85F3 /* Build configuration list for PBXNativeTarget "HeraUITests" */;
 			buildPhases = (
+				F1017B5A9EF0CC33036EBBF3 /* [CP] Check Pods Manifest.lock */,
 				BFD3186D287E227A003E85F3 /* Sources */,
 				BFD3186E287E227A003E85F3 /* Frameworks */,
 				BFD3186F287E227A003E85F3 /* Resources */,
@@ -276,6 +320,75 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7A0CABFE294D26002B2E4925 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HeraTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F1017B5A9EF0CC33036EBBF3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Hera-HeraUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FDF276E7BCFD6AF80D65B3EE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Hera-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BFD31845287E2279003E85F3 /* Sources */ = {
@@ -455,6 +568,7 @@
 		};
 		BFD3187C287E227A003E85F3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9D42E31291F33E5D132AC0AD /* Pods-Hera.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -483,6 +597,7 @@
 		};
 		BFD3187D287E227A003E85F3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 97DD85EDE5D69E867BC3EE0C /* Pods-Hera.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -511,6 +626,7 @@
 		};
 		BFD3187F287E227A003E85F3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4CC8DA341A70E853C5141322 /* Pods-HeraTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -529,6 +645,7 @@
 		};
 		BFD31880287E227A003E85F3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 38A0C0FE7E60875DF73BECBD /* Pods-HeraTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -547,6 +664,7 @@
 		};
 		BFD31882287E227A003E85F3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E0D0B7BC09F14B4438396508 /* Pods-Hera-HeraUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -563,6 +681,7 @@
 		};
 		BFD31883287E227A003E85F3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 47E0EDD900263C9EF3D88B22 /* Pods-Hera-HeraUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;

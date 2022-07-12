@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_7" orientation="portrait" appearance="light"/>
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,47 +13,37 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="TermsAndConditionsVC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="DRN-bd-frG">
-                                <rect key="frame" x="30" y="771" width="368" height="71"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gts-GM-cvW" userLabel="t&amp;cs">
-                                        <rect key="frame" x="91.666666666666686" y="0.0" width="185" height="31"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Terms and Privacy Policy"/>
-                                        <connections>
-                                            <action selector="didTapTerms:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Kz8-85-Jll"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nMO-vQ-TyW" userLabel="continue">
-                                        <rect key="frame" x="0.0" y="31" width="368" height="40"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="7RH-ZP-qrq"/>
-                                        </constraints>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled">
-                                            <attributedString key="attributedTitle">
-                                                <fragment content="Continue">
-                                                    <attributes>
-                                                        <font key="NSFont" size="19" name="SFProText-Semibold"/>
-                                                    </attributes>
-                                                </fragment>
-                                            </attributedString>
-                                        </buttonConfiguration>
-                                    </button>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="nMO-vQ-TyW" firstAttribute="leading" secondItem="DRN-bd-frG" secondAttribute="leading" id="63p-bH-Jyk"/>
-                                    <constraint firstAttribute="trailing" secondItem="nMO-vQ-TyW" secondAttribute="trailing" id="n3Z-s7-6NF"/>
-                                </constraints>
-                            </stackView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="meditation" translatesAutoresizingMaskIntoConstraints="NO" id="O4r-vv-tsi">
-                                <rect key="frame" x="0.0" y="44" width="428" height="375"/>
+                                <rect key="frame" x="0.0" y="44" width="390" height="334"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vUQ-U6-Lpn">
+                                <rect key="frame" x="61" y="740" width="268" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="6p0-LQ-i6x"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Continue">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="14"/>
+                                    <color key="baseBackgroundColor" systemColor="systemBlueColor"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sqe-U1-uzC">
+                                <rect key="frame" x="61" y="699" width="268" height="31"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" systemColor="systemBlueColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Terms &amp; Privacy Policy">
+                                    <color key="baseForegroundColor" systemColor="tintColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="didTapTerms:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iXx-Pe-9R4"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Carry privacy in your pocket." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hcw-s9-WGb" userLabel="message">
-                                <rect key="frame" x="30" y="419" width="368" height="88.333333333333314"/>
+                                <rect key="frame" x="61" y="378" width="268" height="88.333333333333314"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="37"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -63,15 +53,20 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="hcw-s9-WGb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2JX-1H-TTV"/>
-                            <constraint firstItem="DRN-bd-frG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FCN-Sg-Dn2"/>
-                            <constraint firstItem="DRN-bd-frG" firstAttribute="leading" secondItem="hcw-s9-WGb" secondAttribute="leading" id="NcF-XM-u0B"/>
-                            <constraint firstItem="hcw-s9-WGb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="TuC-Tq-KU7"/>
+                            <constraint firstItem="vUQ-U6-Lpn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MJT-XG-sBg"/>
+                            <constraint firstItem="vUQ-U6-Lpn" firstAttribute="top" secondItem="sqe-U1-uzC" secondAttribute="bottom" constant="10" id="NAV-hU-1hq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="vUQ-U6-Lpn" secondAttribute="bottom" constant="30" id="Qdx-rG-FIf"/>
+                            <constraint firstItem="hcw-s9-WGb" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="TuC-Tq-KU7"/>
+                            <constraint firstItem="vUQ-U6-Lpn" firstAttribute="trailing" secondItem="sqe-U1-uzC" secondAttribute="trailing" id="V8T-by-BvR"/>
                             <constraint firstItem="hcw-s9-WGb" firstAttribute="top" secondItem="O4r-vv-tsi" secondAttribute="bottom" id="Wty-8e-wLl"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="O4r-vv-tsi" secondAttribute="trailing" id="ZWr-0K-e9X"/>
+                            <constraint firstItem="vUQ-U6-Lpn" firstAttribute="leading" secondItem="hcw-s9-WGb" secondAttribute="leading" id="aIL-t8-fN9"/>
                             <constraint firstItem="O4r-vv-tsi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="eHj-G2-0TN"/>
-                            <constraint firstItem="DRN-bd-frG" firstAttribute="trailing" secondItem="hcw-s9-WGb" secondAttribute="trailing" id="i4k-4b-Vvx"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hcw-s9-WGb" secondAttribute="trailing" constant="30" id="ixo-zy-JU1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="hcw-s9-WGb" secondAttribute="trailing" constant="30" id="ixo-zy-JU1"/>
                             <constraint firstItem="hcw-s9-WGb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="oho-1n-0dp"/>
+                            <constraint firstItem="vUQ-U6-Lpn" firstAttribute="trailing" secondItem="hcw-s9-WGb" secondAttribute="trailing" id="qqH-K8-J7q"/>
+                            <constraint firstItem="sqe-U1-uzC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tEb-BT-cE4"/>
+                            <constraint firstItem="vUQ-U6-Lpn" firstAttribute="leading" secondItem="sqe-U1-uzC" secondAttribute="leading" id="vgo-vz-mL4"/>
                             <constraint firstItem="O4r-vv-tsi" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="zVP-Mh-tmc"/>
                         </constraints>
                     </view>
@@ -85,6 +80,12 @@
         <image name="meditation" width="512" height="512"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

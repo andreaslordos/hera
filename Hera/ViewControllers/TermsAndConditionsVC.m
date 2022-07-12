@@ -8,14 +8,14 @@
 #import "TermsAndConditionsVC.h"
 
 @interface TermsAndConditionsVC ()
-@property (strong, nonatomic) NSString *tcsURL;
+@property (strong, nonatomic) NSURL *tcsURL;
 @end
 
 @implementation TermsAndConditionsVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _tcsURL = @"ww.google.com";
+    _tcsURL = [NSURL URLWithString:@"https://www.google.com"];
     // Do any additional setup after loading the view.
 }
 
@@ -31,6 +31,8 @@
 
 // open t&c's page
 - (IBAction)didTapTerms:(id)sender {
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:self.tcsURL]];
+    if ([[UIApplication sharedApplication] canOpenURL:self.tcsURL]) {
+        [[UIApplication sharedApplication] openURL:self.tcsURL options:@{ } completionHandler:nil];
+    }
 }
 @end
