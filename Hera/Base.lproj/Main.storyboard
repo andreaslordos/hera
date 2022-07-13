@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_7" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,14 +13,14 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="TermsAndConditionsVC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="meditation" translatesAutoresizingMaskIntoConstraints="NO" id="O4r-vv-tsi">
-                                <rect key="frame" x="0.0" y="44" width="428" height="375"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="360"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vUQ-U6-Lpn">
-                                <rect key="frame" x="30" y="822" width="368" height="40"/>
+                                <rect key="frame" x="30" y="792" width="354" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="6p0-LQ-i6x"/>
                                 </constraints>
@@ -34,7 +34,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sqe-U1-uzC">
-                                <rect key="frame" x="30" y="781" width="368" height="31"/>
+                                <rect key="frame" x="30" y="751" width="354" height="31"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" systemColor="systemBlueColor"/>
                                 <state key="normal" title="Button"/>
@@ -46,7 +46,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Carry privacy in your pocket." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hcw-s9-WGb" userLabel="message">
-                                <rect key="frame" x="80" y="419" width="268" height="88.333333333333314"/>
+                                <rect key="frame" x="73" y="404" width="268" height="88.333333333333314"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="37"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -83,20 +83,20 @@
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="0YL-19-taa" customClass="LastPeriodViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sJX-lv-nm1">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="When did your last period start?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yV2-zB-AwL" userLabel="message">
-                                <rect key="frame" x="56" y="74" width="316.33333333333331" height="88.333333333333314"/>
+                                <rect key="frame" x="49" y="74" width="316.33333333333331" height="88.333333333333314"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="37"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="inline" translatesAutoresizingMaskIntoConstraints="NO" id="P2p-A5-rUT">
-                                <rect key="frame" x="27" y="177.33333333333334" width="374" height="351.33333333333326"/>
+                                <rect key="frame" x="27" y="177.33333333333334" width="360" height="341.33333333333326"/>
                             </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fvG-GF-lQx">
-                                <rect key="frame" x="30" y="822" width="368" height="40"/>
+                                <rect key="frame" x="30" y="792" width="354" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="gQH-DJ-VDc"/>
                                 </constraints>
@@ -104,9 +104,12 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Continue">
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="14"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="1Dq-dF-42g" kind="show" id="bxA-Qh-Fz7"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ndE-BA-oAX">
-                                <rect key="frame" x="30" y="781" width="368" height="31"/>
+                                <rect key="frame" x="30" y="751" width="354" height="31"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" systemColor="systemBlueColor"/>
                                 <state key="normal" title="Button"/>
@@ -148,16 +151,81 @@
             </objects>
             <point key="canvasLocation" x="1085" y="95"/>
         </scene>
-        <!--View Controller-->
+        <!--Period Length View Controller-->
         <scene sceneID="py7-98-A6M">
             <objects>
-                <viewController id="1Dq-dF-42g" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="1Dq-dF-42g" customClass="PeriodLengthViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="J1o-FO-Y6H">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How long does your period usually last?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="whL-Ys-cmO" userLabel="message">
+                                <rect key="frame" x="39" y="74" width="336" height="88.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="37"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jht-uW-ibl">
+                                <rect key="frame" x="30" y="182" width="340" height="216"/>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Period length is measured from the first to last day of bleeding." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MdK-we-dSC">
+                                <rect key="frame" x="30" y="423.33333333333331" width="354" height="40.666666666666686"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RNp-A1-IsA">
+                                <rect key="frame" x="30" y="792" width="354" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="5AL-1H-rT5"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Continue">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="14"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Irt-Bq-YMA">
+                                <rect key="frame" x="30" y="751" width="354" height="31"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" systemColor="systemBlueColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="I'm not sure">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
+                                    <color key="baseForegroundColor" systemColor="tintColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="didTapTerms:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KMg-7L-04d"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Qey-O3-Ygv"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Qey-O3-Ygv" firstAttribute="trailing" secondItem="Jht-uW-ibl" secondAttribute="trailing" constant="30" id="2p8-of-N7D"/>
+                            <constraint firstItem="Irt-Bq-YMA" firstAttribute="centerX" secondItem="J1o-FO-Y6H" secondAttribute="centerX" id="4Kl-14-BpJ"/>
+                            <constraint firstItem="RNp-A1-IsA" firstAttribute="top" secondItem="Irt-Bq-YMA" secondAttribute="bottom" constant="10" id="54T-PU-n2r"/>
+                            <constraint firstItem="RNp-A1-IsA" firstAttribute="trailing" secondItem="Irt-Bq-YMA" secondAttribute="trailing" id="5qw-yX-xNG"/>
+                            <constraint firstItem="whL-Ys-cmO" firstAttribute="centerX" secondItem="J1o-FO-Y6H" secondAttribute="centerX" id="A1b-P5-JYw"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="whL-Ys-cmO" secondAttribute="trailing" constant="30" id="FQp-Hn-bYO"/>
+                            <constraint firstItem="Qey-O3-Ygv" firstAttribute="trailing" secondItem="MdK-we-dSC" secondAttribute="trailing" constant="30" id="GsF-LD-rO7"/>
+                            <constraint firstItem="whL-Ys-cmO" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="J1o-FO-Y6H" secondAttribute="leading" constant="30" id="HNK-iN-IcM"/>
+                            <constraint firstItem="Qey-O3-Ygv" firstAttribute="bottom" secondItem="RNp-A1-IsA" secondAttribute="bottom" constant="30" id="RPf-DE-fU5"/>
+                            <constraint firstItem="Jht-uW-ibl" firstAttribute="centerX" secondItem="J1o-FO-Y6H" secondAttribute="centerX" id="Vxy-aY-zHy"/>
+                            <constraint firstItem="Jht-uW-ibl" firstAttribute="top" secondItem="whL-Ys-cmO" secondAttribute="bottom" constant="20" id="b06-GZ-kbT"/>
+                            <constraint firstItem="MdK-we-dSC" firstAttribute="top" secondItem="Jht-uW-ibl" secondAttribute="bottom" constant="25" id="bYv-nT-Rew"/>
+                            <constraint firstItem="RNp-A1-IsA" firstAttribute="leading" secondItem="Qey-O3-Ygv" secondAttribute="leading" constant="30" id="ego-pD-YfT"/>
+                            <constraint firstItem="Qey-O3-Ygv" firstAttribute="trailing" secondItem="RNp-A1-IsA" secondAttribute="trailing" constant="30" id="mFs-6W-UdK"/>
+                            <constraint firstItem="RNp-A1-IsA" firstAttribute="leading" secondItem="Irt-Bq-YMA" secondAttribute="leading" id="nEn-X3-cIl"/>
+                            <constraint firstItem="whL-Ys-cmO" firstAttribute="top" secondItem="Qey-O3-Ygv" secondAttribute="top" constant="30" id="new-hP-paj"/>
+                            <constraint firstItem="Irt-Bq-YMA" firstAttribute="top" relation="greaterThanOrEqual" secondItem="MdK-we-dSC" secondAttribute="bottom" constant="10" id="pde-ZS-Cig"/>
+                            <constraint firstItem="Jht-uW-ibl" firstAttribute="leading" secondItem="Qey-O3-Ygv" secondAttribute="leading" constant="30" id="pdq-PI-mE8"/>
+                            <constraint firstItem="MdK-we-dSC" firstAttribute="leading" secondItem="Qey-O3-Ygv" secondAttribute="leading" constant="30" id="sbv-hi-zRJ"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="h2t-fe-yyr"/>
+                    <connections>
+                        <outlet property="picker" destination="Jht-uW-ibl" id="rLq-Ak-Dam"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="apE-FK-Fhy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

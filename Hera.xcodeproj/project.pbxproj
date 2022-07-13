@@ -10,6 +10,7 @@
 		2B599417BBDCEA3D154F3B71 /* Pods_Hera.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B11FF632FBF9EB7B982B28D /* Pods_Hera.framework */; };
 		BF078DBC287E511900608897 /* LastPeriodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF078DBB287E511900608897 /* LastPeriodViewController.m */; };
 		BF9054A7287E2F5A0061001C /* TermsAndConditionsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9054A6287E2F5A0061001C /* TermsAndConditionsVC.m */; };
+		BFD11BE0287E74140006E93E /* PeriodLengthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFD11BDF287E74140006E93E /* PeriodLengthViewController.m */; };
 		BFD3184E287E2279003E85F3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BFD3184D287E2279003E85F3 /* AppDelegate.m */; };
 		BFD31851287E2279003E85F3 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BFD31850287E2279003E85F3 /* SceneDelegate.m */; };
 		BFD31854287E2279003E85F3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFD31853287E2279003E85F3 /* ViewController.m */; };
@@ -55,6 +56,8 @@
 		BF078DBB287E511900608897 /* LastPeriodViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LastPeriodViewController.m; sourceTree = "<group>"; };
 		BF9054A5287E2F5A0061001C /* TermsAndConditionsVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TermsAndConditionsVC.h; sourceTree = "<group>"; };
 		BF9054A6287E2F5A0061001C /* TermsAndConditionsVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TermsAndConditionsVC.m; sourceTree = "<group>"; };
+		BFD11BDE287E74140006E93E /* PeriodLengthViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PeriodLengthViewController.h; sourceTree = "<group>"; };
+		BFD11BDF287E74140006E93E /* PeriodLengthViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PeriodLengthViewController.m; sourceTree = "<group>"; };
 		BFD31849287E2279003E85F3 /* Hera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFD3184C287E2279003E85F3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BFD3184D287E2279003E85F3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -134,6 +137,8 @@
 				BF9054A6287E2F5A0061001C /* TermsAndConditionsVC.m */,
 				BF078DBA287E511900608897 /* LastPeriodViewController.h */,
 				BF078DBB287E511900608897 /* LastPeriodViewController.m */,
+				BFD11BDE287E74140006E93E /* PeriodLengthViewController.h */,
+				BFD11BDF287E74140006E93E /* PeriodLengthViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -402,6 +407,7 @@
 				BFD31862287E227A003E85F3 /* main.m in Sources */,
 				BF9054A7287E2F5A0061001C /* TermsAndConditionsVC.m in Sources */,
 				BFD31854287E2279003E85F3 /* ViewController.m in Sources */,
+				BFD11BE0287E74140006E93E /* PeriodLengthViewController.m in Sources */,
 				BF078DBC287E511900608897 /* LastPeriodViewController.m in Sources */,
 				BFD3185A287E2279003E85F3 /* Hera.xcdatamodeld in Sources */,
 				BFD3184E287E2279003E85F3 /* AppDelegate.m in Sources */,
