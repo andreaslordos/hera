@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yWC-uq-aHk">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -8,6 +8,21 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="Vvg-mc-5Xk">
+            <objects>
+                <navigationController navigationBarHidden="YES" id="yWC-uq-aHk" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Nye-hS-QeF">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="SwG-bE-CFI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JZ4-mQ-iiv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1186" y="94"/>
+        </scene>
         <!--Terms And ConditionsVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -30,7 +45,7 @@
                                     <color key="baseBackgroundColor" systemColor="systemBlueColor"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="0YL-19-taa" kind="showDetail" id="MUf-wB-i68"/>
+                                    <segue destination="0YL-19-taa" kind="show" id="ggJ-4E-rJM"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sqe-U1-uzC">
@@ -73,10 +88,11 @@
                             <constraint firstItem="O4r-vv-tsi" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="zVP-Mh-tmc"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="9BL-Kh-bFF"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="131.77570093457942" y="94.600431965442766"/>
+            <point key="canvasLocation" x="-7" y="94"/>
         </scene>
         <!--Last Period View Controller-->
         <scene sceneID="HAS-ZB-nDk">
@@ -166,7 +182,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jht-uW-ibl">
-                                <rect key="frame" x="30" y="182" width="340" height="216"/>
+                                <rect key="frame" x="30" y="182.33333333333337" width="354" height="216"/>
                             </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Period length is measured from the first to last day of bleeding." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MdK-we-dSC">
                                 <rect key="frame" x="30" y="423.33333333333331" width="354" height="40.666666666666686"/>
