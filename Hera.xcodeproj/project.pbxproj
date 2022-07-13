@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2B599417BBDCEA3D154F3B71 /* Pods_Hera.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B11FF632FBF9EB7B982B28D /* Pods_Hera.framework */; };
+		BF078DBC287E511900608897 /* LastPeriodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF078DBB287E511900608897 /* LastPeriodViewController.m */; };
 		BF9054A7287E2F5A0061001C /* TermsAndConditionsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9054A6287E2F5A0061001C /* TermsAndConditionsVC.m */; };
 		BFD3184E287E2279003E85F3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BFD3184D287E2279003E85F3 /* AppDelegate.m */; };
 		BFD31851287E2279003E85F3 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BFD31850287E2279003E85F3 /* SceneDelegate.m */; };
@@ -50,6 +51,8 @@
 		97DD85EDE5D69E867BC3EE0C /* Pods-Hera.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hera.release.xcconfig"; path = "Target Support Files/Pods-Hera/Pods-Hera.release.xcconfig"; sourceTree = "<group>"; };
 		9D42E31291F33E5D132AC0AD /* Pods-Hera.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hera.debug.xcconfig"; path = "Target Support Files/Pods-Hera/Pods-Hera.debug.xcconfig"; sourceTree = "<group>"; };
 		A07E095FA461189870EB3B7E /* Pods_Hera_HeraUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hera_HeraUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF078DBA287E511900608897 /* LastPeriodViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LastPeriodViewController.h; sourceTree = "<group>"; };
+		BF078DBB287E511900608897 /* LastPeriodViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LastPeriodViewController.m; sourceTree = "<group>"; };
 		BF9054A5287E2F5A0061001C /* TermsAndConditionsVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TermsAndConditionsVC.h; sourceTree = "<group>"; };
 		BF9054A6287E2F5A0061001C /* TermsAndConditionsVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TermsAndConditionsVC.m; sourceTree = "<group>"; };
 		BFD31849287E2279003E85F3 /* Hera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hera.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -111,7 +114,6 @@
 				4CC8DA341A70E853C5141322 /* Pods-HeraTests.debug.xcconfig */,
 				38A0C0FE7E60875DF73BECBD /* Pods-HeraTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -130,6 +132,8 @@
 			children = (
 				BF9054A5287E2F5A0061001C /* TermsAndConditionsVC.h */,
 				BF9054A6287E2F5A0061001C /* TermsAndConditionsVC.m */,
+				BF078DBA287E511900608897 /* LastPeriodViewController.h */,
+				BF078DBB287E511900608897 /* LastPeriodViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -398,6 +402,7 @@
 				BFD31862287E227A003E85F3 /* main.m in Sources */,
 				BF9054A7287E2F5A0061001C /* TermsAndConditionsVC.m in Sources */,
 				BFD31854287E2279003E85F3 /* ViewController.m in Sources */,
+				BF078DBC287E511900608897 /* LastPeriodViewController.m in Sources */,
 				BFD3185A287E2279003E85F3 /* Hera.xcdatamodeld in Sources */,
 				BFD3184E287E2279003E85F3 /* AppDelegate.m in Sources */,
 				BFD31851287E2279003E85F3 /* SceneDelegate.m in Sources */,
