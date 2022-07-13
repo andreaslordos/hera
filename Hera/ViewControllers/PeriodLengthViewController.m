@@ -19,7 +19,8 @@
     _picker.delegate = self;
     _picker.dataSource = self;
     _pickerData = [[NSMutableArray alloc] init];
-    for (int i = 1; i <= 31; i++) {
+    [_pickerData addObject:@"1 day"];
+    for (int i = 2; i <= 31; i++) {
         [_pickerData addObject:[[@(i) stringValue] stringByAppendingString:@" days"]];
     }
     [self.picker selectRow:4 inComponent:0 animated:YES];
