@@ -11,6 +11,8 @@
 		BF078DBC287E511900608897 /* LastPeriodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF078DBB287E511900608897 /* LastPeriodViewController.m */; };
 		BF9054A7287E2F5A0061001C /* TermsAndConditionsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9054A6287E2F5A0061001C /* TermsAndConditionsVC.m */; };
 		BFD11BE0287E74140006E93E /* PeriodLengthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFD11BDF287E74140006E93E /* PeriodLengthViewController.m */; };
+		BFD11BE3287F4C940006E93E /* FaceIdSetupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFD11BE2287F4C940006E93E /* FaceIdSetupViewController.m */; };
+		BFD11BE6287F9B700006E93E /* Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = BFD11BE5287F9B700006E93E /* Utilities.m */; };
 		BFD3184E287E2279003E85F3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BFD3184D287E2279003E85F3 /* AppDelegate.m */; };
 		BFD31851287E2279003E85F3 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BFD31850287E2279003E85F3 /* SceneDelegate.m */; };
 		BFD31854287E2279003E85F3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFD31853287E2279003E85F3 /* ViewController.m */; };
@@ -58,6 +60,10 @@
 		BF9054A6287E2F5A0061001C /* TermsAndConditionsVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TermsAndConditionsVC.m; sourceTree = "<group>"; };
 		BFD11BDE287E74140006E93E /* PeriodLengthViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PeriodLengthViewController.h; sourceTree = "<group>"; };
 		BFD11BDF287E74140006E93E /* PeriodLengthViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PeriodLengthViewController.m; sourceTree = "<group>"; };
+		BFD11BE1287F4C940006E93E /* FaceIdSetupViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FaceIdSetupViewController.h; sourceTree = "<group>"; };
+		BFD11BE2287F4C940006E93E /* FaceIdSetupViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FaceIdSetupViewController.m; sourceTree = "<group>"; };
+		BFD11BE4287F9B700006E93E /* Utilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Utilities.h; sourceTree = "<group>"; };
+		BFD11BE5287F9B700006E93E /* Utilities.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Utilities.m; sourceTree = "<group>"; };
 		BFD31849287E2279003E85F3 /* Hera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFD3184C287E2279003E85F3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BFD3184D287E2279003E85F3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -139,6 +145,8 @@
 				BF078DBB287E511900608897 /* LastPeriodViewController.m */,
 				BFD11BDE287E74140006E93E /* PeriodLengthViewController.h */,
 				BFD11BDF287E74140006E93E /* PeriodLengthViewController.m */,
+				BFD11BE1287F4C940006E93E /* FaceIdSetupViewController.h */,
+				BFD11BE2287F4C940006E93E /* FaceIdSetupViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -181,6 +189,8 @@
 				BFD31860287E227A003E85F3 /* Info.plist */,
 				BFD31861287E227A003E85F3 /* main.m */,
 				BFD31858287E2279003E85F3 /* Hera.xcdatamodeld */,
+				BFD11BE4287F9B700006E93E /* Utilities.h */,
+				BFD11BE5287F9B700006E93E /* Utilities.m */,
 			);
 			path = Hera;
 			sourceTree = "<group>";
@@ -408,8 +418,10 @@
 				BF9054A7287E2F5A0061001C /* TermsAndConditionsVC.m in Sources */,
 				BFD31854287E2279003E85F3 /* ViewController.m in Sources */,
 				BFD11BE0287E74140006E93E /* PeriodLengthViewController.m in Sources */,
+				BFD11BE6287F9B700006E93E /* Utilities.m in Sources */,
 				BF078DBC287E511900608897 /* LastPeriodViewController.m in Sources */,
 				BFD3185A287E2279003E85F3 /* Hera.xcdatamodeld in Sources */,
+				BFD11BE3287F4C940006E93E /* FaceIdSetupViewController.m in Sources */,
 				BFD3184E287E2279003E85F3 /* AppDelegate.m in Sources */,
 				BFD31851287E2279003E85F3 /* SceneDelegate.m in Sources */,
 			);
