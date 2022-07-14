@@ -80,6 +80,7 @@
 }
 
 - (IBAction)didTapNotNow:(id)sender {
+    [self performSegueWithIdentifier:@"doneWithFace" sender:nil];
 }
 
 @end
