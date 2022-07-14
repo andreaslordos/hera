@@ -26,4 +26,22 @@
     }];
 }
 
++ (void)saveToUserDefaults:(NSString*)string_to_store keys:(NSString *)key_for_the_String
+{
+    NSUserDefaults *standardUserDefaults = [NSUserDefaults standardUserDefaults];
+
+    if (standardUserDefaults) {
+        [standardUserDefaults setObject:string_to_store forKey:key_for_the_String];
+        [standardUserDefaults synchronize];
+    }
+}
+
++ (NSString*)retrieveUserDefault:(NSString*)key {
+    return [[NSUserDefaults standardUserDefaults] objectForKey:key];
+}
+
++ (BOOL)inUserDefaults:(NSString*)key {
+    return [self retrieveUserDefault:key] != nil;
+}
+
 @end

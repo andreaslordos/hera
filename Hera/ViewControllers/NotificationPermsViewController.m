@@ -8,6 +8,8 @@
 #import "NotificationPermsViewController.h"
 #import "UserNotifications/UserNotifications.h"
 #import "UserNotificationsUI/UserNotificationsUI.h"
+#import "Utilities.h"
+
 @interface NotificationPermsViewController ()
 
 @end
@@ -29,15 +31,28 @@
 }
 */
 
+- (void)completedSetup {
+    [Utilities saveToUserDefaults:@"YES" keys:@"completedSetup"];
+}
+
 - (void)registerForNotifications {
-    
+    UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
+    UNAuthorizationOptions options = UNAuthorizationOptionAlert + UNAuthorizationOptionSound;
+    [center requestAuthorizationWithOptions:options
+     completionHandler:^(BOOL granted, NSError * _Nullable error) {
+      if (!granted) {
+        NSLog(@"Notifications not granted");
+      }
+    }];
 }
 
 - (IBAction)tappedEnableNotif:(id)sender {
-
+    [self registerForNotifications];
+    [self completedSetup];
 }
 
 - (IBAction)tappedNotNow:(id)sender {
+    [self completedSetup];
 }
 
 @end
