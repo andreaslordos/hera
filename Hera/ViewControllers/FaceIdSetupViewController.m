@@ -61,8 +61,12 @@
                 if (error != NULL) {
                     NSLog(@"Authentication error"); // comes here if you fail face id twice and try passcode or cancel
                 } else if (success) {
-                    NSLog(@"Authentication success"); // comes here if you succeed on face id
+                    NSLog(@"Authentication success");
+                    // comes here if you succeed on face id
                     // programmatically switch to the next view
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        [self performSegueWithIdentifier:@"NotificationPermsViewController" sender:nil];
+                        });
                 } else {
                     NSLog(@"Authentication false");
                 }
@@ -73,6 +77,9 @@
         // no authentication with biometrics enabled.
         [Utilities createSimpleAlert:@"Phone security not enabled" desc:@"You must set up a form of security (Face ID, Pin, Touch ID) in your iPhone settings first, or skip this step." vc:self];
     }
+}
+
+- (IBAction)didTapNotNow:(id)sender {
 }
 
 @end

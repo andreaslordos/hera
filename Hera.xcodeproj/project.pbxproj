@@ -13,6 +13,7 @@
 		BFD11BE0287E74140006E93E /* PeriodLengthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFD11BDF287E74140006E93E /* PeriodLengthViewController.m */; };
 		BFD11BE3287F4C940006E93E /* FaceIdSetupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFD11BE2287F4C940006E93E /* FaceIdSetupViewController.m */; };
 		BFD11BE6287F9B700006E93E /* Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = BFD11BE5287F9B700006E93E /* Utilities.m */; };
+		BFD11BE92880BF840006E93E /* NotificationPermsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFD11BE82880BF840006E93E /* NotificationPermsViewController.m */; };
 		BFD3184E287E2279003E85F3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BFD3184D287E2279003E85F3 /* AppDelegate.m */; };
 		BFD31851287E2279003E85F3 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BFD31850287E2279003E85F3 /* SceneDelegate.m */; };
 		BFD31854287E2279003E85F3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFD31853287E2279003E85F3 /* ViewController.m */; };
@@ -64,6 +65,8 @@
 		BFD11BE2287F4C940006E93E /* FaceIdSetupViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FaceIdSetupViewController.m; sourceTree = "<group>"; };
 		BFD11BE4287F9B700006E93E /* Utilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Utilities.h; sourceTree = "<group>"; };
 		BFD11BE5287F9B700006E93E /* Utilities.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Utilities.m; sourceTree = "<group>"; };
+		BFD11BE72880BF840006E93E /* NotificationPermsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationPermsViewController.h; sourceTree = "<group>"; };
+		BFD11BE82880BF840006E93E /* NotificationPermsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationPermsViewController.m; sourceTree = "<group>"; };
 		BFD31849287E2279003E85F3 /* Hera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFD3184C287E2279003E85F3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BFD3184D287E2279003E85F3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -147,6 +150,8 @@
 				BFD11BDF287E74140006E93E /* PeriodLengthViewController.m */,
 				BFD11BE1287F4C940006E93E /* FaceIdSetupViewController.h */,
 				BFD11BE2287F4C940006E93E /* FaceIdSetupViewController.m */,
+				BFD11BE72880BF840006E93E /* NotificationPermsViewController.h */,
+				BFD11BE82880BF840006E93E /* NotificationPermsViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -423,6 +428,7 @@
 				BFD3185A287E2279003E85F3 /* Hera.xcdatamodeld in Sources */,
 				BFD11BE3287F4C940006E93E /* FaceIdSetupViewController.m in Sources */,
 				BFD3184E287E2279003E85F3 /* AppDelegate.m in Sources */,
+				BFD11BE92880BF840006E93E /* NotificationPermsViewController.m in Sources */,
 				BFD31851287E2279003E85F3 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
