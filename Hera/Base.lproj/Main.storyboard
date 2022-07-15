@@ -122,7 +122,7 @@
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="14"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="1Dq-dF-42g" kind="show" id="bxA-Qh-Fz7"/>
+                                    <action selector="didTapContinue:" destination="0YL-19-taa" eventType="touchUpInside" id="dXk-nm-2fg"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ndE-BA-oAX">
@@ -135,7 +135,7 @@
                                     <color key="baseForegroundColor" systemColor="tintColor"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="didTapTerms:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Y9r-FM-B65"/>
+                                    <action selector="didTapNotSure:" destination="0YL-19-taa" eventType="touchUpInside" id="CE0-h3-4cB"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We use this to predict your next period" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uQP-Id-iee">
@@ -172,6 +172,7 @@
                     <navigationItem key="navigationItem" id="ixn-mE-x1k"/>
                     <connections>
                         <outlet property="datepicker" destination="P2p-A5-rUT" id="REe-XL-n0a"/>
+                        <segue destination="1Dq-dF-42g" kind="show" identifier="finishLastPeriod" id="neK-9n-5ci"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GNN-jf-Vec" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -183,7 +184,7 @@
             <objects>
                 <viewController id="hKJ-Lt-ti1" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vaR-1h-Yo2">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="pxw-8d-drp"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -199,7 +200,7 @@
             <objects>
                 <viewController id="jUC-S9-rgV" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TpW-NZ-4GV">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="j6p-6C-E8D"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -299,7 +300,7 @@
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="14"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="zrs-9s-oUM" kind="show" id="0xj-Pi-uzf"/>
+                                    <action selector="didTapContinue:" destination="1Dq-dF-42g" eventType="touchUpInside" id="SXU-Ws-zmZ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Irt-Bq-YMA">
@@ -312,7 +313,7 @@
                                     <color key="baseForegroundColor" systemColor="tintColor"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="didTapTerms:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KMg-7L-04d"/>
+                                    <action selector="didTapNotSure:" destination="1Dq-dF-42g" eventType="touchUpInside" id="DlM-yj-AdJ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -343,6 +344,7 @@
                     <navigationItem key="navigationItem" id="h2t-fe-yyr"/>
                     <connections>
                         <outlet property="picker" destination="Jht-uW-ibl" id="rLq-Ak-Dam"/>
+                        <segue destination="zrs-9s-oUM" kind="show" identifier="finishPeriodDuration" id="z2V-dd-9e9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="apE-FK-Fhy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -394,7 +396,6 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="didTapNotNow:" destination="zrs-9s-oUM" eventType="touchUpInside" id="Ttz-lz-i4o"/>
-                                    <action selector="didTapTerms:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dh4-Ou-U2w"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Face ID adds an extra layer of security to your data and helps prevent unauthorized access." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fu1-vS-flh">
@@ -473,8 +474,6 @@
                                     <color key="baseForegroundColor" systemColor="tintColor"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="didTapNotNow:" destination="zrs-9s-oUM" eventType="touchUpInside" id="lz0-zq-kvN"/>
-                                    <action selector="didTapTerms:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jl8-JG-cSg"/>
                                     <action selector="tappedNotNow:" destination="7H2-2h-uCY" eventType="touchUpInside" id="7Sb-hx-ebu"/>
                                 </connections>
                             </button>
@@ -489,7 +488,6 @@
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="14"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="didTapEnable:" destination="zrs-9s-oUM" eventType="touchUpInside" id="4YS-nE-5Wi"/>
                                     <action selector="tappedEnableNotif:" destination="7H2-2h-uCY" eventType="touchUpInside" id="pwj-gu-DSE"/>
                                 </connections>
                             </button>
@@ -528,7 +526,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="qQr-jC-vcw"/>
+        <segue reference="Zxx-ba-z90"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="faceid" catalog="system" width="128" height="115"/>

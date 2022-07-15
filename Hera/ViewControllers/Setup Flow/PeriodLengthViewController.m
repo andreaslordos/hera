@@ -13,6 +13,10 @@
 
 @implementation PeriodLengthViewController
 
+- (void)finishPeriodLength {
+    [self performSegueWithIdentifier:@"finishPeriodDuration" sender:nil];
+    
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -48,4 +52,13 @@
         return[_pickerData objectAtIndex:row];
 }
 
+- (IBAction)didTapNotSure:(id)sender {
+    [self finishPeriodLength];
+    // set up core data
+}
+
+- (IBAction)didTapContinue:(id)sender {
+    [self finishPeriodLength];
+    // set up core data
+}
 @end

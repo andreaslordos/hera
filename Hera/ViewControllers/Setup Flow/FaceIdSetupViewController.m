@@ -31,6 +31,10 @@
 }
 */
 
+- (void)finishFaceID {
+    [self performSegueWithIdentifier:@"doneWithFace" sender:nil];
+}
+
 - (IBAction)didTapEnable:(id)sender {
     LAContext *laContext = [[LAContext alloc] init];
     NSString *localizedReason;
@@ -65,7 +69,7 @@
                     // comes here if you succeed on face id
                     // programmatically switch to the next view
                     dispatch_async(dispatch_get_main_queue(), ^{
-                        [self performSegueWithIdentifier:@"NotificationPermsViewController" sender:nil];
+                        [self finishFaceID];
                         });
                 } else {
                     NSLog(@"Authentication false");
@@ -80,7 +84,7 @@
 }
 
 - (IBAction)didTapNotNow:(id)sender {
-    [self performSegueWithIdentifier:@"doneWithFace" sender:nil];
+    [self finishFaceID];
 }
 
 @end

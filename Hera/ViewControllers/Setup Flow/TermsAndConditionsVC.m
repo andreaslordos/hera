@@ -15,7 +15,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _tcsURL = [NSURL URLWithString:@"https://www.google.com"];
+    _tcsURL = [NSURL URLWithString:@"https://www.google.com"]; // url leading to t&c's and privacy policy
     // Do any additional setup after loading the view.
 }
 

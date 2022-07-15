@@ -15,7 +15,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _datepicker.maximumDate = [NSDate date];
+    _datepicker.maximumDate = [NSDate date]; // set max date to today
     // Do any additional setup after loading the view.
 }
 
@@ -28,5 +28,16 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (void)finishLastPeriod {
+    [self performSegueWithIdentifier:@"finishLastPeriod" sender:nil];
+}
+- (IBAction)didTapNotSure:(id)sender {
+    [self finishLastPeriod];
+}
+
+- (IBAction)didTapContinue:(id)sender {
+    [self finishLastPeriod];
+}
 
 @end
