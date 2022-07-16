@@ -8,21 +8,56 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Startup Navigation Controller-->
+        <!--Startup View Controller-->
+        <scene sceneID="SQw-st-EIa">
+            <objects>
+                <viewController id="thn-DC-Hze" customClass="StartupViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="n6h-CO-Cve">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hera" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sH1-0N-oqm">
+                                <rect key="frame" x="146" y="405.66666666666669" width="122" height="85"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="62"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="124"/>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Txl-Ul-cCK"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="sH1-0N-oqm" firstAttribute="centerX" secondItem="n6h-CO-Cve" secondAttribute="centerX" id="4cB-6Y-Zx7"/>
+                            <constraint firstItem="sH1-0N-oqm" firstAttribute="centerY" secondItem="n6h-CO-Cve" secondAttribute="centerY" id="yBQ-Zn-vFn"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="R9m-CO-DlW"/>
+                    <connections>
+                        <segue destination="sJK-Pi-PEE" kind="show" identifier="loginSegue" id="d5S-ca-mSI"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="setupSegue" id="Uoi-u9-6Rs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ha3-tg-3se" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1078" y="94"/>
+        </scene>
+        <!--Navigation Controller-->
         <scene sceneID="Vvg-mc-5Xk">
             <objects>
-                <navigationController navigationBarHidden="YES" id="yWC-uq-aHk" customClass="StartupNavigationController" sceneMemberID="viewController">
+                <navigationController navigationBarHidden="YES" id="yWC-uq-aHk" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="QEH-Ro-W76"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Nye-hS-QeF">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="SwG-bE-CFI"/>
-                        <segue destination="8GK-UT-l5R" kind="show" identifier="completedSetup" id="qQr-jC-vcw"/>
+                        <segue destination="thn-DC-Hze" kind="relationship" relationship="rootViewController" id="PKi-lt-bnm"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JZ4-mQ-iiv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1200" y="94"/>
+            <point key="canvasLocation" x="-2178" y="94"/>
         </scene>
         <!--Terms And ConditionsVC-->
         <scene sceneID="tne-QT-ifu">
@@ -211,10 +246,10 @@
             </objects>
             <point key="canvasLocation" x="1516" y="1094"/>
         </scene>
-        <!--Login View Controller-->
+        <!--Authenticate View Controller-->
         <scene sceneID="z9Q-8r-AAs">
             <objects>
-                <viewController id="sJK-Pi-PEE" customClass="LoginViewController" sceneMemberID="viewController">
+                <viewController restorationIdentifier="AuthenticateViewController" storyboardIdentifier="AuthenticateViewController" modalPresentationStyle="fullScreen" id="sJK-Pi-PEE" customClass="AuthenticateViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="s1M-Fv-5yl">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -229,6 +264,9 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Unlock Hera"/>
+                                <connections>
+                                    <action selector="didTapUnlock:" destination="sJK-Pi-PEE" eventType="touchUpInside" id="xJa-9w-prv"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Fei-zn-x4N"/>
@@ -243,10 +281,14 @@
                             <constraint firstItem="Fei-zn-x4N" firstAttribute="trailing" secondItem="25e-Nj-CO2" secondAttribute="trailing" constant="30" id="plg-FZ-qbP"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="SIY-00-AK7"/>
+                    <connections>
+                        <segue destination="8GK-UT-l5R" kind="show" identifier="loginComplete" id="PIN-zr-haL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S4m-82-is4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1257.9710144927537" y="1123.6607142857142"/>
+            <point key="canvasLocation" x="-1078" y="1094"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="oT3-1m-k1k">
@@ -517,7 +559,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="LSJ-xq-bBO"/>
                     <connections>
-                        <segue destination="8GK-UT-l5R" kind="show" identifier="afterSetup" id="Zxx-ba-z90"/>
+                        <segue destination="sJK-Pi-PEE" kind="show" identifier="doneWithSetup" id="sgx-hH-FyB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YSR-Nv-Ndv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -526,7 +568,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Zxx-ba-z90"/>
+        <segue reference="sgx-hH-FyB"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="faceid" catalog="system" width="128" height="115"/>

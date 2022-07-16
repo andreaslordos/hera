@@ -10,12 +10,12 @@
 		2B599417BBDCEA3D154F3B71 /* Pods_Hera.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B11FF632FBF9EB7B982B28D /* Pods_Hera.framework */; };
 		BF078DBC287E511900608897 /* LastPeriodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF078DBB287E511900608897 /* LastPeriodViewController.m */; };
 		BF9054A7287E2F5A0061001C /* TermsAndConditionsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9054A6287E2F5A0061001C /* TermsAndConditionsVC.m */; };
+		BFBD3D5228820D1C008743B8 /* StartupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFBD3D5128820D1C008743B8 /* StartupViewController.m */; };
+		BFBD3D5528821019008743B8 /* AuthenticateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFBD3D5428821019008743B8 /* AuthenticateViewController.m */; };
 		BFD11BE0287E74140006E93E /* PeriodLengthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFD11BDF287E74140006E93E /* PeriodLengthViewController.m */; };
 		BFD11BE3287F4C940006E93E /* FaceIdSetupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFD11BE2287F4C940006E93E /* FaceIdSetupViewController.m */; };
 		BFD11BE6287F9B700006E93E /* Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = BFD11BE5287F9B700006E93E /* Utilities.m */; };
 		BFD11BE92880BF840006E93E /* NotificationPermsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFD11BE82880BF840006E93E /* NotificationPermsViewController.m */; };
-		BFD11BED2880DFBF0006E93E /* StartupNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFD11BEC2880DFBF0006E93E /* StartupNavigationController.m */; };
-		BFD11BF12880E45A0006E93E /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFD11BF02880E45A0006E93E /* LoginViewController.m */; };
 		BFD3184E287E2279003E85F3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BFD3184D287E2279003E85F3 /* AppDelegate.m */; };
 		BFD31851287E2279003E85F3 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BFD31850287E2279003E85F3 /* SceneDelegate.m */; };
 		BFD31854287E2279003E85F3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFD31853287E2279003E85F3 /* ViewController.m */; };
@@ -61,6 +61,10 @@
 		BF078DBB287E511900608897 /* LastPeriodViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LastPeriodViewController.m; sourceTree = "<group>"; };
 		BF9054A5287E2F5A0061001C /* TermsAndConditionsVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TermsAndConditionsVC.h; sourceTree = "<group>"; };
 		BF9054A6287E2F5A0061001C /* TermsAndConditionsVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TermsAndConditionsVC.m; sourceTree = "<group>"; };
+		BFBD3D5028820D1C008743B8 /* StartupViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StartupViewController.h; sourceTree = "<group>"; };
+		BFBD3D5128820D1C008743B8 /* StartupViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StartupViewController.m; sourceTree = "<group>"; };
+		BFBD3D5328821019008743B8 /* AuthenticateViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AuthenticateViewController.h; sourceTree = "<group>"; };
+		BFBD3D5428821019008743B8 /* AuthenticateViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AuthenticateViewController.m; sourceTree = "<group>"; };
 		BFD11BDE287E74140006E93E /* PeriodLengthViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PeriodLengthViewController.h; sourceTree = "<group>"; };
 		BFD11BDF287E74140006E93E /* PeriodLengthViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PeriodLengthViewController.m; sourceTree = "<group>"; };
 		BFD11BE1287F4C940006E93E /* FaceIdSetupViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FaceIdSetupViewController.h; sourceTree = "<group>"; };
@@ -69,10 +73,6 @@
 		BFD11BE5287F9B700006E93E /* Utilities.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Utilities.m; sourceTree = "<group>"; };
 		BFD11BE72880BF840006E93E /* NotificationPermsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationPermsViewController.h; sourceTree = "<group>"; };
 		BFD11BE82880BF840006E93E /* NotificationPermsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationPermsViewController.m; sourceTree = "<group>"; };
-		BFD11BEB2880DFBF0006E93E /* StartupNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StartupNavigationController.h; sourceTree = "<group>"; };
-		BFD11BEC2880DFBF0006E93E /* StartupNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StartupNavigationController.m; sourceTree = "<group>"; };
-		BFD11BEF2880E45A0006E93E /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
-		BFD11BF02880E45A0006E93E /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		BFD31849287E2279003E85F3 /* Hera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFD3184C287E2279003E85F3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BFD3184D287E2279003E85F3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -149,19 +149,12 @@
 			isa = PBXGroup;
 			children = (
 				BFD11BEE2880E4220006E93E /* Setup Flow */,
-				BFD11BEF2880E45A0006E93E /* LoginViewController.h */,
-				BFD11BF02880E45A0006E93E /* LoginViewController.m */,
+				BFBD3D5028820D1C008743B8 /* StartupViewController.h */,
+				BFBD3D5128820D1C008743B8 /* StartupViewController.m */,
+				BFBD3D5328821019008743B8 /* AuthenticateViewController.h */,
+				BFBD3D5428821019008743B8 /* AuthenticateViewController.m */,
 			);
 			path = ViewControllers;
-			sourceTree = "<group>";
-		};
-		BFD11BEA2880DFA80006E93E /* NavigationControllers */ = {
-			isa = PBXGroup;
-			children = (
-				BFD11BEB2880DFBF0006E93E /* StartupNavigationController.h */,
-				BFD11BEC2880DFBF0006E93E /* StartupNavigationController.m */,
-			);
-			path = NavigationControllers;
 			sourceTree = "<group>";
 		};
 		BFD11BEE2880E4220006E93E /* Setup Flow */ = {
@@ -206,7 +199,6 @@
 		BFD3184B287E2279003E85F3 /* Hera */ = {
 			isa = PBXGroup;
 			children = (
-				BFD11BEA2880DFA80006E93E /* NavigationControllers */,
 				BF9054A4287E2F220061001C /* ViewControllers */,
 				BFD3184C287E2279003E85F3 /* AppDelegate.h */,
 				BFD3184D287E2279003E85F3 /* AppDelegate.m */,
@@ -447,11 +439,11 @@
 			files = (
 				BFD31862287E227A003E85F3 /* main.m in Sources */,
 				BF9054A7287E2F5A0061001C /* TermsAndConditionsVC.m in Sources */,
-				BFD11BF12880E45A0006E93E /* LoginViewController.m in Sources */,
+				BFBD3D5528821019008743B8 /* AuthenticateViewController.m in Sources */,
 				BFD31854287E2279003E85F3 /* ViewController.m in Sources */,
-				BFD11BED2880DFBF0006E93E /* StartupNavigationController.m in Sources */,
 				BFD11BE0287E74140006E93E /* PeriodLengthViewController.m in Sources */,
 				BFD11BE6287F9B700006E93E /* Utilities.m in Sources */,
+				BFBD3D5228820D1C008743B8 /* StartupViewController.m in Sources */,
 				BF078DBC287E511900608897 /* LastPeriodViewController.m in Sources */,
 				BFD3185A287E2279003E85F3 /* Hera.xcdatamodeld in Sources */,
 				BFD11BE3287F4C940006E93E /* FaceIdSetupViewController.m in Sources */,

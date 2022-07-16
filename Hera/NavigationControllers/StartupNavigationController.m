@@ -7,8 +7,13 @@
 
 #import "StartupNavigationController.h"
 #import "Utilities.h"
+#import "LoginViewController.h"
+#import "TermsAndConditionsVC.h"
 
 @interface StartupNavigationController ()
+
+@property (nonatomic, retain) LoginViewController * LoginVC;
+@property (nonatomic, retain) TermsAndConditionsVC * TCsVC;
 
 @end
 
@@ -16,9 +21,22 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.LoginVC = [[LoginViewController alloc] init];
+    self.TCsVC = [[TermsAndConditionsVC alloc] init];
+    
     if ([Utilities inUserDefaults:@"completedSetup"]) {
-        [self performSegueWithIdentifier:@"completedSetup" sender:nil];
+        [self setRootViewControllerWithID:1];
     }
+    else {
+        [self setRootViewControllerWithID:2];
+    }
+    [super viewWillAppear:YES];
+
+//    if ([Utilities inUserDefaults:@"completedSetup"]) {
+//        LoginViewController *loginVC;
+//        [self pushViewController:loginVC animated:NO];
+//    }
+    
 }
 
 /*
@@ -30,5 +48,17 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+-(void) setRootViewControllerWithID:(int) viewControllerID
+{
+  if (viewControllerID == 1) {
+    self.viewControllers = [NSArray arrayWithObject:self.LoginVC];
+  } else
+  {
+    self.viewControllers = [NSArray arrayWithObject:self.TCsVC];
+  }
+}
+
+
 
 @end

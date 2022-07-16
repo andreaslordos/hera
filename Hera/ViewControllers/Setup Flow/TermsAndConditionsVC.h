@@ -9,8 +9,13 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@protocol TermsAndConditionsVCDelegate
+
+@end
+
 @interface TermsAndConditionsVC : UIViewController
 - (IBAction)didTapTerms:(id)sender;
+@property (nonatomic, weak) id<TermsAndConditionsVCDelegate> delegate;
 @end
 
 NS_ASSUME_NONNULL_END

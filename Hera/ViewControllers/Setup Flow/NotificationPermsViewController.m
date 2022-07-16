@@ -33,7 +33,7 @@
 
 - (void)completedSetup {
     [Utilities saveToUserDefaults:@"YES" keys:@"completedSetup"];
-    [self performSegueWithIdentifier:@"afterSetup" sender:nil];
+    [self performSegueWithIdentifier:@"doneWithSetup" sender:nil];
 }
 
 - (void)registerForNotifications {
