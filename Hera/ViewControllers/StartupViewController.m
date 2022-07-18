@@ -19,10 +19,6 @@
     // Do any additional setup after loading the view.
     if ([Utilities inUserDefaults:@"completedSetup"]) {
         [self performSegueWithIdentifier:@"loginSegue" sender:self];
-        //AuthenticateViewController *svc= [self.storyboard instantiateViewControllerWithIdentifier @"AuthenticateViewController"];
-        //svc.delegate=self;
-        //[self.navigationController pushViewController:svc animated:YES];
-
     }
     else {
         [self performSegueWithIdentifier:@"setupSegue" sender:nil];

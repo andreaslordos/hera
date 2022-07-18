@@ -40,38 +40,24 @@
     NSError *error;
     if ([laContext canEvaluatePolicy:LAPolicyDeviceOwnerAuthentication error:&error]) {
         if (error != NULL) {
-            // handle error
-            NSLog(@"Error not null");
-            //[self showError:error];
+            [Utilities createSimpleAlert:@"Error" desc:error.localizedDescription vc:self];
         } else {
-            
-            if (@available(iOS 11.0.1, *)) {
-                if ([laContext canEvaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics error:&error]) {
-                    localizedReason = @"Unlock Hera using biometrics";
-                    NSLog(@"FaceId support");
-                }
-                else {
-                    localizedReason = @"Unlock Hera using passcode";
-                    NSLog(@"No Biometric support");
-                }
-            } else {
-                // Fallback on earlier versions
+            if ([laContext canEvaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics error:&error]) {
+                localizedReason = @"Unlock Hera using biometrics";
             }
-            
+            else {
+                localizedReason = @"Unlock Hera using passcode";
+            }
             
             [laContext evaluatePolicy:LAPolicyDeviceOwnerAuthentication localizedReason:localizedReason reply:^(BOOL success, NSError * _Nullable error) {
                 
-                if (error != NULL) {
-                    NSLog(@"Authentication error"); // comes here if you fail face id twice and try passcode or cancel
-                } else if (success) {
+                if (success) {
                     NSLog(@"Authentication success");
                     // comes here if you succeed on face id
                     // programmatically switch to the next view
                     dispatch_async(dispatch_get_main_queue(), ^{
                         [self finishFaceID];
                         });
-                } else {
-                    NSLog(@"Authentication false");
                 }
             }];
         }

@@ -265,7 +265,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Unlock Hera"/>
                                 <connections>
-                                    <action selector="didTapUnlock:" destination="sJK-Pi-PEE" eventType="touchUpInside" id="xJa-9w-prv"/>
+                                    <action selector="didTapUnlock:" destination="sJK-Pi-PEE" eventType="touchUpInside" id="JKR-U2-vsx"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -283,7 +283,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="SIY-00-AK7"/>
                     <connections>
-                        <segue destination="8GK-UT-l5R" kind="show" identifier="loginComplete" id="PIN-zr-haL"/>
+                        <segue destination="8GK-UT-l5R" kind="showDetail" identifier="loginComplete" id="PIN-zr-haL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S4m-82-is4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -293,7 +293,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="oT3-1m-k1k">
             <objects>
-                <tabBarController id="8GK-UT-l5R" sceneMemberID="viewController">
+                <tabBarController modalPresentationStyle="fullScreen" id="8GK-UT-l5R" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="uxG-Ta-jEq"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Q1w-Vd-mvJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
