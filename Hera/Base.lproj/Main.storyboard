@@ -214,33 +214,49 @@
             </objects>
             <point key="canvasLocation" x="932" y="94"/>
         </scene>
-        <!--Item 2-->
+        <!--Calendar-->
         <scene sceneID="wHP-B9-Kia">
             <objects>
-                <viewController id="hKJ-Lt-ti1" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="hKJ-Lt-ti1" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vaR-1h-Yo2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="pxw-8d-drp"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="mXx-fY-FeY"/>
+                    <tabBarItem key="tabBarItem" title="Calendar" id="mXx-fY-FeY"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EOj-0J-S4m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1516" y="1811"/>
+            <point key="canvasLocation" x="1516" y="1809"/>
         </scene>
-        <!--Item 1-->
+        <!--Track-->
+        <scene sceneID="b81-Cx-5rF">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="wEd-Ya-CIA" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JeD-bg-9D2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="auR-2p-GXk"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Track" id="e9a-Ct-j2Q"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WXH-CX-5Cq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1516" y="2560"/>
+        </scene>
+        <!--Cycle-->
         <scene sceneID="HWf-Qs-dUy">
             <objects>
-                <viewController id="jUC-S9-rgV" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="jUC-S9-rgV" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TpW-NZ-4GV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="j6p-6C-E8D"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="rE6-fi-yIu"/>
+                    <tabBarItem key="tabBarItem" title="Cycle" id="rE6-fi-yIu"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ht9-eh-eA9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -303,6 +319,9 @@
                     <connections>
                         <segue destination="jUC-S9-rgV" kind="relationship" relationship="viewControllers" id="JfO-87-5jK"/>
                         <segue destination="hKJ-Lt-ti1" kind="relationship" relationship="viewControllers" id="OnT-Dc-HEu"/>
+                        <segue destination="wEd-Ya-CIA" kind="relationship" relationship="viewControllers" id="vtc-T0-J9L"/>
+                        <segue destination="vH7-rd-UXE" kind="relationship" relationship="viewControllers" id="EQ6-Ka-rkj"/>
+                        <segue destination="mXo-oY-Cl9" kind="relationship" relationship="viewControllers" id="ZcD-dq-JwI"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pM4-by-91F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -565,6 +584,38 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YSR-Nv-Ndv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3876.9230769230767" y="93.838862559241704"/>
+        </scene>
+        <!--Analytics-->
+        <scene sceneID="ngD-jc-xBO">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="vH7-rd-UXE" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Z0e-cw-Pnj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="kpV-36-8V8"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Analytics" id="CgN-5r-1z3"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XJ6-9e-xaL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1516" y="3339"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="qAX-Em-1Xu">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="mXo-oY-Cl9" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KFf-6a-gf3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="lKh-2q-Jfi"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Settings" id="1v3-ec-ruK"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DYo-Xq-cir" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1516" y="4205"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
