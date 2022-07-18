@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2B599417BBDCEA3D154F3B71 /* Pods_Hera.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B11FF632FBF9EB7B982B28D /* Pods_Hera.framework */; };
 		BF078DBC287E511900608897 /* LastPeriodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF078DBB287E511900608897 /* LastPeriodViewController.m */; };
+		BF7863C72885FEA600417C36 /* LoggingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7863C62885FEA600417C36 /* LoggingViewController.m */; };
 		BF9054A7287E2F5A0061001C /* TermsAndConditionsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9054A6287E2F5A0061001C /* TermsAndConditionsVC.m */; };
 		BFBD3D5228820D1C008743B8 /* StartupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFBD3D5128820D1C008743B8 /* StartupViewController.m */; };
 		BFBD3D5B2885CD40008743B8 /* LoginScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFBD3D5A2885CD40008743B8 /* LoginScreenViewController.m */; };
@@ -59,6 +60,8 @@
 		A07E095FA461189870EB3B7E /* Pods_Hera_HeraUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hera_HeraUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF078DBA287E511900608897 /* LastPeriodViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LastPeriodViewController.h; sourceTree = "<group>"; };
 		BF078DBB287E511900608897 /* LastPeriodViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LastPeriodViewController.m; sourceTree = "<group>"; };
+		BF7863C52885FEA600417C36 /* LoggingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoggingViewController.h; sourceTree = "<group>"; };
+		BF7863C62885FEA600417C36 /* LoggingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoggingViewController.m; sourceTree = "<group>"; };
 		BF9054A5287E2F5A0061001C /* TermsAndConditionsVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TermsAndConditionsVC.h; sourceTree = "<group>"; };
 		BF9054A6287E2F5A0061001C /* TermsAndConditionsVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TermsAndConditionsVC.m; sourceTree = "<group>"; };
 		BFBD3D5028820D1C008743B8 /* StartupViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StartupViewController.h; sourceTree = "<group>"; };
@@ -145,9 +148,19 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		BF7863C42885FE8E00417C36 /* Main Flow */ = {
+			isa = PBXGroup;
+			children = (
+				BF7863C52885FEA600417C36 /* LoggingViewController.h */,
+				BF7863C62885FEA600417C36 /* LoggingViewController.m */,
+			);
+			path = "Main Flow";
+			sourceTree = "<group>";
+		};
 		BF9054A4287E2F220061001C /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				BF7863C42885FE8E00417C36 /* Main Flow */,
 				BFD11BEE2880E4220006E93E /* Setup Flow */,
 				BFBD3D5028820D1C008743B8 /* StartupViewController.h */,
 				BFBD3D5128820D1C008743B8 /* StartupViewController.m */,
@@ -246,6 +259,7 @@
 				BFD31845287E2279003E85F3 /* Sources */,
 				BFD31846287E2279003E85F3 /* Frameworks */,
 				BFD31847287E2279003E85F3 /* Resources */,
+				3A0B891F07DACE0F6ACC1DA1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -283,6 +297,7 @@
 				BFD3186D287E227A003E85F3 /* Sources */,
 				BFD3186E287E227A003E85F3 /* Frameworks */,
 				BFD3186F287E227A003E85F3 /* Resources */,
+				B6110AECCEB28F97E3933AB5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -364,6 +379,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		3A0B891F07DACE0F6ACC1DA1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Hera/Pods-Hera-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Hera/Pods-Hera-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Hera/Pods-Hera-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		7A0CABFE294D26002B2E4925 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -384,6 +416,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B6110AECCEB28F97E3933AB5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Hera-HeraUITests/Pods-Hera-HeraUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Hera-HeraUITests/Pods-Hera-HeraUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Hera-HeraUITests/Pods-Hera-HeraUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F1017B5A9EF0CC33036EBBF3 /* [CP] Check Pods Manifest.lock */ = {
@@ -447,6 +496,7 @@
 				BF078DBC287E511900608897 /* LastPeriodViewController.m in Sources */,
 				BFD3185A287E2279003E85F3 /* Hera.xcdatamodeld in Sources */,
 				BFD11BE3287F4C940006E93E /* FaceIdSetupViewController.m in Sources */,
+				BF7863C72885FEA600417C36 /* LoggingViewController.m in Sources */,
 				BFD3184E287E2279003E85F3 /* AppDelegate.m in Sources */,
 				BFD11BE92880BF840006E93E /* NotificationPermsViewController.m in Sources */,
 				BFD31851287E2279003E85F3 /* SceneDelegate.m in Sources */,

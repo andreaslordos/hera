@@ -233,7 +233,7 @@
         <!--Track-->
         <scene sceneID="b81-Cx-5rF">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="wEd-Ya-CIA" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="wEd-Ya-CIA" customClass="LoggingViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JeD-bg-9D2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -244,7 +244,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WXH-CX-5Cq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1516" y="2560"/>
+            <point key="canvasLocation" x="1515.9420289855075" y="2559.375"/>
         </scene>
         <!--Cycle-->
         <scene sceneID="HWf-Qs-dUy">
