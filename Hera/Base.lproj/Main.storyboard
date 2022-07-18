@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sJK-Pi-PEE">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yWC-uq-aHk">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -219,7 +219,7 @@
             <objects>
                 <viewController id="hKJ-Lt-ti1" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vaR-1h-Yo2">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="pxw-8d-drp"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -235,7 +235,7 @@
             <objects>
                 <viewController id="jUC-S9-rgV" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TpW-NZ-4GV">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="j6p-6C-E8D"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -249,7 +249,7 @@
         <!--Login Screen View Controller-->
         <scene sceneID="z9Q-8r-AAs">
             <objects>
-                <viewController id="sJK-Pi-PEE" customClass="LoginScreenViewController" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="sJK-Pi-PEE" customClass="LoginScreenViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="s1M-Fv-5yl">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -559,7 +559,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="LSJ-xq-bBO"/>
                     <connections>
-                        <segue destination="sJK-Pi-PEE" kind="show" identifier="doneWithSetup" id="sgx-hH-FyB"/>
+                        <segue destination="sJK-Pi-PEE" kind="showDetail" identifier="doneWithSetup" id="sgx-hH-FyB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YSR-Nv-Ndv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -568,7 +568,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="d5S-ca-mSI"/>
+        <segue reference="sgx-hH-FyB"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="faceid" catalog="system" width="128" height="115"/>
