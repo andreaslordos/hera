@@ -11,7 +11,6 @@
 
 @interface FaceIdSetupViewController ()
 - (IBAction)didTapEnable:(id)sender;
-
 @end
 
 @implementation FaceIdSetupViewController

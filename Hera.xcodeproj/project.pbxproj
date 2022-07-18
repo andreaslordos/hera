@@ -12,6 +12,7 @@
 		BF9054A7287E2F5A0061001C /* TermsAndConditionsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9054A6287E2F5A0061001C /* TermsAndConditionsVC.m */; };
 		BFBD3D5228820D1C008743B8 /* StartupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFBD3D5128820D1C008743B8 /* StartupViewController.m */; };
 		BFBD3D5528821019008743B8 /* AuthenticateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFBD3D5428821019008743B8 /* AuthenticateViewController.m */; };
+		BFBD3D582885CA36008743B8 /* LoginScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFBD3D572885CA36008743B8 /* LoginScreenViewController.m */; };
 		BFD11BE0287E74140006E93E /* PeriodLengthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFD11BDF287E74140006E93E /* PeriodLengthViewController.m */; };
 		BFD11BE3287F4C940006E93E /* FaceIdSetupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFD11BE2287F4C940006E93E /* FaceIdSetupViewController.m */; };
 		BFD11BE6287F9B700006E93E /* Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = BFD11BE5287F9B700006E93E /* Utilities.m */; };
@@ -65,6 +66,8 @@
 		BFBD3D5128820D1C008743B8 /* StartupViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StartupViewController.m; sourceTree = "<group>"; };
 		BFBD3D5328821019008743B8 /* AuthenticateViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AuthenticateViewController.h; sourceTree = "<group>"; };
 		BFBD3D5428821019008743B8 /* AuthenticateViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AuthenticateViewController.m; sourceTree = "<group>"; };
+		BFBD3D562885CA36008743B8 /* LoginScreenViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginScreenViewController.h; sourceTree = "<group>"; };
+		BFBD3D572885CA36008743B8 /* LoginScreenViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginScreenViewController.m; sourceTree = "<group>"; };
 		BFD11BDE287E74140006E93E /* PeriodLengthViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PeriodLengthViewController.h; sourceTree = "<group>"; };
 		BFD11BDF287E74140006E93E /* PeriodLengthViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PeriodLengthViewController.m; sourceTree = "<group>"; };
 		BFD11BE1287F4C940006E93E /* FaceIdSetupViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FaceIdSetupViewController.h; sourceTree = "<group>"; };
@@ -153,6 +156,8 @@
 				BFBD3D5128820D1C008743B8 /* StartupViewController.m */,
 				BFBD3D5328821019008743B8 /* AuthenticateViewController.h */,
 				BFBD3D5428821019008743B8 /* AuthenticateViewController.m */,
+				BFBD3D562885CA36008743B8 /* LoginScreenViewController.h */,
+				BFBD3D572885CA36008743B8 /* LoginScreenViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -441,6 +446,7 @@
 				BF9054A7287E2F5A0061001C /* TermsAndConditionsVC.m in Sources */,
 				BFBD3D5528821019008743B8 /* AuthenticateViewController.m in Sources */,
 				BFD31854287E2279003E85F3 /* ViewController.m in Sources */,
+				BFBD3D582885CA36008743B8 /* LoginScreenViewController.m in Sources */,
 				BFD11BE0287E74140006E93E /* PeriodLengthViewController.m in Sources */,
 				BFD11BE6287F9B700006E93E /* Utilities.m in Sources */,
 				BFBD3D5228820D1C008743B8 /* StartupViewController.m in Sources */,
