@@ -71,7 +71,7 @@
 - (NSString *)calendar:(FSCalendar *)calendar subtitleForDate:(NSDate *)date {
     NSDateFormatter *dateFor = [[NSDateFormatter alloc]init];
     [dateFor setDateFormat:@"MMM"];
-    return [dateFor stringFromDate:date]; // i.e. Jul for July
+    return [dateFor stringFromDate:date];
 }
 
 
@@ -81,7 +81,6 @@
         return self.cellBgColor;
     }
     else {
-        // give disabled color
         return self.cellDisabledBgColor;
     }
 }
@@ -92,7 +91,6 @@
         return self.cellBgColor;
     }
     else {
-        // give disabled color
         return self.cellDisabledBgColor;
     }
 }
@@ -107,7 +105,6 @@
         return self.textDefaultColor;
     }
     else {
-        // give disabled color
         return self.textDisabledColor;
     }
 }
