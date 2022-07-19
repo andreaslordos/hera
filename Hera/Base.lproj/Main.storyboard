@@ -214,42 +214,58 @@
             </objects>
             <point key="canvasLocation" x="932" y="94"/>
         </scene>
-        <!--Item 2-->
+        <!--Calendar-->
         <scene sceneID="wHP-B9-Kia">
             <objects>
-                <viewController id="hKJ-Lt-ti1" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="hKJ-Lt-ti1" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vaR-1h-Yo2">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="pxw-8d-drp"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="mXx-fY-FeY"/>
+                    <tabBarItem key="tabBarItem" title="Calendar" image="calendar" catalog="system" selectedImage="calendar" id="mXx-fY-FeY"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EOj-0J-S4m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1516" y="1811"/>
+            <point key="canvasLocation" x="1516" y="1809"/>
         </scene>
-        <!--Item 1-->
+        <!--Track-->
+        <scene sceneID="b81-Cx-5rF">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="wEd-Ya-CIA" customClass="LoggingViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JeD-bg-9D2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="auR-2p-GXk"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Track" image="plus" catalog="system" selectedImage="plus" id="e9a-Ct-j2Q"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WXH-CX-5Cq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1515.9420289855075" y="2559.375"/>
+        </scene>
+        <!--Cycle-->
         <scene sceneID="HWf-Qs-dUy">
             <objects>
-                <viewController id="jUC-S9-rgV" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="jUC-S9-rgV" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TpW-NZ-4GV">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="j6p-6C-E8D"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="rE6-fi-yIu"/>
+                    <tabBarItem key="tabBarItem" title="Cycle" image="leaf.arrow.circlepath" catalog="system" selectedImage="leaf.arrow.circlepath" id="rE6-fi-yIu"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ht9-eh-eA9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1516" y="1094"/>
         </scene>
-        <!--Authenticate View Controller-->
+        <!--Login Screen View Controller-->
         <scene sceneID="z9Q-8r-AAs">
             <objects>
-                <viewController restorationIdentifier="AuthenticateViewController" storyboardIdentifier="AuthenticateViewController" modalPresentationStyle="fullScreen" id="sJK-Pi-PEE" customClass="AuthenticateViewController" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="sJK-Pi-PEE" customClass="LoginScreenViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="s1M-Fv-5yl">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -265,7 +281,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Unlock Hera"/>
                                 <connections>
-                                    <action selector="didTapUnlock:" destination="sJK-Pi-PEE" eventType="touchUpInside" id="xJa-9w-prv"/>
+                                    <action selector="didTapUnlock:" destination="sJK-Pi-PEE" eventType="touchUpInside" id="JKR-U2-vsx"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -283,7 +299,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="SIY-00-AK7"/>
                     <connections>
-                        <segue destination="8GK-UT-l5R" kind="show" identifier="loginComplete" id="PIN-zr-haL"/>
+                        <segue destination="8GK-UT-l5R" kind="showDetail" identifier="loginComplete" id="PIN-zr-haL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S4m-82-is4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -293,7 +309,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="oT3-1m-k1k">
             <objects>
-                <tabBarController id="8GK-UT-l5R" sceneMemberID="viewController">
+                <tabBarController modalPresentationStyle="fullScreen" id="8GK-UT-l5R" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="uxG-Ta-jEq"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Q1w-Vd-mvJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
@@ -303,6 +319,9 @@
                     <connections>
                         <segue destination="jUC-S9-rgV" kind="relationship" relationship="viewControllers" id="JfO-87-5jK"/>
                         <segue destination="hKJ-Lt-ti1" kind="relationship" relationship="viewControllers" id="OnT-Dc-HEu"/>
+                        <segue destination="wEd-Ya-CIA" kind="relationship" relationship="viewControllers" id="vtc-T0-J9L"/>
+                        <segue destination="vH7-rd-UXE" kind="relationship" relationship="viewControllers" id="EQ6-Ka-rkj"/>
+                        <segue destination="mXo-oY-Cl9" kind="relationship" relationship="viewControllers" id="ZcD-dq-JwI"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pM4-by-91F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -559,22 +578,59 @@
                     </view>
                     <navigationItem key="navigationItem" id="LSJ-xq-bBO"/>
                     <connections>
-                        <segue destination="sJK-Pi-PEE" kind="show" identifier="doneWithSetup" id="sgx-hH-FyB"/>
+                        <segue destination="sJK-Pi-PEE" kind="showDetail" identifier="doneWithSetup" id="sgx-hH-FyB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YSR-Nv-Ndv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3876.9230769230767" y="93.838862559241704"/>
         </scene>
+        <!--Analytics-->
+        <scene sceneID="ngD-jc-xBO">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="vH7-rd-UXE" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Z0e-cw-Pnj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="kpV-36-8V8"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Analytics" image="lines.measurement.horizontal" catalog="system" selectedImage="lines.measurement.horizontal" id="CgN-5r-1z3"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XJ6-9e-xaL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1516" y="3339"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="qAX-Em-1Xu">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="mXo-oY-Cl9" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KFf-6a-gf3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="lKh-2q-Jfi"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Settings" image="gearshape" catalog="system" selectedImage="gearshape" id="1v3-ec-ruK"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DYo-Xq-cir" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1516" y="4205"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="sgx-hH-FyB"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="calendar" catalog="system" width="128" height="106"/>
         <image name="faceid" catalog="system" width="128" height="115"/>
+        <image name="gearshape" catalog="system" width="128" height="121"/>
         <image name="hera_appicon" width="352" height="354"/>
+        <image name="leaf.arrow.circlepath" catalog="system" width="121" height="128"/>
+        <image name="lines.measurement.horizontal" catalog="system" width="128" height="92"/>
         <image name="meditation" width="512" height="512"/>
         <image name="notification" width="512" height="512"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

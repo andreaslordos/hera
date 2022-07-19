@@ -6,6 +6,7 @@ target 'Hera' do
   use_frameworks!
 
   # Pods for Hera
+    pod 'FSCalendar'
 
   target 'HeraTests' do
     inherit! :search_paths
