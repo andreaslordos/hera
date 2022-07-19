@@ -236,11 +236,11 @@
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="wEd-Ya-CIA" customClass="LoggingViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JeD-bg-9D2">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="6DN-Ud-fMx">
-                                <rect key="frame" x="30" y="229.66666666666663" width="354" height="100"/>
+                                <rect key="frame" x="30" y="200.66666666666666" width="354" height="99.999999999999972"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" pointerInteraction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pVz-IN-Qrg" userLabel="periodButton">
                                         <rect key="frame" x="0.0" y="0.0" width="104.66666666666667" height="100"/>
@@ -283,8 +283,22 @@
                                     <constraint firstAttribute="height" constant="100" id="DlW-NG-qul"/>
                                 </constraints>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SpH-Kp-9pG">
+                                <rect key="frame" x="152.33333333333334" y="340.66666666666669" width="109.66666666666666" height="32.666666666666686"/>
+                                <color key="tintColor" red="1" green="0.33061912700000001" blue="0.25229763290000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Bleeding   i">
+                                            <attributes>
+                                                <font key="NSFont" size="16" name="Helvetica-Bold"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </buttonConfiguration>
+                            </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="Icy-6s-oTD">
-                                <rect key="frame" x="65" y="442.33333333333326" width="284" height="310.66666666666674"/>
+                                <rect key="frame" x="65" y="413.33333333333326" width="284" height="310.66666666666674"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="44" translatesAutoresizingMaskIntoConstraints="NO" id="ogg-zT-vpK">
                                         <rect key="frame" x="0.0" y="0.0" width="284" height="141.33333333333334"/>
@@ -408,19 +422,13 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SpH-Kp-9pG">
-                                <rect key="frame" x="152.33333333333334" y="369.66666666666669" width="109.66666666666666" height="32.666666666666686"/>
-                                <color key="tintColor" red="1" green="0.33061912700000001" blue="0.25229763290000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7P4-L3-N7U">
+                                <rect key="frame" x="354" y="44" width="50" height="31"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="Bleeding   i">
-                                            <attributes>
-                                                <font key="NSFont" size="16" name="Helvetica-Bold"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                </buttonConfiguration>
+                                <buttonConfiguration key="configuration" style="plain" title="Add"/>
+                                <connections>
+                                    <action selector="didTapAdd:" destination="wEd-Ya-CIA" eventType="touchUpInside" id="bWc-lc-HQc"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="auR-2p-GXk"/>
@@ -434,10 +442,14 @@
                             <constraint firstItem="Icy-6s-oTD" firstAttribute="top" secondItem="SpH-Kp-9pG" secondAttribute="bottom" constant="40" id="VVr-U7-wBm"/>
                             <constraint firstItem="auR-2p-GXk" firstAttribute="bottom" secondItem="Icy-6s-oTD" secondAttribute="bottom" constant="40" id="gHo-Yi-dah"/>
                             <constraint firstItem="auR-2p-GXk" firstAttribute="trailing" secondItem="6DN-Ud-fMx" secondAttribute="trailing" constant="30" id="gQq-P7-L3V"/>
+                            <constraint firstItem="auR-2p-GXk" firstAttribute="trailing" secondItem="7P4-L3-N7U" secondAttribute="trailing" constant="10" id="gVg-Z4-NKM"/>
+                            <constraint firstItem="7P4-L3-N7U" firstAttribute="top" secondItem="auR-2p-GXk" secondAttribute="top" id="gWt-N6-nVm"/>
                             <constraint firstItem="6DN-Ud-fMx" firstAttribute="leading" secondItem="auR-2p-GXk" secondAttribute="leading" constant="30" id="x7l-fa-O9e"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Track" image="plus" catalog="system" selectedImage="plus" id="e9a-Ct-j2Q"/>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="emotionButton" destination="ceO-Sy-Qva" id="ViE-LK-KOH"/>
                         <outlet property="infobutton" destination="SpH-Kp-9pG" id="kji-JO-wzR"/>

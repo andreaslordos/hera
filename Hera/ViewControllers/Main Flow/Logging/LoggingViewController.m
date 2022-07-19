@@ -10,6 +10,8 @@
 @interface LoggingViewController () <FSCalendarDelegate, FSCalendarDelegateAppearance, FSCalendarDataSource>
 
 @property (strong, atomic) NSDate *maxDate;
+@property (strong, nonatomic) NSString *lastTypeSelected;
+@property (strong, nonatomic) NSString *lastOptionSelected;
 @property (weak, nonatomic) IBOutlet UIButton *periodButton;
 @property (weak, nonatomic) IBOutlet UIButton *emotionButton;
 @property (weak, nonatomic) IBOutlet UIButton *painButton;
@@ -29,6 +31,8 @@
 - (IBAction)didTapOption2:(id)sender;
 - (IBAction)didTapOption3:(id)sender;
 - (IBAction)didTapOption4:(id)sender;
+- (IBAction)didTapAdd:(id)sender;
+
 @end
 
 @implementation LoggingViewController
@@ -49,7 +53,6 @@
     calendar.scrollDirection = FSCalendarScrollDirectionVertical;
     calendar.scope = FSCalendarScopeWeek; // show only previous week
     calendar.firstWeekday = 2; // set first day to monday
-    
     // set default appearance settings
     calendar.appearance.selectionColor = [UIColor blueColor]; // set selection color to blue
     calendar.appearance.headerMinimumDissolvedAlpha = 0.0; // hide header details
@@ -59,7 +62,7 @@
     calendar.appearance.titleOffset = CGPointMake(9., 15.); // set day number to bottom right corner
     calendar.appearance.subtitleOffset = CGPointMake(-10., -15.); // set month to top left corner
     calendar.center = CGPointMake(CGRectGetMidX(self.view.bounds), calendar.center.y); // center calendar
-    
+    [calendar selectDate:_maxDate];
     // add calendar to view
     calendar.dataSource = self;
     calendar.delegate = self;
@@ -88,6 +91,7 @@
     _option3.layer.borderWidth = 4.;
     _option4.layer.borderWidth = 4.;
     [self setInfoButtonText:@"Bleeding"];
+    _lastTypeSelected = @"Bleeding";
 }
 
 - (BOOL)pastOrPresent:(NSDate *)date {
@@ -189,28 +193,42 @@
     _option4label.text = labels[3];
 }
 
+- (IBAction)didTapAdd:(id)sender {
+    if (_lastTypeSelected != nil && _lastOptionSelected != nil && [_calendar selectedDate] != nil) {
+        // store data in core data
+        [Utilities createSimpleAlert:@"Success" desc:@"Added successfully" vc:self];
+    }
+    else {
+        [Utilities createSimpleAlert:@"Error" desc:@"Select an option before adding" vc:self];
+    }
+}
+
 - (IBAction)didTapOption4:(id)sender {
     [self resetButtons];
     _option4.backgroundColor = [UIColor colorWithCGColor:_option4.layer.borderColor];
     _option4.tintColor = [UIColor whiteColor];
+    _lastOptionSelected = @"4";
 }
 
 - (IBAction)didTapOption3:(id)sender {
     [self resetButtons];
     _option3.backgroundColor = [UIColor colorWithCGColor:_option3.layer.borderColor];
     _option3.tintColor = [UIColor whiteColor];
+    _lastOptionSelected = @"3";
 }
 
 - (IBAction)didTapOption2:(id)sender {
     [self resetButtons];
     _option2.backgroundColor = [UIColor colorWithCGColor:_option2.layer.borderColor];
     _option2.tintColor = [UIColor whiteColor];
+    _lastOptionSelected = @"2";
 }
 
 - (IBAction)didTapOption1:(id)sender {
     [self resetButtons];
     _option1.backgroundColor = [UIColor colorWithCGColor:_option1.layer.borderColor];
     _option1.tintColor = [UIColor whiteColor];
+    _lastOptionSelected = @"1";
 }
 
 - (IBAction)didTapEmotionButton:(id)sender {
@@ -218,6 +236,7 @@
     [self setInfoButtonText:@"Mood"];
     [self setButtonLabels:[NSArray arrayWithObjects:@"Happy", @"Sensitive", @"Sad", @"PMS", nil]];
     [self resetButtons];
+    _lastTypeSelected = @"Emotion";
 }
 
 - (IBAction)didTapPainButton:(id)sender {
@@ -225,6 +244,7 @@
     [self setInfoButtonText:@"Pain"];
     [self setButtonLabels:[NSArray arrayWithObjects:@"Cramps", @"Headache", @"Ovulation", @"Tender Breasts", nil]];
     [self resetButtons];
+    _lastTypeSelected = @"Pain";
 }
 
 - (IBAction)didTapPeriodButton:(id)sender {
@@ -232,5 +252,6 @@
     [self setInfoButtonText:@"Bleeding"];
     [self setButtonLabels:[NSArray arrayWithObjects:@"Light", @"Moderate", @"Heavy", @"Spotting", nil]];
     [self resetButtons];
+    _lastTypeSelected = @"Period";
 }
 @end

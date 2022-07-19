@@ -8,6 +8,7 @@
 #import <UIKit/UIKit.h>
 #import "cc.h"
 #import <FSCalendar/FSCalendar.h>
+#import "Utilities.h"
 NS_ASSUME_NONNULL_BEGIN
 
 @interface LoggingViewController : UIViewController <FSCalendarDelegate, FSCalendarDelegateAppearance, FSCalendarDataSource>
