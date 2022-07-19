@@ -337,7 +337,7 @@
                                                             <action selector="didTapOption2:" destination="wEd-Ya-CIA" eventType="touchUpInside" id="MyY-v6-Ogd"/>
                                                         </connections>
                                                     </button>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Medium" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gpb-3X-UPU">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Moderate" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gpb-3X-UPU">
                                                         <rect key="frame" x="0.0" y="121.00000000000004" width="120" height="20.333333333333329"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
@@ -440,11 +440,15 @@
                     <tabBarItem key="tabBarItem" title="Track" image="plus" catalog="system" selectedImage="plus" id="e9a-Ct-j2Q"/>
                     <connections>
                         <outlet property="emotionButton" destination="ceO-Sy-Qva" id="ViE-LK-KOH"/>
-                        <outlet property="infobutton" destination="SpH-Kp-9pG" id="a2Z-nV-aNi"/>
+                        <outlet property="infobutton" destination="SpH-Kp-9pG" id="kji-JO-wzR"/>
                         <outlet property="option1" destination="NKz-WG-Hpc" id="Ped-ty-sFd"/>
+                        <outlet property="option1label" destination="gvX-wE-Y39" id="Mlv-4N-FwI"/>
                         <outlet property="option2" destination="AII-PT-Zbj" id="fXK-hh-bQV"/>
+                        <outlet property="option2label" destination="gpb-3X-UPU" id="KJL-6H-rtG"/>
                         <outlet property="option3" destination="v2c-rm-ylK" id="b0W-KZ-X2V"/>
+                        <outlet property="option3label" destination="Vjd-8Y-gzL" id="zRL-2B-PXF"/>
                         <outlet property="option4" destination="9iG-uU-lak" id="Lcm-bZ-Ykf"/>
+                        <outlet property="option4label" destination="DSH-nd-r7P" id="CUh-Ld-eOv"/>
                         <outlet property="painButton" destination="z9H-3v-jjv" id="Z3n-Oh-mZw"/>
                         <outlet property="periodButton" destination="pVz-IN-Qrg" id="UOM-Zg-bQe"/>
                     </connections>

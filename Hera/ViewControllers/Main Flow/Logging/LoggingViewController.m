@@ -17,6 +17,10 @@
 @property (weak, nonatomic) IBOutlet UIButton *option2;
 @property (weak, nonatomic) IBOutlet UIButton *option3;
 @property (weak, nonatomic) IBOutlet UIButton *option4;
+@property (weak, nonatomic) IBOutlet UILabel *option1label;
+@property (weak, nonatomic) IBOutlet UILabel *option2label;
+@property (weak, nonatomic) IBOutlet UILabel *option3label;
+@property (weak, nonatomic) IBOutlet UILabel *option4label;
 @property (weak, nonatomic) IBOutlet UIButton *infobutton;
 - (IBAction)didTapPeriodButton:(id)sender;
 - (IBAction)didTapPainButton:(id)sender;
@@ -178,6 +182,13 @@
     _option4.tintColor = [UIColor colorWithCGColor:_option4.layer.borderColor];
 }
 
+- (void)setButtonLabels:(NSArray*)labels {
+    _option1label.text = labels[0];
+    _option2label.text = labels[1];
+    _option3label.text = labels[2];
+    _option4label.text = labels[3];
+}
+
 - (IBAction)didTapOption4:(id)sender {
     [self resetButtons];
     _option4.backgroundColor = [UIColor colorWithCGColor:_option4.layer.borderColor];
@@ -205,18 +216,21 @@
 - (IBAction)didTapEmotionButton:(id)sender {
     [self setButtonColor:cc.emotionButtonBg];
     [self setInfoButtonText:@"Mood"];
+    [self setButtonLabels:[NSArray arrayWithObjects:@"Happy", @"Sensitive", @"Sad", @"PMS", nil]];
     [self resetButtons];
 }
 
 - (IBAction)didTapPainButton:(id)sender {
     [self setButtonColor:cc.painButtonBg];
     [self setInfoButtonText:@"Pain"];
+    [self setButtonLabels:[NSArray arrayWithObjects:@"Cramps", @"Headache", @"Ovulation", @"Tender Breasts", nil]];
     [self resetButtons];
 }
 
 - (IBAction)didTapPeriodButton:(id)sender {
     [self setButtonColor:cc.bleedingButtonBg];
     [self setInfoButtonText:@"Bleeding"];
+    [self setButtonLabels:[NSArray arrayWithObjects:@"Light", @"Moderate", @"Heavy", @"Spotting", nil]];
     [self resetButtons];
 }
 @end
