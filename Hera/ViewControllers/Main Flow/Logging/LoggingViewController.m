@@ -10,6 +10,10 @@
 @interface LoggingViewController () <FSCalendarDelegate, FSCalendarDelegateAppearance, FSCalendarDataSource>
 
 @property (strong, atomic) NSDate *maxDate;
+@property (weak, nonatomic) IBOutlet UIButton *periodButton;
+@property (weak, nonatomic) IBOutlet UIButton *emotionButton;
+@property (weak, nonatomic) IBOutlet UIButton *painButton;
+
 @end
 
 @implementation LoggingViewController
@@ -105,6 +109,16 @@
 - (NSDate *)maximumDateForCalendar:(FSCalendar *)calendar {
     return _maxDate; // set today's date as maximum selectable date
 }
+
+- (IBAction)didTapPeriodButton:(id)sender {
+}
+
+- (IBAction)didTapEmotionButton:(id)sender {
+}
+
+- (IBAction)didTapPainButton:(id)sender {
+}
+
 
 /*
 #pragma mark - Navigation
