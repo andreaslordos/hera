@@ -10,12 +10,6 @@
 @interface LoggingViewController () <FSCalendarDelegate, FSCalendarDelegateAppearance, FSCalendarDataSource>
 
 @property (strong, atomic) NSDate *maxDate;
-@property (strong, atomic) UIColor *cellBgColor;
-@property (strong, atomic) UIColor *cellDisabledBgColor;
-@property (strong, atomic) UIColor *textSelectedColor;
-@property (strong, atomic) UIColor *textDefaultColor;
-@property (strong, atomic) UIColor *textDisabledColor;
-
 @end
 
 @implementation LoggingViewController
@@ -50,11 +44,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     _maxDate = [NSDate date];
-    self.cellBgColor = [UIColor lightGrayColor];
-    self.cellDisabledBgColor = [UIColor grayColor];
-    self.textSelectedColor = [UIColor whiteColor];
-    self.textDefaultColor = [UIColor blackColor];
-    self.textDisabledColor = [UIColor lightGrayColor];
     [self setAppearance];
 }
 
@@ -78,39 +67,39 @@
 - (UIColor *)calendar:(FSCalendar *)calendar appearance:(FSCalendarAppearance *)appearance fillDefaultColorForDate:(NSDate *)date {
     if ([self pastOrPresent:date]) {
         // color normally
-        return self.cellBgColor;
+        return cc.cellBgColor;
     }
     else {
-        return self.cellDisabledBgColor;
+        return cc.cellDisabledBgColor;
     }
 }
 
 - (UIColor *)calendar:(FSCalendar *)calendar appearance:(FSCalendarAppearance *)appearance subtitleDefaultColorForDate:(NSDate *)date {
     if ([self pastOrPresent:date]) {
         // color normally
-        return self.cellBgColor;
+        return cc.cellBgColor;
     }
     else {
-        return self.cellDisabledBgColor;
+        return cc.cellDisabledBgColor;
     }
 }
 
 - (UIColor *)calendar:(FSCalendar *)calendar appearance:(FSCalendarAppearance *)appearance subtitleSelectionColorForDate:(NSDate *)date {
-    return self.textSelectedColor;
+    return cc.textSelectedColor;
 }
 
 - (UIColor *)calendar:(FSCalendar *)calendar appearance:(FSCalendarAppearance *)appearance titleDefaultColorForDate:(NSDate *)date {
     if ([self pastOrPresent:date]) {
         // color normally
-        return self.textDefaultColor;
+        return cc.textDefaultColor;
     }
     else {
-        return self.textDisabledColor;
+        return cc.textDisabledColor;
     }
 }
 
 - (UIColor *)calendar:(FSCalendar *)calendar appearance:(FSCalendarAppearance *)appearance titleSelectionColorForDate:(NSDate *)date {
-    return self.textSelectedColor;
+    return cc.textSelectedColor;
 }
 
 - (NSDate *)maximumDateForCalendar:(FSCalendar *)calendar {

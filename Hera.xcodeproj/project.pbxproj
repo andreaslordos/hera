@@ -10,6 +10,7 @@
 		2B599417BBDCEA3D154F3B71 /* Pods_Hera.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B11FF632FBF9EB7B982B28D /* Pods_Hera.framework */; };
 		BF078DBC287E511900608897 /* LastPeriodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF078DBB287E511900608897 /* LastPeriodViewController.m */; };
 		BF7863C72885FEA600417C36 /* LoggingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7863C62885FEA600417C36 /* LoggingViewController.m */; };
+		BF7863CB28862B3E00417C36 /* cc.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7863CA28862B3E00417C36 /* cc.m */; };
 		BF9054A7287E2F5A0061001C /* TermsAndConditionsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9054A6287E2F5A0061001C /* TermsAndConditionsVC.m */; };
 		BFBD3D5228820D1C008743B8 /* StartupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFBD3D5128820D1C008743B8 /* StartupViewController.m */; };
 		BFBD3D5B2885CD40008743B8 /* LoginScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFBD3D5A2885CD40008743B8 /* LoginScreenViewController.m */; };
@@ -62,6 +63,8 @@
 		BF078DBB287E511900608897 /* LastPeriodViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LastPeriodViewController.m; sourceTree = "<group>"; };
 		BF7863C52885FEA600417C36 /* LoggingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoggingViewController.h; sourceTree = "<group>"; };
 		BF7863C62885FEA600417C36 /* LoggingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoggingViewController.m; sourceTree = "<group>"; };
+		BF7863C928862B3E00417C36 /* cc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = cc.h; sourceTree = "<group>"; };
+		BF7863CA28862B3E00417C36 /* cc.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = cc.m; sourceTree = "<group>"; };
 		BF9054A5287E2F5A0061001C /* TermsAndConditionsVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TermsAndConditionsVC.h; sourceTree = "<group>"; };
 		BF9054A6287E2F5A0061001C /* TermsAndConditionsVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TermsAndConditionsVC.m; sourceTree = "<group>"; };
 		BFBD3D5028820D1C008743B8 /* StartupViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StartupViewController.h; sourceTree = "<group>"; };
@@ -151,10 +154,20 @@
 		BF7863C42885FE8E00417C36 /* Main Flow */ = {
 			isa = PBXGroup;
 			children = (
-				BF7863C52885FEA600417C36 /* LoggingViewController.h */,
-				BF7863C62885FEA600417C36 /* LoggingViewController.m */,
+				BF7863C828862AED00417C36 /* Logging */,
 			);
 			path = "Main Flow";
+			sourceTree = "<group>";
+		};
+		BF7863C828862AED00417C36 /* Logging */ = {
+			isa = PBXGroup;
+			children = (
+				BF7863C52885FEA600417C36 /* LoggingViewController.h */,
+				BF7863C62885FEA600417C36 /* LoggingViewController.m */,
+				BF7863C928862B3E00417C36 /* cc.h */,
+				BF7863CA28862B3E00417C36 /* cc.m */,
+			);
+			path = Logging;
 			sourceTree = "<group>";
 		};
 		BF9054A4287E2F220061001C /* ViewControllers */ = {
@@ -498,6 +511,7 @@
 				BFD11BE3287F4C940006E93E /* FaceIdSetupViewController.m in Sources */,
 				BF7863C72885FEA600417C36 /* LoggingViewController.m in Sources */,
 				BFD3184E287E2279003E85F3 /* AppDelegate.m in Sources */,
+				BF7863CB28862B3E00417C36 /* cc.m in Sources */,
 				BFD11BE92880BF840006E93E /* NotificationPermsViewController.m in Sources */,
 				BFD31851287E2279003E85F3 /* SceneDelegate.m in Sources */,
 			);
