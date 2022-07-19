@@ -13,12 +13,30 @@
 @property (weak, nonatomic) IBOutlet UIButton *periodButton;
 @property (weak, nonatomic) IBOutlet UIButton *emotionButton;
 @property (weak, nonatomic) IBOutlet UIButton *painButton;
-
+@property (weak, nonatomic) IBOutlet UIButton *option1;
+@property (weak, nonatomic) IBOutlet UIButton *option2;
+@property (weak, nonatomic) IBOutlet UIButton *option3;
+@property (weak, nonatomic) IBOutlet UIButton *option4;
+@property (weak, nonatomic) IBOutlet UIButton *infobutton;
+- (IBAction)didTapPeriodButton:(id)sender;
+- (IBAction)didTapPainButton:(id)sender;
+- (IBAction)didTapEmotionButton:(id)sender;
+- (IBAction)didTapOption1:(id)sender;
+- (IBAction)didTapOption2:(id)sender;
+- (IBAction)didTapOption3:(id)sender;
+- (IBAction)didTapOption4:(id)sender;
 @end
 
 @implementation LoggingViewController
 
-- (void)setAppearance {
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    _maxDate = [NSDate date];
+    [self setAppearanceButtons];
+    [self setAppearanceCalendar];
+}
+
+- (void)setAppearanceCalendar {
     
     // create calendar object
     FSCalendar *calendar = [[FSCalendar alloc] initWithFrame:CGRectMake(0, 40, self.view.frame.size.width - 20, 400)];
@@ -42,13 +60,30 @@
     calendar.dataSource = self;
     calendar.delegate = self;
     [self.view addSubview:calendar];
+    [self.view sendSubviewToBack:calendar];
     self.calendar = calendar;
 }
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    _maxDate = [NSDate date];
-    [self setAppearance];
+
+- (void)setButtonColor:(UIColor*)color {
+    _option1.layer.borderColor = color.CGColor;
+    _option1.tintColor = color;
+    _option2.layer.borderColor = color.CGColor;
+    _option2.tintColor = color;
+    _option3.layer.borderColor = color.CGColor;
+    _option3.tintColor = color;
+    _option4.layer.borderColor = color.CGColor;
+    _option4.tintColor = color;
+    _infobutton.tintColor = color;
+}
+
+- (void)setAppearanceButtons {
+    [self setButtonColor:cc.bleedingButtonBg];
+    _option1.layer.borderWidth = 4.;
+    _option2.layer.borderWidth = 4.;
+    _option3.layer.borderWidth = 4.;
+    _option4.layer.borderWidth = 4.;
+    [self setInfoButtonText:@"Bleeding"];
 }
 
 - (BOOL)pastOrPresent:(NSDate *)date {
@@ -110,15 +145,17 @@
     return _maxDate; // set today's date as maximum selectable date
 }
 
-- (IBAction)didTapPeriodButton:(id)sender {
-}
+- (void)setInfoButtonText:(NSString *)desc {
+    NSString *fullStr = [desc stringByAppendingString:@"  i"];
+    NSMutableAttributedString *attributedText = [[NSMutableAttributedString alloc] initWithString: fullStr];
+ 
+    NSRange boldRange = [fullStr rangeOfString:fullStr];
+    UIFont *boldFont = [UIFont fontWithName:@"Helvetica-bold" size: 15];
+    [attributedText addAttribute:NSFontAttributeName value:boldFont range: boldRange];
 
-- (IBAction)didTapEmotionButton:(id)sender {
-}
+    [_infobutton setAttributedTitle:attributedText forState:UIControlStateNormal];
 
-- (IBAction)didTapPainButton:(id)sender {
 }
-
 
 /*
 #pragma mark - Navigation
@@ -130,4 +167,56 @@
 }
 */
 
+- (void)resetButtons {
+    _option1.backgroundColor = [UIColor systemBackgroundColor];
+    _option2.backgroundColor = [UIColor systemBackgroundColor];
+    _option3.backgroundColor = [UIColor systemBackgroundColor];
+    _option4.backgroundColor = [UIColor systemBackgroundColor];
+    _option1.tintColor = [UIColor colorWithCGColor:_option1.layer.borderColor];
+    _option2.tintColor = [UIColor colorWithCGColor:_option2.layer.borderColor];
+    _option3.tintColor = [UIColor colorWithCGColor:_option3.layer.borderColor];
+    _option4.tintColor = [UIColor colorWithCGColor:_option4.layer.borderColor];
+}
+
+- (IBAction)didTapOption4:(id)sender {
+    [self resetButtons];
+    _option4.backgroundColor = [UIColor colorWithCGColor:_option4.layer.borderColor];
+    _option4.tintColor = [UIColor whiteColor];
+}
+
+- (IBAction)didTapOption3:(id)sender {
+    [self resetButtons];
+    _option3.backgroundColor = [UIColor colorWithCGColor:_option3.layer.borderColor];
+    _option3.tintColor = [UIColor whiteColor];
+}
+
+- (IBAction)didTapOption2:(id)sender {
+    [self resetButtons];
+    _option2.backgroundColor = [UIColor colorWithCGColor:_option2.layer.borderColor];
+    _option2.tintColor = [UIColor whiteColor];
+}
+
+- (IBAction)didTapOption1:(id)sender {
+    [self resetButtons];
+    _option1.backgroundColor = [UIColor colorWithCGColor:_option1.layer.borderColor];
+    _option1.tintColor = [UIColor whiteColor];
+}
+
+- (IBAction)didTapEmotionButton:(id)sender {
+    [self setButtonColor:cc.emotionButtonBg];
+    [self setInfoButtonText:@"Mood"];
+    [self resetButtons];
+}
+
+- (IBAction)didTapPainButton:(id)sender {
+    [self setButtonColor:cc.painButtonBg];
+    [self setInfoButtonText:@"Pain"];
+    [self resetButtons];
+}
+
+- (IBAction)didTapPeriodButton:(id)sender {
+    [self setButtonColor:cc.bleedingButtonBg];
+    [self setInfoButtonText:@"Bleeding"];
+    [self resetButtons];
+}
 @end
