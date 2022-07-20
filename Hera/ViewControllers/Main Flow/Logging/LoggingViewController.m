@@ -9,7 +9,7 @@
 
 @interface LoggingViewController () <FSCalendarDelegate, FSCalendarDelegateAppearance, FSCalendarDataSource>
 
-@property (strong, atomic) NSDate *maxDate;
+@property (strong, atomic) NSDate *today;
 @property (strong, nonatomic) NSString *lastTypeSelected;
 @property (strong, nonatomic) NSString *lastOptionSelected;
 @property (weak, nonatomic) IBOutlet UIButton *periodButton;
@@ -39,7 +39,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _maxDate = [NSDate date];
+    _today = [NSDate date];
     [self setAppearanceButtons];
     [self setAppearanceCalendar];
 }
@@ -49,8 +49,11 @@
     // create calendar object
     FSCalendar *calendar = [[FSCalendar alloc] initWithFrame:CGRectMake(0, 40, self.view.frame.size.width - 20, 400)];
     
+    calendar.dataSource = self;
+    calendar.delegate = self;
+    
     // define interaction and scope of calendar object
-    calendar.scrollDirection = FSCalendarScrollDirectionVertical;
+    calendar.scrollDirection = FSCalendarScrollDirectionHorizontal;
     calendar.scope = FSCalendarScopeWeek; // show only previous week
     calendar.firstWeekday = 2; // set first day to monday
     // set default appearance settings
@@ -62,10 +65,9 @@
     calendar.appearance.titleOffset = CGPointMake(9., 15.); // set day number to bottom right corner
     calendar.appearance.subtitleOffset = CGPointMake(-10., -15.); // set month to top left corner
     calendar.center = CGPointMake(CGRectGetMidX(self.view.bounds), calendar.center.y); // center calendar
-    [calendar selectDate:_maxDate];
+    calendar.appearance.headerTitleColor = [UIColor blackColor];
+    [calendar selectDate:_today];
     // add calendar to view
-    calendar.dataSource = self;
-    calendar.delegate = self;
     [self.view addSubview:calendar];
     [self.view sendSubviewToBack:calendar];
     self.calendar = calendar;
@@ -95,7 +97,7 @@
 }
 
 - (BOOL)pastOrPresent:(NSDate *)date {
-    NSComparisonResult result = [date compare:_maxDate];
+    NSComparisonResult result = [date compare:_today];
     if (result==NSOrderedAscending) {
         return YES;
     }
@@ -150,7 +152,7 @@
 }
 
 - (NSDate *)maximumDateForCalendar:(FSCalendar *)calendar {
-    return _maxDate; // set today's date as maximum selectable date
+    return _today; // set today's date as maximum selectable date
 }
 
 - (void)setInfoButtonText:(NSString *)desc {
