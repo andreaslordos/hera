@@ -478,8 +478,23 @@
                     <view key="view" contentMode="scaleToFill" id="TpW-NZ-4GV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jcC-Z2-hXT" customClass="MSGradientCircularSlider" customModule="MSCircularSlider">
+                                <rect key="frame" x="30" y="271" width="354" height="300"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="H6f-dJ-FUG"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="j6p-6C-E8D"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="j6p-6C-E8D" firstAttribute="trailing" secondItem="jcC-Z2-hXT" secondAttribute="trailing" constant="30" id="XSl-ca-Cw8"/>
+                            <constraint firstItem="jcC-Z2-hXT" firstAttribute="centerY" secondItem="TpW-NZ-4GV" secondAttribute="centerY" id="ehe-Ja-0QT"/>
+                            <constraint firstItem="jcC-Z2-hXT" firstAttribute="centerX" secondItem="TpW-NZ-4GV" secondAttribute="centerX" id="gjy-i0-Ym2"/>
+                            <constraint firstItem="jcC-Z2-hXT" firstAttribute="leading" secondItem="j6p-6C-E8D" secondAttribute="leading" constant="30" id="srH-bF-KM7"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Cycle" image="leaf.arrow.circlepath" catalog="system" selectedImage="leaf.arrow.circlepath" id="rE6-fi-yIu"/>
                 </viewController>

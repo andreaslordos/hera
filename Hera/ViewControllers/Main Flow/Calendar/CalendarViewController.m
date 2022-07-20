@@ -55,40 +55,38 @@
     self.calendar = calendar;
 }
 
-- (BOOL)pastOrPresent:(NSDate *)date {
-    NSComparisonResult result = [date compare:_today];
-    if (result==NSOrderedAscending) {
-        return YES;
-    }
-    else {
-        return NO;
-    }
-}
-
 - (NSString *)calendar:(FSCalendar *)calendar subtitleForDate:(NSDate *)date {
     NSDateFormatter *dateFor = [[NSDateFormatter alloc]init];
     [dateFor setDateFormat:@"MMM"];
     return [dateFor stringFromDate:date];
 }
 
+- (BOOL)isSameDay:(NSDate*)date1 otherDay:(NSDate*)date2 {
+    NSCalendar* calendar = [NSCalendar currentCalendar];
+
+    unsigned unitFlags = NSCalendarUnitYear | NSCalendarUnitMonth |  NSCalendarUnitDay;
+    NSDateComponents* comp1 = [calendar components:unitFlags fromDate:date1];
+    NSDateComponents* comp2 = [calendar components:unitFlags fromDate:date2];
+
+    return [comp1 day]   == [comp2 day] &&
+    [comp1 month] == [comp2 month] &&
+    [comp1 year]  == [comp2 year];}
 
 - (UIColor *)calendar:(FSCalendar *)calendar appearance:(FSCalendarAppearance *)appearance fillDefaultColorForDate:(NSDate *)date {
-    if ([self pastOrPresent:date]) {
-        // color normally
-        return cc_calendar.cellBgColor;
+    if ([self isSameDay:_today otherDay:date]) {
+        return cc_calendar.cellTodayBgColor;
     }
     else {
-        return cc_calendar.cellDisabledBgColor;
+        return cc_calendar.cellBgColor;
     }
 }
 
 - (UIColor *)calendar:(FSCalendar *)calendar appearance:(FSCalendarAppearance *)appearance subtitleDefaultColorForDate:(NSDate *)date {
-    if ([self pastOrPresent:date]) {
-        // color normally
-        return cc_calendar.cellBgColor;
+    if ([self isSameDay:_today otherDay:date]) {
+        return cc_calendar.cellTodayBgColor;
     }
     else {
-        return cc_calendar.cellDisabledBgColor;
+        return cc_calendar.cellBgColor;
     }
 }
 
@@ -97,13 +95,7 @@
 }
 
 - (UIColor *)calendar:(FSCalendar *)calendar appearance:(FSCalendarAppearance *)appearance titleDefaultColorForDate:(NSDate *)date {
-    if ([self pastOrPresent:date]) {
-        // color normally
-        return cc_calendar.textDefaultColor;
-    }
-    else {
-        return cc_calendar.textDisabledColor;
-    }
+    return cc_calendar.textDefaultColor;
 }
 
 - (UIColor *)calendar:(FSCalendar *)calendar appearance:(FSCalendarAppearance *)appearance titleSelectionColorForDate:(NSDate *)date {

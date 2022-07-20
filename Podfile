@@ -7,6 +7,7 @@ target 'Hera' do
 
   # Pods for Hera
     pod 'FSCalendar'
+    pod 'MSCircularSlider'
 
   target 'HeraTests' do
     inherit! :search_paths

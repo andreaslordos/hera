@@ -9,12 +9,12 @@
 
 @implementation cc_calendar
 +(UIColor*)cellBgColor {
-    return [UIColor lightGrayColor];
+    return [UIColor colorWithRed:227.0f/255.0f
+                            green:227.0f/255.0f
+                            blue:227.0f/255.0f
+                            alpha:1.0f];
 }
 
-+(UIColor*)cellDisabledBgColor {
-    return [UIColor grayColor];
-}
 
 +(UIColor*)textSelectedColor {
     return [UIColor whiteColor];
@@ -24,8 +24,7 @@
     return [UIColor blackColor];
 }
 
-+(UIColor*)textDisabledColor {
-    return [UIColor lightGrayColor];
++(UIColor*)cellTodayBgColor {
+    return [UIColor yellowColor];
 }
-
 @end

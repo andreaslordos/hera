@@ -10,7 +10,10 @@
 @implementation cc
 
 +(UIColor*)cellBgColor {
-    return [UIColor lightGrayColor];
+    return [UIColor colorWithRed:227.0f/255.0f
+                            green:227.0f/255.0f
+                            blue:227.0f/255.0f
+                            alpha:1.0f];
 }
 
 +(UIColor*)cellDisabledBgColor {
@@ -27,6 +30,13 @@
 
 +(UIColor*)textDisabledColor {
     return [UIColor lightGrayColor];
+}
+
++(UIColor*)cellSelectedColor {
+    return [UIColor colorWithRed:32./255.
+                                green:178./255.
+                                blue:211./255.
+                                alpha:1.];
 }
 
 +(UIColor*)bleedingButtonBg {
@@ -49,5 +59,7 @@
                                       blue:214/255.0
                                      alpha:1];
 }
+
+
 
 @end

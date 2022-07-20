@@ -12,6 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface cc : UIColor
 +(UIColor*)cellBgColor;
 +(UIColor*)cellDisabledBgColor;
++(UIColor*)cellSelectedColor;
 +(UIColor*)textSelectedColor;
 +(UIColor*)textDefaultColor;
 +(UIColor*)textDisabledColor;

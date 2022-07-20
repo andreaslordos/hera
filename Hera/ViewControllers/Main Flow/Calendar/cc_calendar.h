@@ -11,10 +11,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface cc_calendar : NSObject
 +(UIColor*)cellBgColor;
-+(UIColor*)cellDisabledBgColor;
 +(UIColor*)textSelectedColor;
 +(UIColor*)textDefaultColor;
-+(UIColor*)textDisabledColor;
++(UIColor*)cellTodayBgColor;
 @end
 
 NS_ASSUME_NONNULL_END
