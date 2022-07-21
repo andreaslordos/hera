@@ -486,6 +486,13 @@
                                     <constraint firstAttribute="height" constant="354" id="Jot-KY-Nw4"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sun-jN-IA4">
+                                <rect key="frame" x="186" y="102" width="42" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="j6p-6C-E8D"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -498,12 +505,13 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Cycle" image="leaf.arrow.circlepath" catalog="system" selectedImage="leaf.arrow.circlepath" id="rE6-fi-yIu"/>
                     <connections>
+                        <outlet property="dayCounter" destination="sun-jN-IA4" id="tP7-h1-5tJ"/>
                         <outlet property="slider" destination="HLD-pP-V4n" id="cqZ-le-090"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ht9-eh-eA9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1516" y="1094"/>
+            <point key="canvasLocation" x="1515.9420289855075" y="1093.5267857142856"/>
         </scene>
         <!--Login Screen View Controller-->
         <scene sceneID="z9Q-8r-AAs">
