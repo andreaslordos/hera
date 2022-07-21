@@ -24,7 +24,7 @@
 - (void)setAppearanceCalendar {
     
     // create calendar object
-    FSCalendar *calendar = [[FSCalendar alloc] initWithFrame:CGRectMake(0, 40, self.view.frame.size.width - 20, self.view.frame.size.height - 80)];
+    FSCalendar *calendar = [[FSCalendar alloc] initWithFrame:CGRectMake(0, 80, self.view.frame.size.width - 20, self.view.frame.size.height - 80)];
     
     calendar.dataSource = self;
     calendar.delegate = self;

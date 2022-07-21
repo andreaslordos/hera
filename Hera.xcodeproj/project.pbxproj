@@ -734,6 +734,7 @@
 				DEVELOPMENT_TEAM = 4TPXP6N79S;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Hera/Info.plist;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "The app uses Face ID to allow users to authenticate themselves";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -745,7 +746,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.andreaslordos.Hera;
+				PRODUCT_BUNDLE_IDENTIFIER = com.andreaslordos.Heraa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "Hera/ViewControllers/Main Flow/Cycle/Hera-Bridging-Header.h";
@@ -767,6 +768,7 @@
 				DEVELOPMENT_TEAM = 3P2W72R536;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Hera/Info.plist;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "The app uses Face ID to allow users to authenticate themselves";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

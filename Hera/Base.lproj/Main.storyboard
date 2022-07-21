@@ -273,7 +273,7 @@
                                         <rect key="frame" x="124.66666666666666" y="0.0" width="104.66666666666666" height="100"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" image="smiley" catalog="system">
+                                        <buttonConfiguration key="configuration" style="filled" image="face.smiling" catalog="system">
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="baseBackgroundColor" systemColor="systemOrangeColor"/>
                                         </buttonConfiguration>
@@ -593,7 +593,7 @@
                             <constraint firstItem="vx1-by-Wdh" firstAttribute="leading" secondItem="j6p-6C-E8D" secondAttribute="leading" id="tQd-Ar-fj2"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Cycle" image="leaf.arrow.circlepath" catalog="system" selectedImage="leaf.arrow.circlepath" id="rE6-fi-yIu"/>
+                    <tabBarItem key="tabBarItem" title="Cycle" image="leaf.arrow.circlepath" catalog="system" selectedImage="leaf.arrow.triangle.circlepath" id="rE6-fi-yIu"/>
                     <connections>
                         <outlet property="bleedingLabel" destination="I9M-rp-aNF" id="4p7-fu-56x"/>
                         <outlet property="dayCounter" destination="sun-jN-IA4" id="tP7-h1-5tJ"/>
@@ -971,15 +971,16 @@
         <image name="circle.hexagonpath" catalog="system" width="128" height="112"/>
         <image name="cross.circle" catalog="system" width="128" height="121"/>
         <image name="drop" catalog="system" width="101" height="128"/>
+        <image name="face.smiling" catalog="system" width="128" height="121"/>
         <image name="faceid" catalog="system" width="128" height="115"/>
         <image name="gearshape" catalog="system" width="128" height="121"/>
         <image name="hera_appicon" width="352" height="354"/>
         <image name="leaf.arrow.circlepath" catalog="system" width="121" height="128"/>
+        <image name="leaf.arrow.triangle.circlepath" catalog="system" width="121" height="128"/>
         <image name="lines.measurement.horizontal" catalog="system" width="128" height="92"/>
         <image name="meditation" width="512" height="512"/>
         <image name="notification" width="512" height="512"/>
         <image name="plus" catalog="system" width="128" height="113"/>
-        <image name="smiley" catalog="system" width="128" height="121"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
