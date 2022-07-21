@@ -13,6 +13,7 @@
 		BF7863CB28862B3E00417C36 /* cc.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7863CA28862B3E00417C36 /* cc.m */; };
 		BF7863CF28887CA600417C36 /* CalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7863CE28887CA600417C36 /* CalendarViewController.m */; };
 		BF7863D228887D8300417C36 /* cc_calendar.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7863D128887D8300417C36 /* cc_calendar.m */; };
+		BF7863DA2889B6A100417C36 /* CycleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7863D92889B6A100417C36 /* CycleViewController.swift */; };
 		BF9054A7287E2F5A0061001C /* TermsAndConditionsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9054A6287E2F5A0061001C /* TermsAndConditionsVC.m */; };
 		BFBD3D5228820D1C008743B8 /* StartupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFBD3D5128820D1C008743B8 /* StartupViewController.m */; };
 		BFBD3D5B2885CD40008743B8 /* LoginScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFBD3D5A2885CD40008743B8 /* LoginScreenViewController.m */; };
@@ -71,6 +72,8 @@
 		BF7863CE28887CA600417C36 /* CalendarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalendarViewController.m; sourceTree = "<group>"; };
 		BF7863D028887D8300417C36 /* cc_calendar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = cc_calendar.h; sourceTree = "<group>"; };
 		BF7863D128887D8300417C36 /* cc_calendar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = cc_calendar.m; sourceTree = "<group>"; };
+		BF7863D82889B6A100417C36 /* Hera-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Hera-Bridging-Header.h"; sourceTree = "<group>"; };
+		BF7863D92889B6A100417C36 /* CycleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CycleViewController.swift; sourceTree = "<group>"; };
 		BF9054A5287E2F5A0061001C /* TermsAndConditionsVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TermsAndConditionsVC.h; sourceTree = "<group>"; };
 		BF9054A6287E2F5A0061001C /* TermsAndConditionsVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TermsAndConditionsVC.m; sourceTree = "<group>"; };
 		BFBD3D5028820D1C008743B8 /* StartupViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StartupViewController.h; sourceTree = "<group>"; };
@@ -160,6 +163,7 @@
 		BF7863C42885FE8E00417C36 /* Main Flow */ = {
 			isa = PBXGroup;
 			children = (
+				BF7863D32888B1C300417C36 /* Cycle */,
 				BF7863CC28887C8700417C36 /* Calendar */,
 				BF7863C828862AED00417C36 /* Logging */,
 			);
@@ -186,6 +190,22 @@
 				BF7863D128887D8300417C36 /* cc_calendar.m */,
 			);
 			path = Calendar;
+			sourceTree = "<group>";
+		};
+		BF7863D32888B1C300417C36 /* Cycle */ = {
+			isa = PBXGroup;
+			children = (
+				BF7863D92889B6A100417C36 /* CycleViewController.swift */,
+				BF7863D82889B6A100417C36 /* Hera-Bridging-Header.h */,
+			);
+			path = Cycle;
+			sourceTree = "<group>";
+		};
+		BF7863D72889B5FF00417C36 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		BF9054A4287E2F220061001C /* ViewControllers */ = {
@@ -243,6 +263,7 @@
 		BFD3184B287E2279003E85F3 /* Hera */ = {
 			isa = PBXGroup;
 			children = (
+				BF7863D72889B5FF00417C36 /* Views */,
 				BF9054A4287E2F220061001C /* ViewControllers */,
 				BFD3184C287E2279003E85F3 /* AppDelegate.h */,
 				BFD3184D287E2279003E85F3 /* AppDelegate.m */,
@@ -351,6 +372,7 @@
 				TargetAttributes = {
 					BFD31848287E2279003E85F3 = {
 						CreatedOnToolsVersion = 13.4.1;
+						LastSwiftMigration = 1340;
 					};
 					BFD31866287E227A003E85F3 = {
 						CreatedOnToolsVersion = 13.4.1;
@@ -526,6 +548,7 @@
 				BFD11BE6287F9B700006E93E /* Utilities.m in Sources */,
 				BFBD3D5228820D1C008743B8 /* StartupViewController.m in Sources */,
 				BF078DBC287E511900608897 /* LastPeriodViewController.m in Sources */,
+				BF7863DA2889B6A100417C36 /* CycleViewController.swift in Sources */,
 				BFD3185A287E2279003E85F3 /* Hera.xcdatamodeld in Sources */,
 				BFD11BE3287F4C940006E93E /* FaceIdSetupViewController.m in Sources */,
 				BF7863C72885FEA600417C36 /* LoggingViewController.m in Sources */,
@@ -705,6 +728,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4TPXP6N79S;
@@ -724,6 +748,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.andreaslordos.Hera;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Hera/ViewControllers/Main Flow/Cycle/Hera-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -734,6 +761,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3P2W72R536;
@@ -753,6 +781,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.andreaslordos.Hera;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Hera/ViewControllers/Main Flow/Cycle/Hera-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -761,6 +791,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4CC8DA341A70E853C5141322 /* Pods-HeraTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -780,6 +811,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 38A0C0FE7E60875DF73BECBD /* Pods-HeraTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -799,6 +831,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E0D0B7BC09F14B4438396508 /* Pods-Hera-HeraUITests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4TPXP6N79S;
@@ -816,6 +849,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 47E0EDD900263C9EF3D88B22 /* Pods-Hera-HeraUITests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4TPXP6N79S;
