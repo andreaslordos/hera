@@ -14,6 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 +(UIColor*)textSelectedColor;
 +(UIColor*)textDefaultColor;
 +(UIColor*)cellTodayBgColor;
++(UIColor*)cellSelectedColor;
 @end
 
 NS_ASSUME_NONNULL_END

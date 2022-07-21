@@ -35,7 +35,7 @@
     calendar.firstWeekday = 2; // set first day to monday
     
     // set default appearance settings
-    calendar.appearance.selectionColor = [UIColor blueColor]; // set selection color to blue
+    calendar.appearance.selectionColor = cc_calendar.cellSelectedColor; // set selection color to blue
     calendar.appearance.headerMinimumDissolvedAlpha = 0.0; // hide header details
     calendar.appearance.caseOptions = FSCalendarCaseOptionsWeekdayUsesSingleUpperCase; // Mon -> M, Tue -> T, etc.
     calendar.appearance.borderRadius = 0.0; // make cells rectangular

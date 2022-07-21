@@ -20,6 +20,13 @@
     return [UIColor whiteColor];
 }
 
++(UIColor*)cellSelectedColor {
+    return [UIColor colorWithRed:32./255.
+                           green:178./255.
+                           blue:211./255.
+                           alpha:1.];
+}
+
 +(UIColor*)textDefaultColor {
     return [UIColor blackColor];
 }
