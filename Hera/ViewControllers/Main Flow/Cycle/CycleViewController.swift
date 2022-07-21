@@ -10,12 +10,16 @@ import MSCircularSlider
 
 class CycleViewController: UIViewController, MSCircularSliderProtocol, MSCircularSliderDelegate {
     
-    func circularSlider(_ slider: MSCircularSlider, valueChangedTo value: Double, fromUser: Bool) {
-        <#code#>
-    }
-    
 
     @IBOutlet weak var slider: MSCircularSlider!
+    
+    var cycleLength: Int = 28 // change this to get data frmo predictions
+    var cycleStartDate: Date = Date()
+    var currentDayInCycle: Int = -1
+    var ovulationPeriod = (11, 15)
+    var periodDuration = 4
+    var cycleEndDate: Date = Date()
+    var valueBetweenLabels = 0.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,25 +29,47 @@ class CycleViewController: UIViewController, MSCircularSliderProtocol, MSCircula
     }
     
     func createSlider() {
+        createLabels()
+        
         self.slider.currentValue = 60.0
-        self.slider.maximumAngle = 300.0
+        self.slider.maximumAngle = 320.0
+        
+        self.valueBetweenLabels = 100 / Double(cycleLength)
+        
+        self.slider.lineWidth = 20
+        
+        //self.slider.snapToLabels = true
+        
         self.slider.filledColor = UIColor(red: 127 / 255.0, green: 168 / 255.0, blue: 198 / 255.0, alpha: 1.0)
         self.slider.unfilledColor = UIColor(red: 80 / 255.0, green: 148 / 255.0, blue: 95 / 255.0, alpha: 1.0)
         self.slider.handleType = .doubleCircle
         self.slider.handleColor = UIColor(red: 35 / 255.0, green: 69 / 255.0, blue: 96 / 255.0, alpha: 1.0)
         self.slider.handleEnlargementPoints = 12
-        self.slider.labels = ["1", "2", "3", "4", "5"]
+        
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func createLabels() {
+        var labels = ["1"]
+        for x in 2...cycleLength {
+            labels.append(String(x))
+        }
+        self.slider.labels = labels
+        self.slider.labelColor = UIColor .systemBackground
     }
-    */
+    
+    
+    // snap to cycle days instead of being able to "float" between them
+    func circularSlider(_ slider: MSCircularSlider, valueChangedTo value: Double, fromUser: Bool) {
+        if fromUser {
+            if (value.truncatingRemainder(dividingBy: valueBetweenLabels)  < (valueBetweenLabels / 2.0)) {
+                self.slider.currentValue = value - value.truncatingRemainder(dividingBy: valueBetweenLabels)
+            }
+            else {
+                    self.slider.currentValue = value + (valueBetweenLabels - value.truncatingRemainder(dividingBy: valueBetweenLabels))
+            }
+        }
+        print(value)
+    }
 
 }

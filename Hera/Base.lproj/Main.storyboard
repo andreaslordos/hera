@@ -479,14 +479,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HLD-pP-V4n" customClass="MSCircularSlider">
-                                <rect key="frame" x="87" y="357" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HLD-pP-V4n" customClass="MSCircularSlider">
+                                <rect key="frame" x="30" y="244" width="354" height="354"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="354" id="Jot-KY-Nw4"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="j6p-6C-E8D"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="HLD-pP-V4n" firstAttribute="centerX" secondItem="TpW-NZ-4GV" secondAttribute="centerX" id="hQi-Ac-Rk6"/>
+                            <constraint firstItem="HLD-pP-V4n" firstAttribute="leading" secondItem="j6p-6C-E8D" secondAttribute="leading" constant="30" id="kMh-aG-D8M"/>
+                            <constraint firstItem="HLD-pP-V4n" firstAttribute="centerY" secondItem="TpW-NZ-4GV" secondAttribute="centerY" id="lhg-oS-qMm"/>
+                            <constraint firstItem="j6p-6C-E8D" firstAttribute="trailing" secondItem="HLD-pP-V4n" secondAttribute="trailing" constant="30" id="tEJ-z7-Q0I"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Cycle" image="leaf.arrow.circlepath" catalog="system" selectedImage="leaf.arrow.circlepath" id="rE6-fi-yIu"/>
                     <connections>
