@@ -10,6 +10,7 @@
 @interface CalendarViewController () <FSCalendarDelegate, FSCalendarDelegateAppearance, FSCalendarDataSource>
 
 @property (strong, atomic) NSDate *today;
+@property (weak, nonatomic) IBOutlet UINavigationItem *titleBar;
 
 @end
 
@@ -116,5 +117,49 @@
     NSDateComponents *offsetComponents = [[NSDateComponents alloc] init];
     [offsetComponents setYear:-1];
     return [gregorian dateByAddingComponents:offsetComponents toDate:_today options:0];
+}
+
+- (void)calendar:(FSCalendar *)calendar didSelectDate:(NSDate *)date atMonthPosition:(FSCalendarMonthPosition)monthPosition {
+    NSCalendar *diff_calendar = [NSCalendar currentCalendar];
+    //declare your unitFlags
+    int unitFlags = NSCalendarUnitWeekOfYear | NSCalendarUnitDay | NSCalendarUnitMonth;
+
+    NSDateComponents *dateComponents = [diff_calendar components:unitFlags fromDate:date  toDate:_today options:0];
+
+    long monthsInBetween = [dateComponents month];
+    long weeksInBetween = [dateComponents weekOfYear];
+    long daysInBetween = [dateComponents day];
+    
+    NSString *descriptor = @"";
+    long length = 0;
+    if (monthsInBetween >= 12) {
+        descriptor = @"year";
+        length = 1;
+    }
+    else if (monthsInBetween > 0) {
+        descriptor = @"month";
+        length = monthsInBetween;
+    }
+    else if (weeksInBetween > 0) {
+        descriptor = @"week";
+        length = weeksInBetween;
+    }
+    else if (daysInBetween > 0) {
+        descriptor = @"day";
+        length = daysInBetween;
+    }
+    else {
+        [_titleBar setTitle:@"Today"];
+        return;
+    }
+    
+    if (length > 1) {
+        descriptor = [descriptor stringByAppendingString:@"s"];
+    }
+    descriptor = [[NSString stringWithFormat:@"%lu ", length] stringByAppendingString:descriptor];
+    
+    NSString *title = [descriptor stringByAppendingString:@" ago"];
+    
+    [_titleBar setTitle:title];
 }
 @end

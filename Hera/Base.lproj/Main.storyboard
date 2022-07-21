@@ -241,6 +241,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Calendar" image="calendar" catalog="system" selectedImage="calendar" id="mXx-fY-FeY"/>
+                    <connections>
+                        <outlet property="titleBar" destination="LTh-bh-28L" id="zfF-mk-3oK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EOj-0J-S4m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -441,7 +444,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                                 <color key="barTintColor" systemColor="systemBackgroundColor"/>
                                 <items>
-                                    <navigationItem title="Logging" id="gTG-v4-O42">
+                                    <navigationItem title="Tracking" id="gTG-v4-O42">
                                         <barButtonItem key="rightBarButtonItem" style="plain" id="zKB-v2-Kp2">
                                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="7P4-L3-N7U">
                                                 <rect key="frame" x="339.33333333333331" y="5" width="54.666666666666686" height="34.333333333333336"/>
