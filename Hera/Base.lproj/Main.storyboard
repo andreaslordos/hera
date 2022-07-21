@@ -546,28 +546,46 @@
                                     <navigationItem title="Your Current Cycle" id="Asp-BG-jOx"/>
                                 </items>
                             </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bleeding for the next 3 days" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I9M-rp-aNF">
-                                <rect key="frame" x="101" y="86" width="213" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fertile window in the 4 days" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lyx-td-fuN">
-                                <rect key="frame" x="101" y="116" width="213" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="0Od-DR-cAN">
+                                <rect key="frame" x="0.0" y="106.00000000000001" width="414" height="48.666666666666671"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I9M-rp-aNF">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="20.333333333333332"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Bleeding for the next 3 days">
+                                                <attributes>
+                                                    <font key="NSFont" metaFont="system" size="17"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lyx-td-fuN">
+                                        <rect key="frame" x="0.0" y="28.333333333333343" width="414" height="20.333333333333329"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Fertile window in 4 days">
+                                                <attributes>
+                                                    <font key="NSFont" metaFont="system" size="17"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="j6p-6C-E8D"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="vx1-by-Wdh" firstAttribute="trailing" secondItem="j6p-6C-E8D" secondAttribute="trailing" id="Bet-nt-ddl"/>
+                            <constraint firstItem="0Od-DR-cAN" firstAttribute="top" secondItem="vx1-by-Wdh" secondAttribute="bottom" constant="50" id="C9P-jT-47q"/>
                             <constraint firstItem="mRG-pu-Uti" firstAttribute="centerX" secondItem="TpW-NZ-4GV" secondAttribute="centerX" id="Iql-0k-QA3"/>
+                            <constraint firstItem="0Od-DR-cAN" firstAttribute="leading" secondItem="j6p-6C-E8D" secondAttribute="leading" id="PiC-Ry-9RK"/>
                             <constraint firstItem="vx1-by-Wdh" firstAttribute="top" secondItem="j6p-6C-E8D" secondAttribute="top" id="a6C-QW-mOi"/>
                             <constraint firstItem="mRG-pu-Uti" firstAttribute="centerY" secondItem="TpW-NZ-4GV" secondAttribute="centerY" id="dPW-RT-O0R"/>
+                            <constraint firstItem="j6p-6C-E8D" firstAttribute="trailing" secondItem="0Od-DR-cAN" secondAttribute="trailing" id="fhi-DI-Qij"/>
                             <constraint firstItem="HLD-pP-V4n" firstAttribute="centerX" secondItem="TpW-NZ-4GV" secondAttribute="centerX" id="hQi-Ac-Rk6"/>
                             <constraint firstItem="HLD-pP-V4n" firstAttribute="leading" secondItem="j6p-6C-E8D" secondAttribute="leading" constant="30" id="kMh-aG-D8M"/>
                             <constraint firstItem="HLD-pP-V4n" firstAttribute="centerY" secondItem="TpW-NZ-4GV" secondAttribute="centerY" id="lhg-oS-qMm"/>
@@ -577,7 +595,9 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Cycle" image="leaf.arrow.circlepath" catalog="system" selectedImage="leaf.arrow.circlepath" id="rE6-fi-yIu"/>
                     <connections>
+                        <outlet property="bleedingLabel" destination="I9M-rp-aNF" id="4p7-fu-56x"/>
                         <outlet property="dayCounter" destination="sun-jN-IA4" id="tP7-h1-5tJ"/>
+                        <outlet property="fertileLabel" destination="lyx-td-fuN" id="9et-Ue-Yj9"/>
                         <outlet property="fertileWindow" destination="Oiq-Tr-QhB" id="aKD-fs-wYM"/>
                         <outlet property="nextPeriod" destination="NVY-In-p8v" id="swh-mj-riX"/>
                         <outlet property="slider" destination="HLD-pP-V4n" id="cqZ-le-090"/>

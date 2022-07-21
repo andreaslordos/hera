@@ -15,6 +15,8 @@ class CycleViewController: UIViewController, MSCircularSliderProtocol, MSCircula
     @IBOutlet weak var nextPeriod: UILabel!
     @IBOutlet weak var fertileWindow: UILabel!
     @IBOutlet weak var slider: MSGradientCircularSlider!
+    @IBOutlet weak var bleedingLabel: UILabel!
+    @IBOutlet weak var fertileLabel: UILabel!
     
     var cycleLength: Int = 28 // change this to get data frmo predictions
     var cycleStartDate: Date = Date() // initialized to today
@@ -87,6 +89,10 @@ class CycleViewController: UIViewController, MSCircularSliderProtocol, MSCircula
     }
     
     func updateDayShown() {
+        
+        self.fertileLabel.attributedText = NSAttributedString()
+        self.bleedingLabel.attributedText = NSAttributedString()
+
         if (self.currentDayShown == self.currentDayInCycle) {
             dayCounter.text = "Today"
         }
@@ -96,9 +102,54 @@ class CycleViewController: UIViewController, MSCircularSliderProtocol, MSCircula
         dayCounter.text = (dayCounter.text ?? "")! + " (" + dateToString(addOrSubtractDay(day: currentDayShown)) + ")"
         if (self.currentDayShown >= self.periodDuration.0 && self.currentDayShown <= self.periodDuration.1) {
             self.fertileWindow.text = "Bleeding"
+            
+            let boldText = "Bleeding"
+            let attrs = [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 17)]
+            let attributedString = NSMutableAttributedString(string:boldText, attributes:attrs)
+
+            if (self.periodDuration.1 - self.currentDayShown == 0) {
+                attributedString.append(NSMutableAttributedString(string:" ending today"))
+            }
+            else {
+                let normalText = " for the next "
+                let normalString = NSMutableAttributedString(string:normalText)
+
+                attributedString.append(normalString)
+                
+                
+                let boldText2 = (self.periodDuration.1 - self.currentDayShown) == 1 ?
+                "day" :
+                (String(self.periodDuration.1 - self.currentDayShown) + " days")
+                let attrs2 = [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 17)]
+                let attributedString2 = NSMutableAttributedString(string:boldText2, attributes:attrs2)
+                attributedString.append(attributedString2)
+            }
+            bleedingLabel.attributedText = attributedString
         }
         else if (self.currentDayShown >= self.ovulationPeriod.0 && self.currentDayShown <= self.ovulationPeriod.1) {
             self.fertileWindow.text = "Fertile window"
+            let boldText = "Fertile window"
+            let attrs = [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 17)]
+            let attributedString = NSMutableAttributedString(string:boldText, attributes:attrs)
+
+            if (self.ovulationPeriod.1 - self.currentDayShown == 0) {
+                attributedString.append(NSMutableAttributedString(string:" ending today"))
+            }
+            else {
+                let normalText = " for the next "
+                let normalString = NSMutableAttributedString(string:normalText)
+
+                attributedString.append(normalString)
+                
+                
+                let boldText2 = (self.ovulationPeriod.1 - self.currentDayShown) == 1 ?
+                "day" :
+                (String(self.ovulationPeriod.1 - self.currentDayShown) + " days")
+                let attrs2 = [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 17)]
+                let attributedString2 = NSMutableAttributedString(string:boldText2, attributes:attrs2)
+                attributedString.append(attributedString2)
+            }
+            fertileLabel.attributedText = attributedString
         }
         else {
             self.fertileWindow.text = ""
