@@ -14,7 +14,7 @@ class CycleViewController: UIViewController, MSCircularSliderProtocol, MSCircula
     @IBOutlet weak var dayCounter: UILabel!
     @IBOutlet weak var nextPeriod: UILabel!
     @IBOutlet weak var fertileWindow: UILabel!
-    @IBOutlet weak var slider: MSCircularSlider!
+    @IBOutlet weak var slider: MSGradientCircularSlider!
     
     var cycleLength: Int = 28 // change this to get data frmo predictions
     var cycleStartDate: Date = Date() // initialized to today
@@ -48,8 +48,10 @@ class CycleViewController: UIViewController, MSCircularSliderProtocol, MSCircula
         
         self.slider.snapToLabels = true
         
-        self.slider.filledColor = UIColor(red: 127 / 255.0, green: 80.0 / 255.0, blue: 80.0 / 255.0, alpha: 1.0)
-        self.slider.unfilledColor = UIColor(red: 80 / 255.0, green: 148 / 255.0, blue: 95 / 255.0, alpha: 1.0)
+        self.slider.gradientColors = [.red, .blue, .purple, .purple];
+        self.slider.unfilledColor = .purple;
+        //self.slider.filledColor = UIColor(red: 127 / 255.0, green: 80.0 / 255.0, blue: 80.0 / 255.0, alpha: 1.0)
+        //self.slider.unfilledColor = UIColor(red: 80 / 255.0, green: 148 / 255.0, blue: 95 / 255.0, alpha: 1.0)
         self.slider.handleType = .doubleCircle
         self.slider.handleColor = UIColor(red: 35 / 255.0, green: 69 / 255.0, blue: 96 / 255.0, alpha: 1.0)
         self.slider.handleEnlargementPoints = 12
@@ -90,9 +92,8 @@ class CycleViewController: UIViewController, MSCircularSliderProtocol, MSCircula
         }
         else {
             dayCounter.text = "Day " + String(self.currentDayShown)
-            // + " - " + dateToString(addOrSubtractDay(day: currentDayShown))
         }
-        
+        dayCounter.text = (dayCounter.text ?? "")! + " (" + dateToString(addOrSubtractDay(day: currentDayShown)) + ")"
         if (self.currentDayShown >= self.periodDuration.0 && self.currentDayShown <= self.periodDuration.1) {
             self.fertileWindow.text = "Bleeding"
         }
@@ -106,7 +107,7 @@ class CycleViewController: UIViewController, MSCircularSliderProtocol, MSCircula
     
     func valueToCurrentDay(_ value: Double) {
         let previousDay = self.currentDayShown
-        let newDay = Int((value / 100.0) * Double(cycleLength - 1)) + 1
+        let newDay = Int(round((value / 100.0) * Double(cycleLength - 1))) + 1
         if newDay != previousDay {
             currentDayShown = newDay
             updateDayShown()
