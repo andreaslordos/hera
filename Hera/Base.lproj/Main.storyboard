@@ -272,7 +272,7 @@
                                             <action selector="didTapPeriodButton:" destination="wEd-Ya-CIA" eventType="touchUpInside" id="CHQ-oY-FSg"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" pointerInteraction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ceO-Sy-Qva" userLabel="emotionButton">
+                                    <button opaque="NO" alpha="0.25" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" pointerInteraction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ceO-Sy-Qva" userLabel="emotionButton">
                                         <rect key="frame" x="124.66666666666666" y="0.0" width="104.66666666666666" height="100"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
@@ -284,7 +284,7 @@
                                             <action selector="didTapEmotionButton:" destination="wEd-Ya-CIA" eventType="touchUpInside" id="Bvq-rF-q7y"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" pointerInteraction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="z9H-3v-jjv" userLabel="painButton">
+                                    <button opaque="NO" alpha="0.25" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" pointerInteraction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="z9H-3v-jjv" userLabel="painButton">
                                         <rect key="frame" x="249.33333333333329" y="0.0" width="104.66666666666666" height="100"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
