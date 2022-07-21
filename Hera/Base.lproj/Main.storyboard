@@ -230,7 +230,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EOj-0J-S4m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1516" y="1809"/>
+            <point key="canvasLocation" x="1546" y="1809"/>
         </scene>
         <!--Track-->
         <scene sceneID="b81-Cx-5rF">
@@ -486,17 +486,35 @@
                                     <constraint firstAttribute="height" constant="354" id="Jot-KY-Nw4"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sun-jN-IA4">
-                                <rect key="frame" x="186" y="102" width="42" height="55"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="mRG-pu-Uti">
+                                <rect key="frame" x="123" y="367.66666666666669" width="168" height="106.66666666666669"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sun-jN-IA4">
+                                        <rect key="frame" x="61" y="0.0" width="46" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Next period on Aug 12" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NVY-In-p8v">
+                                        <rect key="frame" x="0.0" y="28.333333333333314" width="168" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oiq-Tr-QhB">
+                                        <rect key="frame" x="59" y="56.666666666666629" width="50" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="j6p-6C-E8D"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="mRG-pu-Uti" firstAttribute="centerX" secondItem="TpW-NZ-4GV" secondAttribute="centerX" id="Iql-0k-QA3"/>
+                            <constraint firstItem="mRG-pu-Uti" firstAttribute="centerY" secondItem="TpW-NZ-4GV" secondAttribute="centerY" id="dPW-RT-O0R"/>
                             <constraint firstItem="HLD-pP-V4n" firstAttribute="centerX" secondItem="TpW-NZ-4GV" secondAttribute="centerX" id="hQi-Ac-Rk6"/>
                             <constraint firstItem="HLD-pP-V4n" firstAttribute="leading" secondItem="j6p-6C-E8D" secondAttribute="leading" constant="30" id="kMh-aG-D8M"/>
                             <constraint firstItem="HLD-pP-V4n" firstAttribute="centerY" secondItem="TpW-NZ-4GV" secondAttribute="centerY" id="lhg-oS-qMm"/>
@@ -506,6 +524,8 @@
                     <tabBarItem key="tabBarItem" title="Cycle" image="leaf.arrow.circlepath" catalog="system" selectedImage="leaf.arrow.circlepath" id="rE6-fi-yIu"/>
                     <connections>
                         <outlet property="dayCounter" destination="sun-jN-IA4" id="tP7-h1-5tJ"/>
+                        <outlet property="fertileWindow" destination="Oiq-Tr-QhB" id="aKD-fs-wYM"/>
+                        <outlet property="nextPeriod" destination="NVY-In-p8v" id="swh-mj-riX"/>
                         <outlet property="slider" destination="HLD-pP-V4n" id="cqZ-le-090"/>
                     </connections>
                 </viewController>

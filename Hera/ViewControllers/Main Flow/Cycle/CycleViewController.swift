@@ -12,6 +12,8 @@ class CycleViewController: UIViewController, MSCircularSliderProtocol, MSCircula
     
 
     @IBOutlet weak var dayCounter: UILabel!
+    @IBOutlet weak var nextPeriod: UILabel!
+    @IBOutlet weak var fertileWindow: UILabel!
     @IBOutlet weak var slider: MSCircularSlider!
     
     var cycleLength: Int = 28 // change this to get data frmo predictions
@@ -26,13 +28,16 @@ class CycleViewController: UIViewController, MSCircularSliderProtocol, MSCircula
     override func viewDidLoad() {
         super.viewDidLoad()
         self.slider.delegate = self;
-        createSlider();
+        determineCycle()
+        createSlider()
+        updateDayShown()
         // Do any additional setup after loading the view.
     }
     
     func createSlider() {
         self.valueBetweenLabels = 100 / Double(cycleLength-1)
         createLabels()
+        
         
         self.slider.currentValue = Double(self.currentDayInCycle - 1) / Double(cycleLength - 1) * 100.0
         snapToClosestDay(self.slider.currentValue)
@@ -43,7 +48,7 @@ class CycleViewController: UIViewController, MSCircularSliderProtocol, MSCircula
         
         self.slider.snapToLabels = true
         
-        self.slider.filledColor = UIColor(red: 127 / 255.0, green: 168 / 255.0, blue: 198 / 255.0, alpha: 1.0)
+        self.slider.filledColor = UIColor(red: 127 / 255.0, green: 80.0 / 255.0, blue: 80.0 / 255.0, alpha: 1.0)
         self.slider.unfilledColor = UIColor(red: 80 / 255.0, green: 148 / 255.0, blue: 95 / 255.0, alpha: 1.0)
         self.slider.handleType = .doubleCircle
         self.slider.handleColor = UIColor(red: 35 / 255.0, green: 69 / 255.0, blue: 96 / 255.0, alpha: 1.0)
@@ -64,14 +69,39 @@ class CycleViewController: UIViewController, MSCircularSliderProtocol, MSCircula
     func addOrSubtractDay(day:Int)->Date{
       return Calendar.current.date(byAdding: .day, value: day, to: Date())!
     }
+    
+    func dateToString(_ date: Date) -> String {
+        let dateFormat = "MMM dd"
+        let formatter1 = DateFormatter()
+        formatter1.dateFormat = dateFormat
+        return formatter1.string(from: date)
+    }
 
     func determineCycle() {
         self.cycleStartDate = addOrSubtractDay(day: -(self.currentDayInCycle - 1))
         self.cycleEndDate = addOrSubtractDay(day: self.cycleLength - self.currentDayInCycle)
+        let nextPeriodDay = Calendar.current.date(byAdding: .day, value: 1, to: self.cycleEndDate)!
+        self.nextPeriod.text = "Next period on " + dateToString(nextPeriodDay)
     }
     
     func updateDayShown() {
-        dayCounter.text = String(self.currentDayShown)
+        if (self.currentDayShown == self.currentDayInCycle) {
+            dayCounter.text = "Today"
+        }
+        else {
+            dayCounter.text = "Day " + String(self.currentDayShown)
+            // + " - " + dateToString(addOrSubtractDay(day: currentDayShown))
+        }
+        
+        if (self.currentDayShown >= self.periodDuration.0 && self.currentDayShown <= self.periodDuration.1) {
+            self.fertileWindow.text = "Bleeding"
+        }
+        else if (self.currentDayShown >= self.ovulationPeriod.0 && self.currentDayShown <= self.ovulationPeriod.1) {
+            self.fertileWindow.text = "Fertile window"
+        }
+        else {
+            self.fertileWindow.text = ""
+        }
     }
     
     func valueToCurrentDay(_ value: Double) {
