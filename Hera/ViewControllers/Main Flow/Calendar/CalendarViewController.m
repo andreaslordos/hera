@@ -6,12 +6,16 @@
 //
 
 #import "CalendarViewController.h"
+#import "DIYCalendarCell.h"
 
 @interface CalendarViewController () <FSCalendarDelegate, FSCalendarDelegateAppearance, FSCalendarDataSource>
 
 @property (strong, atomic) NSDate *today;
 @property (weak, nonatomic) IBOutlet UINavigationItem *titleBar;
+@property (strong, nonatomic) NSCalendar *gregorian;
+
 - (IBAction)didTapCalendar:(id)sender;
+- (void)configureCell:(FSCalendarCell *)cell forDate:(NSDate *)date atMonthPosition:(FSCalendarMonthPosition)position;
 
 @end
 
@@ -19,6 +23,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.gregorian = [NSCalendar calendarWithIdentifier:NSCalendarIdentifierGregorian];
     _today = [[NSDate alloc] init];
     [self setAppearanceCalendar];
 }
@@ -51,9 +56,10 @@
     calendar.center = CGPointMake(CGRectGetMidX(self.view.bounds), calendar.center.y); // center calendar
     [calendar selectDate:_today];
     calendar.appearance.headerTitleColor = [UIColor blackColor];
-
     [calendar setPagingEnabled:NO]; // multiple months on the same screen
-    [calendar setPlaceholderType:FSCalendarPlaceholderTypeNone];
+    [calendar setPlaceholderType:FSCalendarPlaceholderTypeNone]; // remove mon
+    
+    [calendar registerClass:[DIYCalendarCell class] forCellReuseIdentifier:@"cell"];
     
     // add calendar to view
     [self.view addSubview:calendar];
@@ -110,18 +116,16 @@
 
 // 6 months forward calendar
 - (NSDate *)maximumDateForCalendar:(FSCalendar *)calendar {
-    NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
     NSDateComponents *offsetComponents = [[NSDateComponents alloc] init];
     [offsetComponents setMonth:6];
-    return [gregorian dateByAddingComponents:offsetComponents toDate:_today options:0];
+    return [self.gregorian dateByAddingComponents:offsetComponents toDate:_today options:0];
 
 }
 
 - (NSDate *)minimumDateForCalendar:(FSCalendar *)calendar {
-    NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
     NSDateComponents *offsetComponents = [[NSDateComponents alloc] init];
     [offsetComponents setYear:-1];
-    return [gregorian dateByAddingComponents:offsetComponents toDate:_today options:0];
+    return [self.gregorian dateByAddingComponents:offsetComponents toDate:_today options:0];
 }
 
 - (void)calendar:(FSCalendar *)calendar didSelectDate:(NSDate *)date atMonthPosition:(FSCalendarMonthPosition)monthPosition {
@@ -172,4 +176,58 @@
     NSLog(@"YES");
     [_calendar setCurrentPage:[NSDate date] animated:YES];
 }
+
+- (FSCalendarCell *)calendar:(FSCalendar *)calendar cellForDate:(NSDate *)date atMonthPosition:(FSCalendarMonthPosition)monthPosition
+{
+    DIYCalendarCell *cell = [calendar dequeueReusableCellWithIdentifier:@"cell" forDate:date atMonthPosition:monthPosition];
+    return cell;
+}
+
+- (void)configureCell:(FSCalendarCell *)cell forDate:(NSDate *)date atMonthPosition:(FSCalendarMonthPosition)monthPosition
+{
+    
+    DIYCalendarCell *diyCell = (DIYCalendarCell *)cell;
+    
+    // Custom today circle
+    diyCell.circleImageView.hidden = ![self.gregorian isDateInToday:date];
+    
+    // Configure selection layer
+    if (monthPosition == FSCalendarMonthPositionCurrent) {
+        
+        SelectionType selectionType = SelectionTypeNone;
+        if ([self.calendar.selectedDates containsObject:date]) {
+            NSDate *previousDate = [self.gregorian dateByAddingUnit:NSCalendarUnitDay value:-1 toDate:date options:0];
+            NSDate *nextDate = [self.gregorian dateByAddingUnit:NSCalendarUnitDay value:1 toDate:date options:0];
+            if ([self.calendar.selectedDates containsObject:date]) {
+                if ([self.calendar.selectedDates containsObject:previousDate] && [self.calendar.selectedDates containsObject:nextDate]) {
+                    selectionType = SelectionTypeMiddle;
+                } else if ([self.calendar.selectedDates containsObject:previousDate] && [self.calendar.selectedDates containsObject:date]) {
+                    selectionType = SelectionTypeRightBorder;
+                } else if ([self.calendar.selectedDates containsObject:nextDate]) {
+                    selectionType = SelectionTypeLeftBorder;
+                } else {
+                    selectionType = SelectionTypeSingle;
+                }
+            }
+        } else {
+            selectionType = SelectionTypeNone;
+        }
+        
+        if (selectionType == SelectionTypeNone) {
+            diyCell.selectionLayer.hidden = YES;
+            return;
+        }
+        
+        diyCell.selectionLayer.hidden = NO;
+        diyCell.selectionType = selectionType;
+        
+    } else {
+        
+        diyCell.circleImageView.hidden = YES;
+        diyCell.selectionLayer.hidden = YES;
+        
+    }
+}
+
+
 @end
