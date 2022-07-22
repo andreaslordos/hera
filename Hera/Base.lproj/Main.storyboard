@@ -228,7 +228,14 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                                 <color key="barTintColor" systemColor="systemBackgroundColor"/>
                                 <items>
-                                    <navigationItem title="Today" id="LTh-bh-28L"/>
+                                    <navigationItem title="Today" id="LTh-bh-28L">
+                                        <barButtonItem key="leftBarButtonItem" title="Item" id="HrG-J5-gBb">
+                                            <imageReference key="image" image="calendar" catalog="system" symbolScale="default"/>
+                                            <connections>
+                                                <action selector="didTapCalendar:" destination="hKJ-Lt-ti1" id="aQE-Dl-09J"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
                                 </items>
                             </navigationBar>
                         </subviews>
@@ -241,6 +248,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Calendar" image="calendar" catalog="system" selectedImage="calendar" id="mXx-fY-FeY"/>
+                    <connections>
+                        <outlet property="titleBar" destination="LTh-bh-28L" id="zfF-mk-3oK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EOj-0J-S4m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -269,11 +279,11 @@
                                             <action selector="didTapPeriodButton:" destination="wEd-Ya-CIA" eventType="touchUpInside" id="CHQ-oY-FSg"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" pointerInteraction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ceO-Sy-Qva" userLabel="emotionButton">
+                                    <button opaque="NO" alpha="0.25" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" pointerInteraction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ceO-Sy-Qva" userLabel="emotionButton">
                                         <rect key="frame" x="124.66666666666666" y="0.0" width="104.66666666666666" height="100"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" image="smiley" catalog="system">
+                                        <buttonConfiguration key="configuration" style="filled" image="face.smiling" catalog="system">
                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="baseBackgroundColor" systemColor="systemOrangeColor"/>
                                         </buttonConfiguration>
@@ -281,7 +291,7 @@
                                             <action selector="didTapEmotionButton:" destination="wEd-Ya-CIA" eventType="touchUpInside" id="Bvq-rF-q7y"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" pointerInteraction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="z9H-3v-jjv" userLabel="painButton">
+                                    <button opaque="NO" alpha="0.25" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" pointerInteraction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="z9H-3v-jjv" userLabel="painButton">
                                         <rect key="frame" x="249.33333333333329" y="0.0" width="104.66666666666666" height="100"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
@@ -441,7 +451,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                                 <color key="barTintColor" systemColor="systemBackgroundColor"/>
                                 <items>
-                                    <navigationItem title="Logging" id="gTG-v4-O42">
+                                    <navigationItem title="Tracking" id="gTG-v4-O42">
                                         <barButtonItem key="rightBarButtonItem" style="plain" id="zKB-v2-Kp2">
                                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="7P4-L3-N7U">
                                                 <rect key="frame" x="339.33333333333331" y="5" width="54.666666666666686" height="34.333333333333336"/>
@@ -593,7 +603,7 @@
                             <constraint firstItem="vx1-by-Wdh" firstAttribute="leading" secondItem="j6p-6C-E8D" secondAttribute="leading" id="tQd-Ar-fj2"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Cycle" image="leaf.arrow.circlepath" catalog="system" selectedImage="leaf.arrow.circlepath" id="rE6-fi-yIu"/>
+                    <tabBarItem key="tabBarItem" title="Cycle" image="leaf.arrow.circlepath" catalog="system" selectedImage="leaf.arrow.triangle.circlepath" id="rE6-fi-yIu"/>
                     <connections>
                         <outlet property="bleedingLabel" destination="I9M-rp-aNF" id="4p7-fu-56x"/>
                         <outlet property="dayCounter" destination="sun-jN-IA4" id="tP7-h1-5tJ"/>
@@ -971,15 +981,16 @@
         <image name="circle.hexagonpath" catalog="system" width="128" height="112"/>
         <image name="cross.circle" catalog="system" width="128" height="121"/>
         <image name="drop" catalog="system" width="101" height="128"/>
+        <image name="face.smiling" catalog="system" width="128" height="121"/>
         <image name="faceid" catalog="system" width="128" height="115"/>
         <image name="gearshape" catalog="system" width="128" height="121"/>
         <image name="hera_appicon" width="352" height="354"/>
         <image name="leaf.arrow.circlepath" catalog="system" width="121" height="128"/>
+        <image name="leaf.arrow.triangle.circlepath" catalog="system" width="121" height="128"/>
         <image name="lines.measurement.horizontal" catalog="system" width="128" height="92"/>
         <image name="meditation" width="512" height="512"/>
         <image name="notification" width="512" height="512"/>
         <image name="plus" catalog="system" width="128" height="113"/>
-        <image name="smiley" catalog="system" width="128" height="121"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>

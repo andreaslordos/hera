@@ -210,6 +210,7 @@
     _option4.backgroundColor = [UIColor colorWithCGColor:_option4.layer.borderColor];
     _option4.tintColor = [UIColor whiteColor];
     _lastOptionSelected = @"4";
+    _option4.alpha = 1.;
 }
 
 - (IBAction)didTapOption3:(id)sender {
@@ -217,6 +218,7 @@
     _option3.backgroundColor = [UIColor colorWithCGColor:_option3.layer.borderColor];
     _option3.tintColor = [UIColor whiteColor];
     _lastOptionSelected = @"3";
+    _option3.alpha = 1.;
 }
 
 - (IBAction)didTapOption2:(id)sender {
@@ -224,6 +226,7 @@
     _option2.backgroundColor = [UIColor colorWithCGColor:_option2.layer.borderColor];
     _option2.tintColor = [UIColor whiteColor];
     _lastOptionSelected = @"2";
+    _option2.alpha = 1.;
 }
 
 - (IBAction)didTapOption1:(id)sender {
@@ -231,6 +234,7 @@
     _option1.backgroundColor = [UIColor colorWithCGColor:_option1.layer.borderColor];
     _option1.tintColor = [UIColor whiteColor];
     _lastOptionSelected = @"1";
+    _option1.alpha = 1.;
 }
 
 - (IBAction)didTapEmotionButton:(id)sender {
@@ -239,6 +243,7 @@
     [self setButtonLabels:[NSArray arrayWithObjects:@"Happy", @"Sensitive", @"Sad", @"PMS", nil]];
     [self resetButtons];
     _lastTypeSelected = @"Emotion";
+    [self setButtonAlphas:_emotionButton];
 }
 
 - (IBAction)didTapPainButton:(id)sender {
@@ -247,6 +252,7 @@
     [self setButtonLabels:[NSArray arrayWithObjects:@"Cramps", @"Headache", @"Ovulation", @"Tender Breasts", nil]];
     [self resetButtons];
     _lastTypeSelected = @"Pain";
+    [self setButtonAlphas:_painButton];
 }
 
 - (IBAction)didTapPeriodButton:(id)sender {
@@ -255,5 +261,14 @@
     [self setButtonLabels:[NSArray arrayWithObjects:@"Light", @"Moderate", @"Heavy", @"Spotting", nil]];
     [self resetButtons];
     _lastTypeSelected = @"Period";
+    [self setButtonAlphas:_periodButton];
+    
+}
+
+- (void)setButtonAlphas:(UIButton*)button {
+    _painButton.alpha = .25;
+    _periodButton.alpha = .25;
+    _emotionButton.alpha = .25;
+    button.alpha = 1.;
 }
 @end

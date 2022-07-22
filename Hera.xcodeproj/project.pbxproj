@@ -731,9 +731,10 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 4TPXP6N79S;
+				DEVELOPMENT_TEAM = 3P2W72R536;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Hera/Info.plist;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "The app uses Face ID to allow users to authenticate themselves";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -767,6 +768,7 @@
 				DEVELOPMENT_TEAM = 3P2W72R536;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Hera/Info.plist;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "The app uses Face ID to allow users to authenticate themselves";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

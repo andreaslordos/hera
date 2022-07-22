@@ -10,6 +10,8 @@
 @interface CalendarViewController () <FSCalendarDelegate, FSCalendarDelegateAppearance, FSCalendarDataSource>
 
 @property (strong, atomic) NSDate *today;
+@property (weak, nonatomic) IBOutlet UINavigationItem *titleBar;
+- (IBAction)didTapCalendar:(id)sender;
 
 @end
 
@@ -21,10 +23,14 @@
     [self setAppearanceCalendar];
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [_calendar setCurrentPage:[NSDate date] animated:NO];
+}
+
 - (void)setAppearanceCalendar {
     
     // create calendar object
-    FSCalendar *calendar = [[FSCalendar alloc] initWithFrame:CGRectMake(0, 40, self.view.frame.size.width - 20, self.view.frame.size.height - 80)];
+    FSCalendar *calendar = [[FSCalendar alloc] initWithFrame:CGRectMake(0, 80, self.view.frame.size.width - 20, self.view.frame.size.height - 80)];
     
     calendar.dataSource = self;
     calendar.delegate = self;
@@ -116,5 +122,54 @@
     NSDateComponents *offsetComponents = [[NSDateComponents alloc] init];
     [offsetComponents setYear:-1];
     return [gregorian dateByAddingComponents:offsetComponents toDate:_today options:0];
+}
+
+- (void)calendar:(FSCalendar *)calendar didSelectDate:(NSDate *)date atMonthPosition:(FSCalendarMonthPosition)monthPosition {
+    NSCalendar *diff_calendar = [NSCalendar currentCalendar];
+    //declare your unitFlags
+    int unitFlags = NSCalendarUnitWeekOfYear | NSCalendarUnitDay | NSCalendarUnitMonth;
+
+    NSDateComponents *dateComponents = [diff_calendar components:unitFlags fromDate:date  toDate:_today options:0];
+
+    long monthsInBetween = [dateComponents month];
+    long weeksInBetween = [dateComponents weekOfYear];
+    long daysInBetween = [dateComponents day];
+    
+    NSString *descriptor = @"";
+    long length = 0;
+    if (monthsInBetween >= 12) {
+        descriptor = @"year";
+        length = 1;
+    }
+    else if (monthsInBetween > 0) {
+        descriptor = @"month";
+        length = monthsInBetween;
+    }
+    else if (weeksInBetween > 0) {
+        descriptor = @"week";
+        length = weeksInBetween;
+    }
+    else if (daysInBetween > 0) {
+        descriptor = @"day";
+        length = daysInBetween;
+    }
+    else {
+        [_titleBar setTitle:@"Today"];
+        return;
+    }
+    
+    if (length > 1) {
+        descriptor = [descriptor stringByAppendingString:@"s"];
+    }
+    descriptor = [[NSString stringWithFormat:@"%lu ", length] stringByAppendingString:descriptor];
+    
+    NSString *title = [descriptor stringByAppendingString:@" ago"];
+    
+    [_titleBar setTitle:title];
+}
+
+- (IBAction)didTapCalendar:(id)sender {
+    NSLog(@"YES");
+    [_calendar setCurrentPage:[NSDate date] animated:YES];
 }
 @end

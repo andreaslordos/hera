@@ -4,8 +4,6 @@
 <dict>
 	<key>UIApplicationExitsOnSuspend</key>
 	<true/>
-	<key>NSFaceIDUsageDescription</key>
-	<string>The app uses Face ID to allow users to authenticate themselves</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
