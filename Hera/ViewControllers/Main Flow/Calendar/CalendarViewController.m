@@ -11,6 +11,7 @@
 
 @property (strong, atomic) NSDate *today;
 @property (weak, nonatomic) IBOutlet UINavigationItem *titleBar;
+- (IBAction)didTapCalendar:(id)sender;
 
 @end
 
@@ -20,6 +21,10 @@
     [super viewDidLoad];
     _today = [[NSDate alloc] init];
     [self setAppearanceCalendar];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [_calendar setCurrentPage:[NSDate date] animated:NO];
 }
 
 - (void)setAppearanceCalendar {
@@ -161,5 +166,10 @@
     NSString *title = [descriptor stringByAppendingString:@" ago"];
     
     [_titleBar setTitle:title];
+}
+
+- (IBAction)didTapCalendar:(id)sender {
+    NSLog(@"YES");
+    [_calendar setCurrentPage:[NSDate date] animated:YES];
 }
 @end

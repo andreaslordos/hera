@@ -228,7 +228,14 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                                 <color key="barTintColor" systemColor="systemBackgroundColor"/>
                                 <items>
-                                    <navigationItem title="Today" id="LTh-bh-28L"/>
+                                    <navigationItem title="Today" id="LTh-bh-28L">
+                                        <barButtonItem key="leftBarButtonItem" title="Item" id="HrG-J5-gBb">
+                                            <imageReference key="image" image="calendar" catalog="system" symbolScale="default"/>
+                                            <connections>
+                                                <action selector="didTapCalendar:" destination="hKJ-Lt-ti1" id="aQE-Dl-09J"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
                                 </items>
                             </navigationBar>
                         </subviews>
