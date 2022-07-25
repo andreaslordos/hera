@@ -13,9 +13,6 @@ NS_ASSUME_NONNULL_BEGIN
 typedef NS_ENUM(NSUInteger, SelectionType) {
     SelectionTypeNone,
     SelectionTypeSingle,
-    SelectionTypeLeftBorder,
-    SelectionTypeMiddle,
-    SelectionTypeRightBorder
 };
 
 @interface DIYCalendarCell : FSCalendarCell
@@ -25,6 +22,9 @@ typedef NS_ENUM(NSUInteger, SelectionType) {
 @property (weak, nonatomic) CAShapeLayer *selectionLayer;
 
 @property (assign, nonatomic) SelectionType selectionType;
+
+- (void)setPeriodProbability:(CGFloat)probability;
+- (void)setOvulationProbability:(CGFloat)probability;
 
 @end
 

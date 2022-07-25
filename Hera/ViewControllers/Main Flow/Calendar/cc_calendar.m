@@ -34,4 +34,19 @@
 +(UIColor*)cellTodayBgColor {
     return [UIColor yellowColor];
 }
+
++(UIColor*)periodIndicatorColor {
+    return [UIColor colorWithRed:255./255.
+                           green:114./255.
+                           blue:118./255.
+                           alpha:1.];
+}
+
++(UIColor*)ovulationIndicatorColor {
+    return [UIColor colorWithRed:173./255.
+                           green:216./255.
+                           blue:230./255.
+                           alpha:1.];
+}
+
 @end
