@@ -973,6 +973,11 @@
             <point key="canvasLocation" x="1516" y="4205"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="HLD-pP-V4n">
+            <size key="intrinsicContentSize" width="338" height="338"/>
+        </designable>
+    </designables>
     <inferredMetricsTieBreakers>
         <segue reference="sgx-hH-FyB"/>
     </inferredMetricsTieBreakers>

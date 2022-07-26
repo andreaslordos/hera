@@ -1,4 +1,54 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Objective-C" usedWithCloudKit="false" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21F79" minimumToolsVersion="Automatic" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
+    <entity name="CurrentCycle" representedClassName="CurrentCycle" parentEntity="Cycle" syncable="YES" codeGenerationType="class"/>
+    <entity name="Cycle" representedClassName="Cycle" syncable="YES" codeGenerationType="class">
+        <attribute name="endDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="ovulationDuration" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="ovulationStart" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="periodDuration" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="startDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+    </entity>
+    <entity name="CycleCollection" representedClassName="CycleCollection" syncable="YES" codeGenerationType="class">
+        <attribute name="cycles" optional="YES" attributeType="Transformable"/>
+        <relationship name="relationship" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Cycle"/>
+    </entity>
+    <entity name="Event" representedClassName="Event" isAbstract="YES" syncable="YES" codeGenerationType="class">
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="predicted" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="type" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="EventCollection" representedClassName="EventCollection" syncable="YES" codeGenerationType="class">
+        <attribute name="collection" optional="YES" attributeType="Transformable"/>
+        <attribute name="past" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <relationship name="event" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Event"/>
+    </entity>
+    <entity name="Mood" representedClassName="Mood" parentEntity="Event" syncable="YES" codeGenerationType="class"/>
+    <entity name="Ovulation" representedClassName="Ovulation" parentEntity="Event" syncable="YES" codeGenerationType="class">
+        <attribute name="probability" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="Pain" representedClassName="Pain" parentEntity="Event" syncable="YES" codeGenerationType="class"/>
+    <entity name="Period" representedClassName="Period" parentEntity="Event" syncable="YES" codeGenerationType="class">
+        <attribute name="intensity" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="User" representedClassName="User" syncable="YES" codeGenerationType="class">
+        <attribute name="attribute" optional="YES"/>
+        <attribute name="attribute1" optional="YES"/>
+        <attribute name="averageOvulationDuration" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="averageOvulationStart" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="averagePeriodDuration" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="lastBackup" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="lastCycleStart" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+    </entity>
+    <elements>
+        <element name="Event" positionX="-63" positionY="-18" width="128" height="74"/>
+        <element name="Period" positionX="-54" positionY="18" width="128" height="44"/>
+        <element name="Ovulation" positionX="-36" positionY="27" width="128" height="44"/>
+        <element name="Mood" positionX="-9" positionY="45" width="128" height="29"/>
+        <element name="Pain" positionX="9" positionY="63" width="128" height="29"/>
+        <element name="EventCollection" positionX="27" positionY="81" width="128" height="74"/>
+        <element name="Cycle" positionX="-18" positionY="45" width="128" height="104"/>
+        <element name="CycleCollection" positionX="-9" positionY="63" width="128" height="59"/>
+        <element name="User" positionX="0" positionY="81" width="128" height="134"/>
+        <element name="CurrentCycle" positionX="18" positionY="117" width="128" height="29"/>
+    </elements>
 </model>

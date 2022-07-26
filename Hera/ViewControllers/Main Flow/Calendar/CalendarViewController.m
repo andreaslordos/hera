@@ -221,11 +221,6 @@
     if ([_ovulationDates objectForKey:[self formatDate:date]]) {
         [diyCell setOvulationProbability:[[_ovulationDates objectForKey:[self formatDate:date]] floatValue]];
     }
-    
-//    if ([self isSameDay:_today otherDay:date]) {
-//        NSLog(@"%@", date);
-//        [diyCell setOvulationProbability:0.5];
-//    }
 }
 
 @end
