@@ -14,6 +14,8 @@
 		BF7863CF28887CA600417C36 /* CalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7863CE28887CA600417C36 /* CalendarViewController.m */; };
 		BF7863D228887D8300417C36 /* cc_calendar.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7863D128887D8300417C36 /* cc_calendar.m */; };
 		BF7863DA2889B6A100417C36 /* CycleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7863D92889B6A100417C36 /* CycleViewController.swift */; };
+		BF7863DD288B59DD00417C36 /* DIYCalendarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7863DC288B59DD00417C36 /* DIYCalendarCell.m */; };
+		BF7863E0288F291C00417C36 /* get_predictions.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7863DF288F291C00417C36 /* get_predictions.m */; };
 		BF9054A7287E2F5A0061001C /* TermsAndConditionsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9054A6287E2F5A0061001C /* TermsAndConditionsVC.m */; };
 		BFBD3D5228820D1C008743B8 /* StartupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFBD3D5128820D1C008743B8 /* StartupViewController.m */; };
 		BFBD3D5B2885CD40008743B8 /* LoginScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFBD3D5A2885CD40008743B8 /* LoginScreenViewController.m */; };
@@ -74,6 +76,10 @@
 		BF7863D128887D8300417C36 /* cc_calendar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = cc_calendar.m; sourceTree = "<group>"; };
 		BF7863D82889B6A100417C36 /* Hera-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Hera-Bridging-Header.h"; sourceTree = "<group>"; };
 		BF7863D92889B6A100417C36 /* CycleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CycleViewController.swift; sourceTree = "<group>"; };
+		BF7863DB288B59DD00417C36 /* DIYCalendarCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DIYCalendarCell.h; sourceTree = "<group>"; };
+		BF7863DC288B59DD00417C36 /* DIYCalendarCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DIYCalendarCell.m; sourceTree = "<group>"; };
+		BF7863DE288F291C00417C36 /* get_predictions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = get_predictions.h; sourceTree = "<group>"; };
+		BF7863DF288F291C00417C36 /* get_predictions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = get_predictions.m; sourceTree = "<group>"; };
 		BF9054A5287E2F5A0061001C /* TermsAndConditionsVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TermsAndConditionsVC.h; sourceTree = "<group>"; };
 		BF9054A6287E2F5A0061001C /* TermsAndConditionsVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TermsAndConditionsVC.m; sourceTree = "<group>"; };
 		BFBD3D5028820D1C008743B8 /* StartupViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StartupViewController.h; sourceTree = "<group>"; };
@@ -188,6 +194,10 @@
 				BF7863CE28887CA600417C36 /* CalendarViewController.m */,
 				BF7863D028887D8300417C36 /* cc_calendar.h */,
 				BF7863D128887D8300417C36 /* cc_calendar.m */,
+				BF7863DB288B59DD00417C36 /* DIYCalendarCell.h */,
+				BF7863DC288B59DD00417C36 /* DIYCalendarCell.m */,
+				BF7863DE288F291C00417C36 /* get_predictions.h */,
+				BF7863DF288F291C00417C36 /* get_predictions.m */,
 			);
 			path = Calendar;
 			sourceTree = "<group>";
@@ -542,11 +552,13 @@
 				BF7863D228887D8300417C36 /* cc_calendar.m in Sources */,
 				BFD31862287E227A003E85F3 /* main.m in Sources */,
 				BF9054A7287E2F5A0061001C /* TermsAndConditionsVC.m in Sources */,
+				BF7863E0288F291C00417C36 /* get_predictions.m in Sources */,
 				BFD31854287E2279003E85F3 /* ViewController.m in Sources */,
 				BFBD3D5B2885CD40008743B8 /* LoginScreenViewController.m in Sources */,
 				BFD11BE0287E74140006E93E /* PeriodLengthViewController.m in Sources */,
 				BFD11BE6287F9B700006E93E /* Utilities.m in Sources */,
 				BFBD3D5228820D1C008743B8 /* StartupViewController.m in Sources */,
+				BF7863DD288B59DD00417C36 /* DIYCalendarCell.m in Sources */,
 				BF078DBC287E511900608897 /* LastPeriodViewController.m in Sources */,
 				BF7863DA2889B6A100417C36 /* CycleViewController.swift in Sources */,
 				BFD3185A287E2279003E85F3 /* Hera.xcdatamodeld in Sources */,

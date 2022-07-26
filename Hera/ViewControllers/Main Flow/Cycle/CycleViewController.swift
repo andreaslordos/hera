@@ -28,9 +28,9 @@ class CycleViewController: UIViewController, MSCircularSliderProtocol, MSCircula
     var valueBetweenLabels = 0.0 // initialized to 0
     
     override func viewDidLoad() {
+        determineCycle()
         super.viewDidLoad()
         self.slider.delegate = self;
-        determineCycle()
         createSlider()
         updateDayShown()
         // Do any additional setup after loading the view.
@@ -181,7 +181,5 @@ class CycleViewController: UIViewController, MSCircularSliderProtocol, MSCircula
             snapToClosestDay(value)
             valueToCurrentDay(self.slider.currentValue)
         }
-        print(value)
     }
-
 }

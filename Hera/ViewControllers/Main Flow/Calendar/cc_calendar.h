@@ -15,6 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 +(UIColor*)textDefaultColor;
 +(UIColor*)cellTodayBgColor;
 +(UIColor*)cellSelectedColor;
++(UIColor*)periodIndicatorColor;
++(UIColor*)ovulationIndicatorColor;
 @end
 
 NS_ASSUME_NONNULL_END
