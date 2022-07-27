@@ -2,7 +2,7 @@
 //  Cycle+CoreDataProperties.m
 //  Hera
 //
-//  Created by Andreas Lordos on 7/26/22.
+//  Created by Andreas Lordos on 7/27/22.
 //
 //
 
@@ -19,5 +19,6 @@
 @dynamic ovulationStart;
 @dynamic periodDuration;
 @dynamic startDate;
+@dynamic events;
 
 @end

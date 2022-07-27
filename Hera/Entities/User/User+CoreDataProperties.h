@@ -2,7 +2,7 @@
 //  User+CoreDataProperties.h
 //  Hera
 //
-//  Created by Andreas Lordos on 7/26/22.
+//  Created by Andreas Lordos on 7/27/22.
 //
 //
 
@@ -22,17 +22,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic) BOOL isSynced;
 @property (nullable, nonatomic, copy) NSDate *lastBackup;
 @property (nullable, nonatomic, copy) NSDate *lastCycleStart;
-@property (nullable, nonatomic, retain) CycleCollection *cycles;
-@property (nullable, nonatomic, retain) NSSet<EventCollection *> *events;
-
-@end
-
-@interface User (CoreDataGeneratedAccessors)
-
-- (void)addEventsObject:(EventCollection *)value;
-- (void)removeEventsObject:(EventCollection *)value;
-- (void)addEvents:(NSSet<EventCollection *> *)values;
-- (void)removeEvents:(NSSet<EventCollection *> *)values;
+@property (nullable, nonatomic, retain) CycleCollectionFuture *cyclesFuture;
+@property (nullable, nonatomic, retain) CycleCollectionPast *cyclesPast;
 
 @end
 

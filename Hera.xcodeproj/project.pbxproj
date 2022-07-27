@@ -17,8 +17,21 @@
 		BF7863DD288B59DD00417C36 /* DIYCalendarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7863DC288B59DD00417C36 /* DIYCalendarCell.m */; };
 		BF7863E0288F291C00417C36 /* get_predictions.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7863DF288F291C00417C36 /* get_predictions.m */; };
 		BF9054A7287E2F5A0061001C /* TermsAndConditionsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9054A6287E2F5A0061001C /* TermsAndConditionsVC.m */; };
+		BFB53FDA2891E76E0077AA22 /* User+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB53FD82891E76E0077AA22 /* User+CoreDataClass.m */; };
+		BFB53FDB2891E76E0077AA22 /* User+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB53FD92891E76E0077AA22 /* User+CoreDataProperties.m */; };
+		BFB53FE42891E7960077AA22 /* Event+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB53FDE2891E7960077AA22 /* Event+CoreDataClass.m */; };
+		BFB53FE52891E7960077AA22 /* Event+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB53FDF2891E7960077AA22 /* Event+CoreDataProperties.m */; };
+		BFB53FE62891E7960077AA22 /* EventCollection+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB53FE22891E7960077AA22 /* EventCollection+CoreDataClass.m */; };
+		BFB53FE72891E7960077AA22 /* EventCollection+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB53FE32891E7960077AA22 /* EventCollection+CoreDataProperties.m */; };
+		BFB53FF42891E7CE0077AA22 /* CycleCollectionFuture+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB53FEA2891E7CE0077AA22 /* CycleCollectionFuture+CoreDataClass.m */; };
+		BFB53FF52891E7CE0077AA22 /* CycleCollectionFuture+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB53FEB2891E7CE0077AA22 /* CycleCollectionFuture+CoreDataProperties.m */; };
+		BFB53FF62891E7CE0077AA22 /* CycleCollectionPast+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB53FEE2891E7CE0077AA22 /* CycleCollectionPast+CoreDataClass.m */; };
+		BFB53FF72891E7CF0077AA22 /* CycleCollectionPast+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB53FEF2891E7CE0077AA22 /* CycleCollectionPast+CoreDataProperties.m */; };
+		BFB53FF82891E7CF0077AA22 /* Cycle+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB53FF22891E7CE0077AA22 /* Cycle+CoreDataClass.m */; };
+		BFB53FF92891E7CF0077AA22 /* Cycle+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB53FF32891E7CE0077AA22 /* Cycle+CoreDataProperties.m */; };
 		BFBD3D5228820D1C008743B8 /* StartupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFBD3D5128820D1C008743B8 /* StartupViewController.m */; };
 		BFBD3D5B2885CD40008743B8 /* LoginScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFBD3D5A2885CD40008743B8 /* LoginScreenViewController.m */; };
+		BFD0EB242891E2E6003A198C /* HeraTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFD0EB232891E2E6003A198C /* HeraTabBarController.m */; };
 		BFD11BE0287E74140006E93E /* PeriodLengthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFD11BDF287E74140006E93E /* PeriodLengthViewController.m */; };
 		BFD11BE3287F4C940006E93E /* FaceIdSetupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFD11BE2287F4C940006E93E /* FaceIdSetupViewController.m */; };
 		BFD11BE6287F9B700006E93E /* Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = BFD11BE5287F9B700006E93E /* Utilities.m */; };
@@ -82,10 +95,36 @@
 		BF7863DF288F291C00417C36 /* get_predictions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = get_predictions.m; sourceTree = "<group>"; };
 		BF9054A5287E2F5A0061001C /* TermsAndConditionsVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TermsAndConditionsVC.h; sourceTree = "<group>"; };
 		BF9054A6287E2F5A0061001C /* TermsAndConditionsVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TermsAndConditionsVC.m; sourceTree = "<group>"; };
+		BFB53FD62891E76E0077AA22 /* User+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "User+CoreDataProperties.h"; sourceTree = "<group>"; };
+		BFB53FD72891E76E0077AA22 /* User+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "User+CoreDataClass.h"; sourceTree = "<group>"; };
+		BFB53FD82891E76E0077AA22 /* User+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "User+CoreDataClass.m"; sourceTree = "<group>"; };
+		BFB53FD92891E76E0077AA22 /* User+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "User+CoreDataProperties.m"; sourceTree = "<group>"; };
+		BFB53FDC2891E7960077AA22 /* Event+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Event+CoreDataProperties.h"; sourceTree = "<group>"; };
+		BFB53FDD2891E7960077AA22 /* Event+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Event+CoreDataClass.h"; sourceTree = "<group>"; };
+		BFB53FDE2891E7960077AA22 /* Event+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Event+CoreDataClass.m"; sourceTree = "<group>"; };
+		BFB53FDF2891E7960077AA22 /* Event+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Event+CoreDataProperties.m"; sourceTree = "<group>"; };
+		BFB53FE02891E7960077AA22 /* EventCollection+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EventCollection+CoreDataProperties.h"; sourceTree = "<group>"; };
+		BFB53FE12891E7960077AA22 /* EventCollection+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EventCollection+CoreDataClass.h"; sourceTree = "<group>"; };
+		BFB53FE22891E7960077AA22 /* EventCollection+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "EventCollection+CoreDataClass.m"; sourceTree = "<group>"; };
+		BFB53FE32891E7960077AA22 /* EventCollection+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "EventCollection+CoreDataProperties.m"; sourceTree = "<group>"; };
+		BFB53FE82891E7CE0077AA22 /* CycleCollectionFuture+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CycleCollectionFuture+CoreDataProperties.h"; sourceTree = "<group>"; };
+		BFB53FE92891E7CE0077AA22 /* CycleCollectionFuture+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CycleCollectionFuture+CoreDataClass.h"; sourceTree = "<group>"; };
+		BFB53FEA2891E7CE0077AA22 /* CycleCollectionFuture+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CycleCollectionFuture+CoreDataClass.m"; sourceTree = "<group>"; };
+		BFB53FEB2891E7CE0077AA22 /* CycleCollectionFuture+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CycleCollectionFuture+CoreDataProperties.m"; sourceTree = "<group>"; };
+		BFB53FEC2891E7CE0077AA22 /* CycleCollectionPast+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CycleCollectionPast+CoreDataProperties.h"; sourceTree = "<group>"; };
+		BFB53FED2891E7CE0077AA22 /* CycleCollectionPast+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CycleCollectionPast+CoreDataClass.h"; sourceTree = "<group>"; };
+		BFB53FEE2891E7CE0077AA22 /* CycleCollectionPast+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CycleCollectionPast+CoreDataClass.m"; sourceTree = "<group>"; };
+		BFB53FEF2891E7CE0077AA22 /* CycleCollectionPast+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CycleCollectionPast+CoreDataProperties.m"; sourceTree = "<group>"; };
+		BFB53FF02891E7CE0077AA22 /* Cycle+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Cycle+CoreDataProperties.h"; sourceTree = "<group>"; };
+		BFB53FF12891E7CE0077AA22 /* Cycle+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Cycle+CoreDataClass.h"; sourceTree = "<group>"; };
+		BFB53FF22891E7CE0077AA22 /* Cycle+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Cycle+CoreDataClass.m"; sourceTree = "<group>"; };
+		BFB53FF32891E7CE0077AA22 /* Cycle+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Cycle+CoreDataProperties.m"; sourceTree = "<group>"; };
 		BFBD3D5028820D1C008743B8 /* StartupViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StartupViewController.h; sourceTree = "<group>"; };
 		BFBD3D5128820D1C008743B8 /* StartupViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StartupViewController.m; sourceTree = "<group>"; };
 		BFBD3D592885CD40008743B8 /* LoginScreenViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginScreenViewController.h; sourceTree = "<group>"; };
 		BFBD3D5A2885CD40008743B8 /* LoginScreenViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginScreenViewController.m; sourceTree = "<group>"; };
+		BFD0EB222891E2E6003A198C /* HeraTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeraTabBarController.h; sourceTree = "<group>"; };
+		BFD0EB232891E2E6003A198C /* HeraTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeraTabBarController.m; sourceTree = "<group>"; };
 		BFD11BDE287E74140006E93E /* PeriodLengthViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PeriodLengthViewController.h; sourceTree = "<group>"; };
 		BFD11BDF287E74140006E93E /* PeriodLengthViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PeriodLengthViewController.m; sourceTree = "<group>"; };
 		BFD11BE1287F4C940006E93E /* FaceIdSetupViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FaceIdSetupViewController.h; sourceTree = "<group>"; };
@@ -166,37 +205,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		BF37D7622890B77500572154 /* Entities */ = {
-			isa = PBXGroup;
-			children = (
-				BF37D7652890B78600572154 /* User */,
-				BF37D7642890B77D00572154 /* Events */,
-				BF37D7632890B77A00572154 /* Cycles */,
-			);
-			path = Entities;
-			sourceTree = "<group>";
-		};
-		BF37D7632890B77A00572154 /* Cycles */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Cycles;
-			sourceTree = "<group>";
-		};
-		BF37D7642890B77D00572154 /* Events */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Events;
-			sourceTree = "<group>";
-		};
-		BF37D7652890B78600572154 /* User */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = User;
-			sourceTree = "<group>";
-		};
 		BF7863C42885FE8E00417C36 /* Main Flow */ = {
 			isa = PBXGroup;
 			children = (
@@ -258,8 +266,65 @@
 				BFBD3D5128820D1C008743B8 /* StartupViewController.m */,
 				BFBD3D592885CD40008743B8 /* LoginScreenViewController.h */,
 				BFBD3D5A2885CD40008743B8 /* LoginScreenViewController.m */,
+				BFD0EB222891E2E6003A198C /* HeraTabBarController.h */,
+				BFD0EB232891E2E6003A198C /* HeraTabBarController.m */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		BFB53FC02891E69F0077AA22 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				BFB53FC32891E6B20077AA22 /* Cycles */,
+				BFB53FC22891E6AA0077AA22 /* Events */,
+				BFB53FC12891E6A40077AA22 /* User */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		BFB53FC12891E6A40077AA22 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				BFB53FD62891E76E0077AA22 /* User+CoreDataProperties.h */,
+				BFB53FD72891E76E0077AA22 /* User+CoreDataClass.h */,
+				BFB53FD82891E76E0077AA22 /* User+CoreDataClass.m */,
+				BFB53FD92891E76E0077AA22 /* User+CoreDataProperties.m */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		BFB53FC22891E6AA0077AA22 /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				BFB53FDC2891E7960077AA22 /* Event+CoreDataProperties.h */,
+				BFB53FDD2891E7960077AA22 /* Event+CoreDataClass.h */,
+				BFB53FDE2891E7960077AA22 /* Event+CoreDataClass.m */,
+				BFB53FDF2891E7960077AA22 /* Event+CoreDataProperties.m */,
+				BFB53FE02891E7960077AA22 /* EventCollection+CoreDataProperties.h */,
+				BFB53FE12891E7960077AA22 /* EventCollection+CoreDataClass.h */,
+				BFB53FE22891E7960077AA22 /* EventCollection+CoreDataClass.m */,
+				BFB53FE32891E7960077AA22 /* EventCollection+CoreDataProperties.m */,
+			);
+			path = Events;
+			sourceTree = "<group>";
+		};
+		BFB53FC32891E6B20077AA22 /* Cycles */ = {
+			isa = PBXGroup;
+			children = (
+				BFB53FE82891E7CE0077AA22 /* CycleCollectionFuture+CoreDataProperties.h */,
+				BFB53FE92891E7CE0077AA22 /* CycleCollectionFuture+CoreDataClass.h */,
+				BFB53FEA2891E7CE0077AA22 /* CycleCollectionFuture+CoreDataClass.m */,
+				BFB53FEB2891E7CE0077AA22 /* CycleCollectionFuture+CoreDataProperties.m */,
+				BFB53FEC2891E7CE0077AA22 /* CycleCollectionPast+CoreDataProperties.h */,
+				BFB53FED2891E7CE0077AA22 /* CycleCollectionPast+CoreDataClass.h */,
+				BFB53FEE2891E7CE0077AA22 /* CycleCollectionPast+CoreDataClass.m */,
+				BFB53FEF2891E7CE0077AA22 /* CycleCollectionPast+CoreDataProperties.m */,
+				BFB53FF02891E7CE0077AA22 /* Cycle+CoreDataProperties.h */,
+				BFB53FF12891E7CE0077AA22 /* Cycle+CoreDataClass.h */,
+				BFB53FF22891E7CE0077AA22 /* Cycle+CoreDataClass.m */,
+				BFB53FF32891E7CE0077AA22 /* Cycle+CoreDataProperties.m */,
+			);
+			path = Cycles;
 			sourceTree = "<group>";
 		};
 		BFD11BEE2880E4220006E93E /* Setup Flow */ = {
@@ -304,7 +369,7 @@
 		BFD3184B287E2279003E85F3 /* Hera */ = {
 			isa = PBXGroup;
 			children = (
-				BF37D7622890B77500572154 /* Entities */,
+				BFB53FC02891E69F0077AA22 /* Entities */,
 				BF7863D72889B5FF00417C36 /* Views */,
 				BF9054A4287E2F220061001C /* ViewControllers */,
 				BFD3184C287E2279003E85F3 /* AppDelegate.h */,
@@ -584,22 +649,35 @@
 				BF7863D228887D8300417C36 /* cc_calendar.m in Sources */,
 				BFD31862287E227A003E85F3 /* main.m in Sources */,
 				BF9054A7287E2F5A0061001C /* TermsAndConditionsVC.m in Sources */,
+				BFB53FDB2891E76E0077AA22 /* User+CoreDataProperties.m in Sources */,
+				BFB53FF82891E7CF0077AA22 /* Cycle+CoreDataClass.m in Sources */,
 				BF7863E0288F291C00417C36 /* get_predictions.m in Sources */,
 				BFD31854287E2279003E85F3 /* ViewController.m in Sources */,
 				BFBD3D5B2885CD40008743B8 /* LoginScreenViewController.m in Sources */,
+				BFB53FE72891E7960077AA22 /* EventCollection+CoreDataProperties.m in Sources */,
 				BFD11BE0287E74140006E93E /* PeriodLengthViewController.m in Sources */,
 				BFD11BE6287F9B700006E93E /* Utilities.m in Sources */,
+				BFB53FE52891E7960077AA22 /* Event+CoreDataProperties.m in Sources */,
+				BFB53FF42891E7CE0077AA22 /* CycleCollectionFuture+CoreDataClass.m in Sources */,
 				BFBD3D5228820D1C008743B8 /* StartupViewController.m in Sources */,
 				BF7863DD288B59DD00417C36 /* DIYCalendarCell.m in Sources */,
 				BF078DBC287E511900608897 /* LastPeriodViewController.m in Sources */,
 				BF7863DA2889B6A100417C36 /* CycleViewController.swift in Sources */,
+				BFB53FE62891E7960077AA22 /* EventCollection+CoreDataClass.m in Sources */,
+				BFB53FF72891E7CF0077AA22 /* CycleCollectionPast+CoreDataProperties.m in Sources */,
 				BFD3185A287E2279003E85F3 /* Hera.xcdatamodeld in Sources */,
+				BFB53FE42891E7960077AA22 /* Event+CoreDataClass.m in Sources */,
 				BFD11BE3287F4C940006E93E /* FaceIdSetupViewController.m in Sources */,
+				BFB53FF62891E7CE0077AA22 /* CycleCollectionPast+CoreDataClass.m in Sources */,
+				BFB53FDA2891E76E0077AA22 /* User+CoreDataClass.m in Sources */,
 				BF7863C72885FEA600417C36 /* LoggingViewController.m in Sources */,
 				BFD3184E287E2279003E85F3 /* AppDelegate.m in Sources */,
+				BFD0EB242891E2E6003A198C /* HeraTabBarController.m in Sources */,
 				BF7863CF28887CA600417C36 /* CalendarViewController.m in Sources */,
+				BFB53FF52891E7CE0077AA22 /* CycleCollectionFuture+CoreDataProperties.m in Sources */,
 				BF7863CB28862B3E00417C36 /* cc.m in Sources */,
 				BFD11BE92880BF840006E93E /* NotificationPermsViewController.m in Sources */,
+				BFB53FF92891E7CF0077AA22 /* Cycle+CoreDataProperties.m in Sources */,
 				BFD31851287E2279003E85F3 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -762,6 +840,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -770,6 +849,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9D42E31291F33E5D132AC0AD /* Pods-Hera.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
@@ -804,6 +884,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 97DD85EDE5D69E867BC3EE0C /* Pods-Hera.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;

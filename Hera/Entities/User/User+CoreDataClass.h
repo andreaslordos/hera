@@ -2,14 +2,14 @@
 //  User+CoreDataClass.h
 //  Hera
 //
-//  Created by Andreas Lordos on 7/26/22.
+//  Created by Andreas Lordos on 7/27/22.
 //
 //
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
-@class CycleCollection, EventCollection;
+@class CycleCollectionFuture, CycleCollectionPast;
 
 NS_ASSUME_NONNULL_BEGIN
 

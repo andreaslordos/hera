@@ -1,5 +1,5 @@
 //
-//  EventCollection+CoreDataClass.h
+//  CycleCollectionPast+CoreDataClass.h
 //  Hera
 //
 //  Created by Andreas Lordos on 7/27/22.
@@ -9,14 +9,14 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
-@class Event;
+@class Cycle;
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface EventCollection : NSManagedObject
+@interface CycleCollectionPast : NSManagedObject
 
 @end
 
 NS_ASSUME_NONNULL_END
 
-#import "EventCollection+CoreDataProperties.h"
+#import "CycleCollectionPast+CoreDataProperties.h"

@@ -2,7 +2,7 @@
 //  User+CoreDataProperties.m
 //  Hera
 //
-//  Created by Andreas Lordos on 7/26/22.
+//  Created by Andreas Lordos on 7/27/22.
 //
 //
 
@@ -21,7 +21,7 @@
 @dynamic isSynced;
 @dynamic lastBackup;
 @dynamic lastCycleStart;
-@dynamic cycles;
-@dynamic events;
+@dynamic cyclesFuture;
+@dynamic cyclesPast;
 
 @end

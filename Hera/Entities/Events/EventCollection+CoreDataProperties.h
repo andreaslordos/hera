@@ -2,7 +2,7 @@
 //  EventCollection+CoreDataProperties.h
 //  Hera
 //
-//  Created by Andreas Lordos on 7/26/22.
+//  Created by Andreas Lordos on 7/27/22.
 //
 //
 
@@ -15,8 +15,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (NSFetchRequest<EventCollection *> *)fetchRequest NS_SWIFT_NAME(fetchRequest());
 
-@property (nullable, nonatomic, retain) NSObject *collection;
-@property (nonatomic) BOOL past;
 @property (nullable, nonatomic, retain) NSOrderedSet<Event *> *event;
 
 @end

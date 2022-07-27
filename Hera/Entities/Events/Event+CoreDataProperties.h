@@ -2,7 +2,7 @@
 //  Event+CoreDataProperties.h
 //  Hera
 //
-//  Created by Andreas Lordos on 7/26/22.
+//  Created by Andreas Lordos on 7/27/22.
 //
 //
 
