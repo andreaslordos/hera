@@ -1,26 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21F79" minimumToolsVersion="Automatic" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
-    <entity name="CurrentCycle" representedClassName="CurrentCycle" parentEntity="Cycle" syncable="YES"/>
     <entity name="Cycle" representedClassName="Cycle" syncable="YES">
         <attribute name="endDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="ovulationDuration" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="ovulationStart" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="periodDuration" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="startDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="events" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="EventCollection"/>
     </entity>
     <entity name="CycleCollection" representedClassName="CycleCollection" syncable="YES">
-        <attribute name="cycles" optional="YES" attributeType="Transformable"/>
-        <relationship name="relationship" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Cycle"/>
+        <relationship name="cycles" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Cycle"/>
     </entity>
-    <entity name="Event" representedClassName="Event" isAbstract="YES" syncable="YES">
+    <entity name="CycleCollectionFuture" representedClassName="CycleCollectionFuture" parentEntity="CycleCollection" syncable="YES" codeGenerationType="class"/>
+    <entity name="CycleCollectionPast" representedClassName="CycleCollectionPast" parentEntity="CycleCollection" syncable="YES" codeGenerationType="class"/>
+    <entity name="Event" representedClassName="Event" syncable="YES">
         <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="predicted" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="type" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
     </entity>
     <entity name="EventCollection" representedClassName="EventCollection" syncable="YES">
-        <attribute name="collection" optional="YES" attributeType="Transformable"/>
-        <attribute name="past" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
-        <relationship name="event" optional="YES" toMany="YES" maxCount="2" deletionRule="Nullify" ordered="YES" destinationEntity="Event"/>
+        <relationship name="event" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Event"/>
     </entity>
     <entity name="Mood" representedClassName="Mood" parentEntity="Event" syncable="YES"/>
     <entity name="Ovulation" representedClassName="Ovulation" parentEntity="Event" syncable="YES">
@@ -38,19 +37,20 @@
         <attribute name="isSynced" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="lastBackup" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="lastCycleStart" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
-        <relationship name="cycles" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CycleCollection"/>
-        <relationship name="events" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="EventCollection"/>
+        <relationship name="cyclesFuture" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CycleCollectionFuture"/>
+        <relationship name="cyclesPast" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CycleCollectionPast"/>
     </entity>
     <elements>
-        <element name="CurrentCycle" positionX="-757.375" positionY="214.109375" width="128" height="43"/>
-        <element name="Cycle" positionX="-539.40234375" positionY="96.33984375" width="128" height="118"/>
-        <element name="CycleCollection" positionX="-568.265625" positionY="324.125" width="128" height="73"/>
-        <element name="Event" positionX="-123.74609375" positionY="80.54296875" width="128" height="88"/>
-        <element name="EventCollection" positionX="260.98046875" positionY="-67.86328125" width="128" height="88"/>
-        <element name="Mood" positionX="-578.171875" positionY="-12.671875" width="128" height="43"/>
-        <element name="Ovulation" positionX="-387.90234375" positionY="-17.953125" width="128" height="58"/>
-        <element name="Pain" positionX="-200.78515625" positionY="-16.34375" width="128" height="43"/>
-        <element name="Period" positionX="9.93359375" positionY="-25.9921875" width="128" height="58"/>
-        <element name="User" positionX="268.046875" positionY="189.484375" width="128" height="178"/>
+        <element name="Cycle" positionX="60.7578125" positionY="211.4765625" width="128" height="133"/>
+        <element name="CycleCollection" positionX="-338.34765625" positionY="151.66796875" width="128" height="58"/>
+        <element name="Event" positionX="503.69921875" positionY="113.4140625" width="128" height="88"/>
+        <element name="EventCollection" positionX="401.3984375" positionY="277.140625" width="128" height="58"/>
+        <element name="Mood" positionX="583.16015625" positionY="-25.546875" width="128" height="43"/>
+        <element name="Ovulation" positionX="-11.41015625" positionY="-20.01953125" width="128" height="58"/>
+        <element name="Pain" positionX="182.40625" positionY="-18.77734375" width="128" height="43"/>
+        <element name="Period" positionX="360.14453125" positionY="-29.94140625" width="128" height="58"/>
+        <element name="User" positionX="-124.58203125" positionY="312.2734375" width="128" height="178"/>
+        <element name="CycleCollectionFuture" positionX="-262.86328125" positionY="261.16015625" width="128" height="29"/>
+        <element name="CycleCollectionPast" positionX="-416.3828125" positionY="261.609375" width="128" height="29"/>
     </elements>
 </model>
