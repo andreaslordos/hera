@@ -14,7 +14,7 @@
 @implementation PeriodLengthViewController
 
 - (void)finishPeriodLength {
-    [self performSegueWithIdentifier:@"finishPeriodDuration" sender:nil];
+    [self performSegueWithIdentifier:@"finishPeriodDuration" sender:self];
     
 }
 - (void)viewDidLoad {

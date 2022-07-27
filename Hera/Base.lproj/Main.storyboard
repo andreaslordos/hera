@@ -661,10 +661,10 @@
             </objects>
             <point key="canvasLocation" x="-1078" y="1094"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Hera Tab Bar Controller-->
         <scene sceneID="oT3-1m-k1k">
             <objects>
-                <tabBarController modalPresentationStyle="fullScreen" id="8GK-UT-l5R" sceneMemberID="viewController">
+                <tabBarController modalPresentationStyle="fullScreen" id="8GK-UT-l5R" customClass="HeraTabBarController" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="uxG-Ta-jEq"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Q1w-Vd-mvJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>

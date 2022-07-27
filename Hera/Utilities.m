@@ -6,7 +6,8 @@
 //
 
 #import "Utilities.h"
-
+#import "HeraTabBarController.h"
+#import "AppDelegate.h"
 @implementation Utilities
 
 + (void)createSimpleAlert:(NSString *)alertTitle desc:(NSString *)alertText vc:(UIViewController *)vc {
@@ -44,4 +45,17 @@
     return [self retrieveUserDefault:key] != nil;
 }
 
++ (NSManagedObjectContext*)getObjectContext {
+    AppDelegate *appDel = [UIApplication sharedApplication].delegate;
+    NSManagedObjectContext *context = [appDel getContext];
+    return context;
+}
+
++ (User*)getUserFromParent:(UIViewController*)vc {
+    HeraTabBarController *parent = nil;
+    parent = [vc tabBarController];
+    NSManagedObjectContext *context = parent.context;
+    User *user = [[context executeFetchRequest:[User fetchRequest] error:nil] firstObject]; // since fetch returns an array get the first object in the array
+    return user;
+}
 @end

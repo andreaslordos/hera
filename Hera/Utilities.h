@@ -7,6 +7,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "User+CoreDataClass.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -15,6 +16,8 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)saveToUserDefaults:(NSString*)string_to_store keys:(NSString *)key_for_the_String;
 + (NSString*)retrieveUserDefault:(NSString*)key;
 + (BOOL)inUserDefaults:(NSString*)key;
++ (User*)getUserFromParent:(UIViewController*)vc;
++ (NSManagedObjectContext*)getObjectContext;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -82,4 +82,8 @@
     }
 }
 
+- (NSManagedObjectContext*)getContext {
+    return self.persistentContainer.viewContext;
+}
+
 @end

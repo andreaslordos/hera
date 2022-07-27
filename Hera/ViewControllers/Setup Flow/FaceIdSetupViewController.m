@@ -35,7 +35,7 @@
  }
 
 - (void)finishFaceID {
-    [self performSegueWithIdentifier:@"doneWithFace" sender:nil];
+    [self performSegueWithIdentifier:@"doneWithFace" sender:self];
 }
 
 - (IBAction)didTapEnable:(id)sender {

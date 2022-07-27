@@ -10,6 +10,7 @@
 #import "CoreData/CoreData.h"
 #import "User+CoreDataClass.h"
 #import "PeriodLengthViewController.h"
+#import "Utilities.h"
 
 @interface LastPeriodViewController ()
 @property (weak) NSManagedObjectContext* context;
@@ -21,7 +22,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.datepicker.maximumDate = [NSDate date]; // set max date to today
-    [self setObjectContext];
+    self.context = [Utilities getObjectContext];
     self.user = [[User alloc] initWithContext:self.context];
     self.user.lastCycleStart = nil;
 }
@@ -37,16 +38,6 @@
         PeriodLengthViewController *controller = (PeriodLengthViewController*)segue.destinationViewController;
         controller.user = self.user;
         controller.context = self.context;
-    }
-}
-
-
-- (void) setObjectContext {
-    _context = nil;
-    id delegate = [[UIApplication sharedApplication] delegate];
-    
-    if ([delegate performSelector:@selector(managedObjectContext)]) {
-            self.context = [delegate managedObjectContext];
     }
 }
 
