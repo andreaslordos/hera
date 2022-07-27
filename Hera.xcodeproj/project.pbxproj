@@ -166,6 +166,37 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		BF37D7622890B77500572154 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				BF37D7652890B78600572154 /* User */,
+				BF37D7642890B77D00572154 /* Events */,
+				BF37D7632890B77A00572154 /* Cycles */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		BF37D7632890B77A00572154 /* Cycles */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cycles;
+			sourceTree = "<group>";
+		};
+		BF37D7642890B77D00572154 /* Events */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Events;
+			sourceTree = "<group>";
+		};
+		BF37D7652890B78600572154 /* User */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
 		BF7863C42885FE8E00417C36 /* Main Flow */ = {
 			isa = PBXGroup;
 			children = (
@@ -273,6 +304,7 @@
 		BFD3184B287E2279003E85F3 /* Hera */ = {
 			isa = PBXGroup;
 			children = (
+				BF37D7622890B77500572154 /* Entities */,
 				BF7863D72889B5FF00417C36 /* Views */,
 				BF9054A4287E2F220061001C /* ViewControllers */,
 				BFD3184C287E2279003E85F3 /* AppDelegate.h */,
