@@ -6,7 +6,7 @@
 //
 
 #import "PeriodLengthViewController.h"
-
+#import "FaceIdSetupViewController.h"
 @interface PeriodLengthViewController ()
 @property (strong, nonatomic) NSMutableArray *pickerData;
 @end
@@ -30,15 +30,20 @@
     [self.picker selectRow:4 inComponent:0 animated:YES];
 }
 
-/*
-#pragma mark - Navigation
-
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqualToString:@"finishPeriodDuration"]) {
+        FaceIdSetupViewController *controller = (FaceIdSetupViewController*)segue.destinationViewController;
+        controller.user = self.user;
+        controller.context = self.context;
+    }
 }
-*/
+
+- (int)getPeriodDuration {
+    return (int)[self.picker selectedRowInComponent:0] + 1;
+}
 
 - (NSInteger)numberOfComponentsInPickerView:(nonnull UIPickerView *)pickerView {
     return 1;
@@ -53,12 +58,12 @@
 }
 
 - (IBAction)didTapNotSure:(id)sender {
+    self.user.averagePeriodDuration = 5; // set to default
     [self finishPeriodLength];
-    // set up core data
 }
 
 - (IBAction)didTapContinue:(id)sender {
+    self.user.averagePeriodDuration = [self getPeriodDuration];
     [self finishPeriodLength];
-    // set up core data
 }
 @end

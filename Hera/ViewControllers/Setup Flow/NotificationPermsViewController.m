@@ -33,6 +33,7 @@
 
 - (void)completedSetup {
     [Utilities saveToUserDefaults:@"YES" keys:@"completedSetup"];
+    [self.context save:nil];
     [self performSegueWithIdentifier:@"doneWithSetup" sender:nil];
 }
 
