@@ -15,16 +15,22 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (NSFetchRequest<CycleCollectionFuture *> *)fetchRequest NS_SWIFT_NAME(fetchRequest());
 
-@property (nullable, nonatomic, retain) NSSet<Cycle *> *cycles;
+@property (nullable, nonatomic, retain) NSOrderedSet<Cycle *> *cycles;
 
 @end
 
 @interface CycleCollectionFuture (CoreDataGeneratedAccessors)
 
+- (void)insertObject:(Cycle *)value inCyclesAtIndex:(NSUInteger)idx;
+- (void)removeObjectFromCyclesAtIndex:(NSUInteger)idx;
+- (void)insertCycles:(NSArray<Cycle *> *)value atIndexes:(NSIndexSet *)indexes;
+- (void)removeCyclesAtIndexes:(NSIndexSet *)indexes;
+- (void)replaceObjectInCyclesAtIndex:(NSUInteger)idx withObject:(Cycle *)value;
+- (void)replaceCyclesAtIndexes:(NSIndexSet *)indexes withCycles:(NSArray<Cycle *> *)values;
 - (void)addCyclesObject:(Cycle *)value;
 - (void)removeCyclesObject:(Cycle *)value;
-- (void)addCycles:(NSSet<Cycle *> *)values;
-- (void)removeCycles:(NSSet<Cycle *> *)values;
+- (void)addCycles:(NSOrderedSet<Cycle *> *)values;
+- (void)removeCycles:(NSOrderedSet<Cycle *> *)values;
 
 @end
 

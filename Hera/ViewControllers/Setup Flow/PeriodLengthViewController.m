@@ -7,6 +7,10 @@
 
 #import "PeriodLengthViewController.h"
 #import "FaceIdSetupViewController.h"
+#import "CycleCollectionFuture+CoreDataClass.h"
+#import "Cycle+CoreDataClass.h"
+#import "Utilities.h"
+
 @interface PeriodLengthViewController ()
 @property (strong, nonatomic) NSMutableArray *pickerData;
 @end
@@ -58,12 +62,16 @@
 }
 
 - (IBAction)didTapNotSure:(id)sender {
-    self.user.averagePeriodDuration = 5; // set to default
+    self.user.averagePeriodDuration = 5.0; // set to default
     [self finishPeriodLength];
 }
 
 - (IBAction)didTapContinue:(id)sender {
     self.user.averagePeriodDuration = [self getPeriodDuration];
+    Cycle *current_cycle = [[self.user.cyclesFuture cycles] lastObject];
+    current_cycle.periodDuration = self.user.averagePeriodDuration;
     [self finishPeriodLength];
+    self.user.lastBackup = nil;
+    self.user.isSynced = NO;
 }
 @end

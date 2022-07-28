@@ -14,7 +14,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface EventCollection : NSManagedObject
-
+-(void)insertEventOrderedByDate:(Event*)eventToAdd;
 @end
 
 NS_ASSUME_NONNULL_END

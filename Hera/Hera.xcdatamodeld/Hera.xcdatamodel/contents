@@ -9,10 +9,10 @@
         <relationship name="events" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="EventCollection"/>
     </entity>
     <entity name="CycleCollectionFuture" representedClassName="CycleCollectionFuture" syncable="YES">
-        <relationship name="cycles" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Cycle"/>
+        <relationship name="cycles" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Cycle"/>
     </entity>
     <entity name="CycleCollectionPast" representedClassName="CycleCollectionPast" syncable="YES">
-        <relationship name="cycles" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Cycle"/>
+        <relationship name="cycles" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Cycle"/>
     </entity>
     <entity name="Event" representedClassName="Event" syncable="YES">
         <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
@@ -42,7 +42,7 @@
         <relationship name="cyclesPast" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CycleCollectionPast"/>
     </entity>
     <elements>
-        <element name="Cycle" positionX="60.7578125" positionY="211.4765625" width="128" height="133"/>
+        <element name="Cycle" positionX="58.9921875" positionY="211.71875" width="128" height="133"/>
         <element name="CycleCollectionFuture" positionX="-269.75" positionY="133.9765625" width="128" height="58"/>
         <element name="CycleCollectionPast" positionX="68.96875" positionY="418.8671875" width="128" height="58"/>
         <element name="Event" positionX="503.69921875" positionY="113.4140625" width="128" height="88"/>
