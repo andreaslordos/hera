@@ -68,7 +68,7 @@
     cycle.startDate = periodDate;
     cycle.ovulationStart = [Utilities getDateByYearOffset:0 monthOffset:0 dayOffset:(int) self.user.averageOvulationStart date:cycle.startDate]; // default ovulation start
     cycle.ovulationDuration = (int) self.user.averageOvulationDuration; // days with probability of ovulation
-    cycle.endDate = [Utilities getDateByYearOffset:0 monthOffset:0 dayOffset:27 date:cycle.startDate]; // default cycle duration 27 days
+    cycle.endDate = [Utilities getDateByYearOffset:0 monthOffset:0 dayOffset:28 date:cycle.startDate]; // default cycle duration 29 days
 
     float startingProb = 0.2;
     float oldMax = (cycle.ovulationDuration - 1.0) * (cycle.ovulationDuration - 1.0) * 2.0;
@@ -84,7 +84,6 @@
         [cycle.events insertEventOrderedByDate:ovulationEvent];
     }
     
-
     Period *periodEvent = [[Period alloc] initWithContext:self.context];
     periodEvent.date = periodDate;
     periodEvent.type = 0;

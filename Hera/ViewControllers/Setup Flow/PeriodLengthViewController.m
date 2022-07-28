@@ -9,6 +9,8 @@
 #import "FaceIdSetupViewController.h"
 #import "CycleCollectionFuture+CoreDataClass.h"
 #import "Cycle+CoreDataClass.h"
+#import "Period+CoreDataClass.h"
+#import "Event+CoreDataClass.h"
 #import "Utilities.h"
 
 @interface PeriodLengthViewController ()
@@ -70,6 +72,17 @@
     self.user.averagePeriodDuration = [self getPeriodDuration];
     Cycle *current_cycle = [[self.user.cyclesFuture cycles] lastObject];
     current_cycle.periodDuration = self.user.averagePeriodDuration;
+    
+    for (int i = 1; i < current_cycle.periodDuration; i++) {
+        NSDate *periodDate = [Utilities getDateByYearOffset:0 monthOffset:0 dayOffset:i date:current_cycle.startDate];
+        Period *periodEvent = [[Period alloc] initWithContext:self.context];
+        periodEvent.date = periodDate;
+        periodEvent.type = 0;
+        periodEvent.intensity = 0.5;
+        periodEvent.predicted = YES;
+        //[current_cycle.events insertEventOrderedByDate:periodEvent];
+    }
+    
     [self finishPeriodLength];
     self.user.lastBackup = nil;
     self.user.isSynced = NO;

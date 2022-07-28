@@ -82,7 +82,7 @@ class CycleViewController: UIViewController, MSCircularSliderProtocol, MSCircula
         self.cycleStartDate = self.cycle.startDate;
         self.cycleEndDate = self.cycle.endDate;
         self.cycleLength = Utilities.getDaysBetween(self.cycleStartDate, to: self.cycleEndDate) + 1
-        self.currentDayInCycle = Utilities.getDaysSince(cycleStartDate) + 1
+        self.currentDayInCycle = Utilities.getDaysSince(cycleStartDate)
         self.currentDayShown = self.currentDayInCycle;
         let ovulationStart = Utilities.getDaysBetween(self.cycleStartDate, to: self.cycle.ovulationStart!)
         let ovulationEnd = ovulationStart + Int(self.cycle.ovulationDuration)
@@ -95,17 +95,19 @@ class CycleViewController: UIViewController, MSCircularSliderProtocol, MSCircula
     }
     
     func updateDayShown() {
-        
+        self.slider.handleColor = UIColor(red: 35 / 255.0, green: 69 / 255.0, blue: 96 / 255.0, alpha: 1.0)
+
         self.fertileLabel.attributedText = NSAttributedString()
         self.bleedingLabel.attributedText = NSAttributedString()
 
         if (self.currentDayShown == self.currentDayInCycle) {
             dayCounter.text = "Today"
+            self.slider.handleColor = UIColor.yellow
         }
         else {
             dayCounter.text = "Day " + String(self.currentDayShown)
         }
-        dayCounter.text = (dayCounter.text ?? "")! + " (" + dateToString(Utilities.getDateByYearOffset(0, monthOffset: 0, dayOffset: Int32(self.currentDayShown), date: self.cycleStartDate)) + ")"
+        dayCounter.text = (dayCounter.text ?? "")! + " (" + dateToString(Utilities.getDateByYearOffset(0, monthOffset: 0, dayOffset: Int32(self.currentDayShown)-1, date: self.cycleStartDate)) + ")"
         
         if (self.currentDayShown >= self.periodDuration.0 && self.currentDayShown <= self.periodDuration.1) {
             self.fertileWindow.text = "Bleeding"
@@ -136,8 +138,9 @@ class CycleViewController: UIViewController, MSCircularSliderProtocol, MSCircula
             let boldText = "Fertile window"
             let attrs = [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 17)]
             let attributedString = NSMutableAttributedString(string:boldText, attributes:attrs)
-
-            if (self.ovulationPeriod.1 - self.currentDayShown == 0) {
+            
+            let daysLeft = self.ovulationPeriod.1 - self.currentDayShown
+            if (daysLeft == 0) {
                 attributedString.append(NSMutableAttributedString(string:" ending today"))
             }
             else {
@@ -147,9 +150,9 @@ class CycleViewController: UIViewController, MSCircularSliderProtocol, MSCircula
                 attributedString.append(normalString)
                 
                 
-                let boldText2 = (self.ovulationPeriod.1 - self.currentDayShown) == 1 ?
+                let boldText2 = (daysLeft) == 1 ?
                 "day" :
-                (String(self.ovulationPeriod.1 - self.currentDayShown) + " days")
+                (String(daysLeft) + " days")
                 let attrs2 = [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 17)]
                 let attributedString2 = NSMutableAttributedString(string:boldText2, attributes:attrs2)
                 attributedString.append(attributedString2)

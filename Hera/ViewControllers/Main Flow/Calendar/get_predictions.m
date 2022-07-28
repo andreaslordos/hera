@@ -6,7 +6,11 @@
 //
 
 #import "get_predictions.h"
-
+#import "User+CoreDataClass.h"
+#import "CycleCollectionFuture+CoreDataClass.h"
+#import "CycleCollectionPast+CoreDataClass.h"
+#import "Cycle+CoreDataClass.h"
+#import "Utilities.h"
 @implementation get_predictions
 
 - (instancetype)init
@@ -28,11 +32,11 @@
 
 - (void)setDefaults {
     self.gregorian = [NSCalendar calendarWithIdentifier:NSCalendarIdentifierGregorian];
-    self.cycleStartDate = [self getDate:0 monthOffset:-11 dayOffset:0 date:[[NSDate alloc] init]];
-    self.ovulationStart = 14;
-    self.ovulationDuration = 4;
-    self.periodDuration = 5;
-    self.cycleLength = 28;
+    self.cycleStartDate = self.user.lastCycleStart;
+    self.ovulationStart = (int) self.user.averageOvulationStart;
+    self.ovulationDuration = (int) self.user.averageOvulationDuration;
+    self.periodDuration = (int) self.user.averagePeriodDuration;
+    self.cycleLength = (int)[Utilities getDaysBetween:self.cycleStartDate toDate:[self.user.cyclesFuture.cycles firstObject].endDate];
 }
 
 - (NSString*)formatDate:(NSDate *)date {

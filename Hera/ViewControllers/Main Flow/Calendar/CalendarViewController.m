@@ -29,7 +29,9 @@
     self.gregorian = [NSCalendar calendarWithIdentifier:NSCalendarIdentifierGregorian];
     _today = [[NSDate alloc] init];
     [self setAppearanceCalendar];
-    get_predictions *predictions = [[get_predictions alloc] init];
+    get_predictions *predictions = [get_predictions alloc];
+    predictions.user = [Utilities getUserFromParent:self];
+    [predictions init];
     _periodDates = [predictions getPeriod];
     _ovulationDates = [predictions getOvulation];
 }
@@ -67,7 +69,7 @@
     [calendar selectDate:_today];
     calendar.appearance.headerTitleColor = [UIColor blackColor];
     [calendar setPagingEnabled:NO]; // multiple months on the same screen
-    [calendar setPlaceholderType:FSCalendarPlaceholderTypeNone]; // remove mon
+    [calendar setPlaceholderType:FSCalendarPlaceholderTypeNone]; // remove month
     
     [calendar registerClass:[DIYCalendarCell class] forCellReuseIdentifier:@"cell"];
     // add calendar to view
