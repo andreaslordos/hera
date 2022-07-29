@@ -32,7 +32,9 @@
 */
 
 - (void)completedSetup {
+    //TODO: Stop storing completedSetup in User Defaults
     [Utilities saveToUserDefaults:@"YES" keys:@"completedSetup"];
+    [self.context save:nil];
     [self performSegueWithIdentifier:@"doneWithSetup" sender:nil];
 }
 

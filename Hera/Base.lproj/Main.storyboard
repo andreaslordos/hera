@@ -661,10 +661,10 @@
             </objects>
             <point key="canvasLocation" x="-1078" y="1094"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Hera Tab Bar Controller-->
         <scene sceneID="oT3-1m-k1k">
             <objects>
-                <tabBarController modalPresentationStyle="fullScreen" id="8GK-UT-l5R" sceneMemberID="viewController">
+                <tabBarController modalPresentationStyle="fullScreen" id="8GK-UT-l5R" customClass="HeraTabBarController" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="uxG-Ta-jEq"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Q1w-Vd-mvJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
@@ -959,20 +959,204 @@
         <!--Settings-->
         <scene sceneID="qAX-Em-1Xu">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="mXo-oY-Cl9" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="mXo-oY-Cl9" customClass="SettingsViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KFf-6a-gf3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ftg-el-L27">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                                <color key="barTintColor" systemColor="systemBackgroundColor"/>
+                                <items>
+                                    <navigationItem title="Settings" id="2Es-5n-MTw">
+                                        <barButtonItem key="rightBarButtonItem" title="Item" style="plain" id="w9Z-mN-Ce1">
+                                            <imageReference key="image" image="qrcode" catalog="system" symbolScale="large"/>
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="ScC-w6-Ldl">
+                                                <rect key="frame" x="339.33333333333331" y="11" width="54.666666666666686" height="34.333333333333336"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="">
+                                                    <imageReference key="image" image="qrcode" catalog="system" symbolScale="large"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="didTapAdd:" destination="wEd-Ya-CIA" eventType="touchUpInside" id="cgG-Jo-3SO"/>
+                                                </connections>
+                                            </button>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="QA8-q7-Fiq">
+                                <rect key="frame" x="0.0" y="56" width="414" height="737"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="securitySetting" rowHeight="40" id="2fj-HN-erX" customClass="SettingsTableViewCell">
+                                        <rect key="frame" x="0.0" y="44.666666030883789" width="414" height="40"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2fj-HN-erX" id="cUR-6H-f8y">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="40"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PHS-BL-cQA" userLabel="settingName">
+                                                    <rect key="frame" x="20" y="9.6666666666666643" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="greaterthan" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="6n1-xa-3dJ">
+                                                    <rect key="frame" x="379" y="8.6666666666666625" width="15" height="23"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="U59-uy-ZoU"/>
+                                                        <constraint firstAttribute="width" constant="15" id="dzK-rG-amJ"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="PHS-BL-cQA" firstAttribute="leading" secondItem="cUR-6H-f8y" secondAttribute="leading" constant="20" symbolic="YES" id="6qf-d4-6y1"/>
+                                                <constraint firstItem="6n1-xa-3dJ" firstAttribute="centerY" secondItem="cUR-6H-f8y" secondAttribute="centerY" id="Jlc-oS-wmD"/>
+                                                <constraint firstItem="PHS-BL-cQA" firstAttribute="centerY" secondItem="cUR-6H-f8y" secondAttribute="centerY" id="YWU-Tu-LCN"/>
+                                                <constraint firstAttribute="trailing" secondItem="6n1-xa-3dJ" secondAttribute="trailing" constant="20" symbolic="YES" id="gq8-iZ-wHs"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="settingName" destination="PHS-BL-cQA" id="wPS-Rj-glH"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="lKh-2q-Jfi"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="QA8-q7-Fiq" firstAttribute="top" secondItem="Ftg-el-L27" secondAttribute="bottom" id="7GL-AJ-2do"/>
+                            <constraint firstItem="lKh-2q-Jfi" firstAttribute="bottom" secondItem="QA8-q7-Fiq" secondAttribute="bottom" id="Adk-AU-hKm"/>
+                            <constraint firstItem="Ftg-el-L27" firstAttribute="top" secondItem="lKh-2q-Jfi" secondAttribute="top" id="GoO-j7-gyF"/>
+                            <constraint firstItem="Ftg-el-L27" firstAttribute="leading" secondItem="lKh-2q-Jfi" secondAttribute="leading" id="MSM-Lp-Vjb"/>
+                            <constraint firstItem="lKh-2q-Jfi" firstAttribute="trailing" secondItem="QA8-q7-Fiq" secondAttribute="trailing" id="dbB-PW-Jgo"/>
+                            <constraint firstItem="Ftg-el-L27" firstAttribute="trailing" secondItem="lKh-2q-Jfi" secondAttribute="trailing" id="nYK-o0-raE"/>
+                            <constraint firstItem="QA8-q7-Fiq" firstAttribute="leading" secondItem="lKh-2q-Jfi" secondAttribute="leading" id="ppk-d2-ctM"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" image="gearshape" catalog="system" selectedImage="gearshape" id="1v3-ec-ruK"/>
+                    <connections>
+                        <outlet property="tableView" destination="QA8-q7-Fiq" id="Efn-ha-iEC"/>
+                        <segue destination="fCf-fl-Wkn" kind="presentation" identifier="qrCode" id="bEh-zT-xbz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DYo-Xq-cir" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1516" y="4205"/>
+            <point key="canvasLocation" x="1515.9420289855075" y="4204.6875"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="OEh-ap-BPG">
+            <objects>
+                <viewController id="fCf-fl-Wkn" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nln-fM-lT9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qrcode" translatesAutoresizingMaskIntoConstraints="NO" id="CI8-qX-hVf">
+                                <rect key="frame" x="30" y="246" width="350" height="350"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="350" id="HkB-ua-rLR"/>
+                                    <constraint firstAttribute="width" constant="350" id="uQk-dK-c2M"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Transfer Hera to a new device" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Tf-Na-cYO" userLabel="message">
+                                <rect key="frame" x="30" y="63.999999999999993" width="350" height="81.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="34"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="4Hk-C1-dRT">
+                                <rect key="frame" x="42.333333333333343" y="165.33333333333334" width="325.33333333333326" height="75"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bby-w5-8FW">
+                                        <rect key="frame" x="0.0" y="0.0" width="325.33333333333331" height="20.333333333333332"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="1. Install and start Hera on your new device">
+                                                <attributes>
+                                                    <font key="NSFont" metaFont="system" size="17"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C9N-Af-Psj">
+                                        <rect key="frame" x="94.333333333333314" y="27.333333333333314" width="137" height="20.333333333333329"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="2. Hera &gt; Settings">
+                                                <attributes>
+                                                    <font key="NSFont" metaFont="system" size="17"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w6t-Wt-jUy">
+                                        <rect key="frame" x="7.6666666666666572" y="54.666666666666664" width="310.33333333333337" height="20.333333333333336"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="3. Scan this QR code on your new device">
+                                                <attributes>
+                                                    <font key="NSFont" metaFont="system" size="17"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hTv-gb-EWc">
+                                <rect key="frame" x="44" y="174" width="0.0" height="0.0"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <attributedString key="attributedText"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0nU-A3-xp6">
+                                <rect key="frame" x="30" y="646" width="350" height="61"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="This transfer is peer-to-peer encrypted. No one (not even Hera) can see the data you transfer.">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="17"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="NGo-mt-uCG"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="9Tf-Na-cYO" firstAttribute="top" secondItem="NGo-mt-uCG" secondAttribute="top" constant="20" id="2SN-GN-gUh"/>
+                            <constraint firstItem="0nU-A3-xp6" firstAttribute="leading" secondItem="CI8-qX-hVf" secondAttribute="leading" id="FOH-AG-35g"/>
+                            <constraint firstItem="0nU-A3-xp6" firstAttribute="leading" secondItem="NGo-mt-uCG" secondAttribute="leading" constant="30" id="HNt-zD-Kit"/>
+                            <constraint firstItem="0nU-A3-xp6" firstAttribute="trailing" secondItem="CI8-qX-hVf" secondAttribute="trailing" id="IJL-3p-xvv"/>
+                            <constraint firstAttribute="trailing" secondItem="0nU-A3-xp6" secondAttribute="trailing" constant="30" id="RV5-7x-eeL"/>
+                            <constraint firstItem="CI8-qX-hVf" firstAttribute="centerY" secondItem="nln-fM-lT9" secondAttribute="centerY" id="V4f-dP-htS"/>
+                            <constraint firstItem="4Hk-C1-dRT" firstAttribute="centerX" secondItem="nln-fM-lT9" secondAttribute="centerX" id="Vll-zo-7IP"/>
+                            <constraint firstItem="9Tf-Na-cYO" firstAttribute="leading" secondItem="nln-fM-lT9" secondAttribute="leading" constant="30" id="XcQ-tX-RBv"/>
+                            <constraint firstItem="4Hk-C1-dRT" firstAttribute="top" secondItem="9Tf-Na-cYO" secondAttribute="bottom" constant="20" id="aIN-vS-kyt"/>
+                            <constraint firstItem="9Tf-Na-cYO" firstAttribute="centerX" secondItem="nln-fM-lT9" secondAttribute="centerX" id="eR8-ro-a4T"/>
+                            <constraint firstItem="0nU-A3-xp6" firstAttribute="top" secondItem="CI8-qX-hVf" secondAttribute="bottom" constant="50" id="kzY-P5-Edy"/>
+                            <constraint firstItem="CI8-qX-hVf" firstAttribute="centerX" secondItem="nln-fM-lT9" secondAttribute="centerX" id="tmd-HM-wGm"/>
+                            <constraint firstAttribute="trailing" secondItem="9Tf-Na-cYO" secondAttribute="trailing" constant="30" id="yRe-1h-dEM"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lPi-ur-8hK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2428.985507246377" y="4204.6875"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="HLD-pP-V4n">
+            <size key="intrinsicContentSize" width="338" height="338"/>
+        </designable>
+    </designables>
     <inferredMetricsTieBreakers>
         <segue reference="sgx-hH-FyB"/>
     </inferredMetricsTieBreakers>
@@ -984,6 +1168,7 @@
         <image name="face.smiling" catalog="system" width="128" height="121"/>
         <image name="faceid" catalog="system" width="128" height="115"/>
         <image name="gearshape" catalog="system" width="128" height="121"/>
+        <image name="greaterthan" catalog="system" width="128" height="111"/>
         <image name="hera_appicon" width="352" height="354"/>
         <image name="leaf.arrow.circlepath" catalog="system" width="121" height="128"/>
         <image name="leaf.arrow.triangle.circlepath" catalog="system" width="121" height="128"/>
@@ -991,6 +1176,8 @@
         <image name="meditation" width="512" height="512"/>
         <image name="notification" width="512" height="512"/>
         <image name="plus" catalog="system" width="128" height="113"/>
+        <image name="qrcode" width="1148" height="1148"/>
+        <image name="qrcode" catalog="system" width="128" height="114"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>

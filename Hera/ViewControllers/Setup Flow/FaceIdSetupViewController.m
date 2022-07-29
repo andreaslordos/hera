@@ -7,6 +7,7 @@
 
 #import "FaceIdSetupViewController.h"
 #import <LocalAuthentication/LocalAuthentication.h>
+#import "NotificationPermsViewController.h"
 #import "Utilities.h"
 
 @interface FaceIdSetupViewController ()
@@ -16,22 +17,25 @@
 @implementation FaceIdSetupViewController
 
 - (void)viewDidLoad {
+    self.user.faceIdEnabled = NO;
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+     // Get the new view controller using [segue destinationViewController].
+     // Pass the selected object to the new view controller.
+     if ([segue.identifier isEqualToString:@"doneWithFace"]) {
+         NotificationPermsViewController *controller = (NotificationPermsViewController*)segue.destinationViewController;
+         controller.user = self.user;
+         controller.context = self.context;
+     }
+ }
 
 - (void)finishFaceID {
-    [self performSegueWithIdentifier:@"doneWithFace" sender:nil];
+    [self performSegueWithIdentifier:@"doneWithFace" sender:self];
 }
 
 - (IBAction)didTapEnable:(id)sender {
@@ -56,6 +60,7 @@
                     // comes here if you succeed on face id
                     // programmatically switch to the next view
                     dispatch_async(dispatch_get_main_queue(), ^{
+                        self.user.faceIdEnabled = YES;
                         [self finishFaceID];
                         });
                 }

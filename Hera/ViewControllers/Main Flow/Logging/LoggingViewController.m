@@ -42,6 +42,10 @@
     _today = [NSDate date];
     [self setAppearanceButtons];
     [self setAppearanceCalendar];
+    User *user = [Utilities getUserFromParent:self];
+    NSLog(@"face ID Enabled: %d", user.faceIdEnabled);
+    NSLog(@"last cycle start date: %@", user.lastCycleStart);
+    NSLog(@"period length: %f", user.averagePeriodDuration);
 }
 
 - (void)setAppearanceCalendar {

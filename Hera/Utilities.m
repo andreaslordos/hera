@@ -6,7 +6,8 @@
 //
 
 #import "Utilities.h"
-
+#import "HeraTabBarController.h"
+#import "AppDelegate.h"
 @implementation Utilities
 
 + (void)createSimpleAlert:(NSString *)alertTitle desc:(NSString *)alertText vc:(UIViewController *)vc {
@@ -44,4 +45,40 @@
     return [self retrieveUserDefault:key] != nil;
 }
 
++ (NSManagedObjectContext*)getObjectContext {
+    AppDelegate *appDel = [UIApplication sharedApplication].delegate;
+    NSManagedObjectContext *context = [appDel getContext];
+    return context;
+}
+
++ (User*)getUserFromParent:(UIViewController*)vc {
+    HeraTabBarController *parent = nil;
+    parent = [vc tabBarController];
+    NSManagedObjectContext *context = parent.context;
+    User *user = [[context executeFetchRequest:[User fetchRequest] error:nil] firstObject]; // since fetch returns an array get the first object in the array
+    return user;
+}
+
++ (NSDate *)getDateByYearOffset:(int)year monthOffset:(int)month dayOffset:(int)day date:(NSDate *)date {
+    NSCalendar *gregorian = [NSCalendar calendarWithIdentifier:NSCalendarIdentifierGregorian];
+    NSDateComponents *offsetComponents = [[NSDateComponents alloc] init];
+    [offsetComponents setYear:year];
+    [offsetComponents setMonth:month];
+    [offsetComponents setDay:day];
+    return [gregorian dateByAddingComponents:offsetComponents toDate:date options:0];
+}
+
++ (NSDateComponents*)getTimeDeltaFrom:(NSDate*)date toDate:(NSDate*)date2 {
+    NSCalendar *diff_calendar = [NSCalendar currentCalendar];
+    int unitFlags = NSCalendarUnitDay;
+    return [diff_calendar components:unitFlags fromDate:date  toDate:date2 options:0];
+}
+
++ (long)getDaysBetween:(NSDate*)date toDate:(NSDate*)date2 {
+    return [[self getTimeDeltaFrom:date toDate:date2] day];
+}
+
++ (long)getDaysSince:(NSDate*)date {
+    return [self getDaysBetween:date toDate:[NSDate date]];
+}
 @end

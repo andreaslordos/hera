@@ -6,10 +6,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "User+CoreDataClass.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface get_predictions : NSObject
+@property (weak, nonatomic) User* user;
 @property (nonatomic) int cycleLength;
 @property (weak, nonatomic) NSDate* cycleStartDate;
 @property int periodDuration;
