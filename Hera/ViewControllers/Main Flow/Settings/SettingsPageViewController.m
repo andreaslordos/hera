@@ -1,22 +1,26 @@
 //
-//  SettingsViewController.m
+//  SettingsPageViewController.m
 //  Hera
 //
-//  Created by Andreas Lordos on 7/28/22.
+//  Created by Andreas Lordos on 7/29/22.
 //
 
-#import "SettingsViewController.h"
-#import "SettingsTableViewCell.h"
-#import "Crypto.h"
+#import "SettingsPageViewController.h"
+#import "SettingTableViewCell.h"
 #import "User+CoreDataClass.h"
-@interface SettingsViewController ()
+#import "Utilities.h"
+#import "Crypto.h"
+
+@interface SettingsPageViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) NSArray *securitySettings;
+@property (strong, nonatomic) User *user;
 @end
 
-@implementation SettingsViewController
+@implementation SettingsPageViewController
 
 - (void)viewDidLoad {
+    self.user = [Utilities getUserFromParent:self];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     [super viewDidLoad];
@@ -39,7 +43,7 @@
 */
 
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
-    SettingsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"securitySetting"];
+    SettingTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"securitySetting"];
     [cell setName:[self.securitySettings objectAtIndex:indexPath.row]];
     [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
     return cell;
@@ -52,8 +56,10 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.row == 4) {
         // selected transfer to a new device
+        [Crypto serializeUser:self.user];
         [self performSegueWithIdentifier:@"qrCode" sender:self];
     }
 }
+
 
 @end
