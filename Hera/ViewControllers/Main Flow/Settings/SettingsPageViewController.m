@@ -66,28 +66,28 @@
         NSString *key = [Crypto generateKeyWithLength:16];
         NSString *IV = [Crypto generateIV];
         NSData *encryptedUser = [Crypto AES256EncryptWithKey:key data:serializedUser iv:IV];
-        // TODO: POST TO DJANGO SERVER AND GET RESOURCE URI
         NSString *url = @"http://127.0.0.1:8000/application/";
-        //[Network HttpPostToUrl:url encryptedUser:encryptedUser];
-        dispatch_async(dispatch_get_main_queue(), ^{
 
-
-            [Network HttpPostToUrl:url encryptedUser:encryptedUser callback:^(NSError *error, BOOL success, NSString *accessToken) {
-                if (success) {
-                    NSLog(@"My response back from the server after an unknown amount of time");
-                    NSString *URI = accessToken;
-                    NSDictionary *qrDict = [NSDictionary dictionaryWithObjectsAndKeys: @"URI", URI, @"key", key, @"IV", IV, nil];
-                    // TODO: PASS IMAGE INTO NEXT SEGUE
-                    UIImage *image = [Crypto generateQRCodeWithData:qrDict];
-                    self.qrImage = image;
+        
+        [Network HttpPostToUrl:url encryptedUser:encryptedUser callback:^(NSError *error, BOOL success, NSString *accessToken) {
+            if (success) {
+                NSLog(@"My response back from the server after an unknown amount of time");
+                NSString *URI = accessToken;
+                NSDictionary *qrDict = [NSDictionary dictionaryWithObjectsAndKeys: URI, @"URI", key, @"key", IV, @"IV", nil];
+                // TODO: PASS IMAGE INTO NEXT SEGUE
+                UIImage *image = [Crypto generateQRCodeWithData:qrDict];
+                self.qrImage = image;
+                dispatch_async(dispatch_get_main_queue(), ^{
                     [self performSegueWithIdentifier:@"qrCode" sender:self];
+                });
 
-                }
-                else {
-                    NSLog(@"%@", error);
-                }
-            }];
-        });
+            }
+            else {
+                NSLog(@"%@", error);
+            }
+        }];
+        
+        
     }
 }
 
