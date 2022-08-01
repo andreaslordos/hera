@@ -1,11 +1,31 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21F79" minimumToolsVersion="Automatic" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
     <entity name="Cycle" representedClassName="Cycle" syncable="YES">
-        <attribute name="endDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
-        <attribute name="ovulationDuration" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
-        <attribute name="ovulationStart" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
-        <attribute name="periodDuration" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
-        <attribute name="startDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="endDate" optional="YES" attributeType="Date" usesScalarValueType="NO">
+            <userInfo>
+                <entry key="JSONKeyPath" value="end_date"/>
+            </userInfo>
+        </attribute>
+        <attribute name="ovulationDuration" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="ovulation_duration"/>
+            </userInfo>
+        </attribute>
+        <attribute name="ovulationStart" optional="YES" attributeType="Date" usesScalarValueType="NO">
+            <userInfo>
+                <entry key="JSONKeyPath" value="ovulation_start"/>
+            </userInfo>
+        </attribute>
+        <attribute name="periodDuration" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="period_duration"/>
+            </userInfo>
+        </attribute>
+        <attribute name="startDate" optional="YES" attributeType="Date" usesScalarValueType="NO">
+            <userInfo>
+                <entry key="JSONKeyPath" value="start_date"/>
+            </userInfo>
+        </attribute>
         <relationship name="events" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="EventCollection"/>
     </entity>
     <entity name="CycleCollectionFuture" representedClassName="CycleCollectionFuture" syncable="YES">
@@ -31,8 +51,16 @@
         <attribute name="intensity" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
     </entity>
     <entity name="User" representedClassName="User" syncable="YES">
-        <attribute name="averageOvulationDuration" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
-        <attribute name="averageOvulationStart" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="averageOvulationDuration" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="averageOvulationDuration"/>
+            </userInfo>
+        </attribute>
+        <attribute name="averageOvulationStart" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="averageOvulationStart"/>
+            </userInfo>
+        </attribute>
         <attribute name="averagePeriodDuration" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="faceIdEnabled" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="isSynced" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
@@ -42,7 +70,7 @@
         <relationship name="cyclesPast" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CycleCollectionPast"/>
     </entity>
     <elements>
-        <element name="Cycle" positionX="58.9921875" positionY="211.71875" width="128" height="133"/>
+        <element name="Cycle" positionX="58.9921875" positionY="211.71875" width="128" height="119"/>
         <element name="CycleCollectionFuture" positionX="-269.75" positionY="133.9765625" width="128" height="58"/>
         <element name="CycleCollectionPast" positionX="68.96875" positionY="418.8671875" width="128" height="58"/>
         <element name="Event" positionX="503.69921875" positionY="113.4140625" width="128" height="88"/>
@@ -51,6 +79,6 @@
         <element name="Ovulation" positionX="-11.41015625" positionY="-20.01953125" width="128" height="58"/>
         <element name="Pain" positionX="182.40625" positionY="-18.77734375" width="128" height="43"/>
         <element name="Period" positionX="360.14453125" positionY="-29.94140625" width="128" height="58"/>
-        <element name="User" positionX="-124.58203125" positionY="312.2734375" width="128" height="178"/>
+        <element name="User" positionX="-177.96875" positionY="381.08203125" width="128" height="164"/>
     </elements>
 </model>
