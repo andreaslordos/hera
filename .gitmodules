@@ -1,0 +1,3 @@
+[submodule "hera-backend"]
+	path = hera-backend
+	url = https://github.com/andreaslordos/hera-backend

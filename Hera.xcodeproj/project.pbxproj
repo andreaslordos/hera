@@ -32,6 +32,8 @@
 		BFB54009289470FE0077AA22 /* Crypto.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB54008289470FE0077AA22 /* Crypto.m */; };
 		BFB540122894AF420077AA22 /* SettingsPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB540112894AF420077AA22 /* SettingsPageViewController.m */; };
 		BFB540152894AF690077AA22 /* SettingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB540142894AF690077AA22 /* SettingTableViewCell.m */; };
+		BFB5401828987C410077AA22 /* Network.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB5401728987C410077AA22 /* Network.m */; };
+		BFB5401B28988A050077AA22 /* qrCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB5401A28988A050077AA22 /* qrCodeViewController.m */; };
 		BFBD3D5228820D1C008743B8 /* StartupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFBD3D5128820D1C008743B8 /* StartupViewController.m */; };
 		BFBD3D5B2885CD40008743B8 /* LoginScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFBD3D5A2885CD40008743B8 /* LoginScreenViewController.m */; };
 		BFD0EB242891E2E6003A198C /* HeraTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFD0EB232891E2E6003A198C /* HeraTabBarController.m */; };
@@ -128,6 +130,10 @@
 		BFB540112894AF420077AA22 /* SettingsPageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingsPageViewController.m; sourceTree = "<group>"; };
 		BFB540132894AF690077AA22 /* SettingTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingTableViewCell.h; sourceTree = "<group>"; };
 		BFB540142894AF690077AA22 /* SettingTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingTableViewCell.m; sourceTree = "<group>"; };
+		BFB5401628987C410077AA22 /* Network.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Network.h; sourceTree = "<group>"; };
+		BFB5401728987C410077AA22 /* Network.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Network.m; sourceTree = "<group>"; };
+		BFB5401928988A050077AA22 /* qrCodeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = qrCodeViewController.h; sourceTree = "<group>"; };
+		BFB5401A28988A050077AA22 /* qrCodeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = qrCodeViewController.m; sourceTree = "<group>"; };
 		BFBD3D5028820D1C008743B8 /* StartupViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StartupViewController.h; sourceTree = "<group>"; };
 		BFBD3D5128820D1C008743B8 /* StartupViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StartupViewController.m; sourceTree = "<group>"; };
 		BFBD3D592885CD40008743B8 /* LoginScreenViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginScreenViewController.h; sourceTree = "<group>"; };
@@ -344,6 +350,8 @@
 				BFD11BE4287F9B700006E93E /* Utilities.h */,
 				BFB54007289470FE0077AA22 /* Crypto.h */,
 				BFB54008289470FE0077AA22 /* Crypto.m */,
+				BFB5401628987C410077AA22 /* Network.h */,
+				BFB5401728987C410077AA22 /* Network.m */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -355,6 +363,8 @@
 				BFB540112894AF420077AA22 /* SettingsPageViewController.m */,
 				BFB540132894AF690077AA22 /* SettingTableViewCell.h */,
 				BFB540142894AF690077AA22 /* SettingTableViewCell.m */,
+				BFB5401928988A050077AA22 /* qrCodeViewController.h */,
+				BFB5401A28988A050077AA22 /* qrCodeViewController.m */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -697,6 +707,7 @@
 				BF7863DA2889B6A100417C36 /* CycleViewController.swift in Sources */,
 				BFB53FE62891E7960077AA22 /* EventCollection+CoreDataClass.m in Sources */,
 				BFB54009289470FE0077AA22 /* Crypto.m in Sources */,
+				BFB5401B28988A050077AA22 /* qrCodeViewController.m in Sources */,
 				BFB53FF72891E7CF0077AA22 /* CycleCollectionPast+CoreDataProperties.m in Sources */,
 				BFD3185A287E2279003E85F3 /* Hera.xcdatamodeld in Sources */,
 				BFB53FE42891E7960077AA22 /* Event+CoreDataClass.m in Sources */,
@@ -710,6 +721,7 @@
 				BF7863CF28887CA600417C36 /* CalendarViewController.m in Sources */,
 				BFB53FF52891E7CE0077AA22 /* CycleCollectionFuture+CoreDataProperties.m in Sources */,
 				BF7863CB28862B3E00417C36 /* cc.m in Sources */,
+				BFB5401828987C410077AA22 /* Network.m in Sources */,
 				BFD11BE92880BF840006E93E /* NotificationPermsViewController.m in Sources */,
 				BFB53FF92891E7CF0077AA22 /* Cycle+CoreDataProperties.m in Sources */,
 				BFD31851287E2279003E85F3 /* SceneDelegate.m in Sources */,

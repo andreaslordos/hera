@@ -45,7 +45,7 @@
 
 +(NSData*)dictToJson:(NSDictionary*)dict {
     return [NSJSONSerialization dataWithJSONObject:dict
-                                           options:NSJSONWritingPrettyPrinted
+                                           options:NSJSONWritingWithoutEscapingSlashes
                                              error:nil];
 }
 

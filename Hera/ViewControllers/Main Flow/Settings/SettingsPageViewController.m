@@ -11,11 +11,16 @@
 #import "Utilities.h"
 #import "Crypto.h"
 #import <CommonCrypto/CommonCryptor.h>
-
+#import "Network.h"
+#import "Foundation/Foundation.h"
+#import "dispatch/dispatch.h"
+#import "qrCodeViewController.h"
 @interface SettingsPageViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) NSArray *securitySettings;
 @property (strong, nonatomic) User *user;
+@property (strong, nonatomic) UIImage *qrImage;
+
 @end
 
 @implementation SettingsPageViewController
@@ -33,15 +38,15 @@
 
 }
 
-/*
-#pragma mark - Navigation
-
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqualToString:@"qrCode"]) {
+        qrCodeViewController *controller = (qrCodeViewController*)segue.destinationViewController;
+        controller.qrImage = self.qrImage;
+    }
 }
-*/
 
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
     SettingTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"securitySetting"];
@@ -61,11 +66,28 @@
         NSString *key = [Crypto generateKeyWithLength:16];
         NSString *IV = [Crypto generateIV];
         NSData *encryptedUser = [Crypto AES256EncryptWithKey:key data:serializedUser iv:IV];
-        // TODO: POST TO DJANGO SERVER AND GET RESOURCE URI
-        NSDictionary *qrDict = [NSDictionary dictionaryWithObjectsAndKeys: @"URI", @"123", @"key", key, @"IV", IV, nil];
-        // TODO: PASS IMAGE INTO NEXT SEGUE
-        UIImage *image = [Crypto generateQRCodeWithData:qrDict];
-        [self performSegueWithIdentifier:@"qrCode" sender:self];
+        NSString *url = @"http://127.0.0.1:8000/application/";
+
+        
+        [Network HttpPostToUrl:url encryptedUser:encryptedUser callback:^(NSError *error, BOOL success, NSString *accessToken) {
+            if (success) {
+                NSLog(@"My response back from the server after an unknown amount of time");
+                NSString *URI = accessToken;
+                NSDictionary *qrDict = [NSDictionary dictionaryWithObjectsAndKeys: URI, @"URI", key, @"key", IV, @"IV", nil];
+                // TODO: PASS IMAGE INTO NEXT SEGUE
+                UIImage *image = [Crypto generateQRCodeWithData:qrDict];
+                self.qrImage = image;
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [self performSegueWithIdentifier:@"qrCode" sender:self];
+                });
+
+            }
+            else {
+                NSLog(@"%@", error);
+            }
+        }];
+        
+        
     }
 }
 
