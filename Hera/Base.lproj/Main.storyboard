@@ -1047,10 +1047,10 @@
             </objects>
             <point key="canvasLocation" x="1515.9420289855075" y="4204.6875"/>
         </scene>
-        <!--View Controller-->
+        <!--Qr Code View Controller-->
         <scene sceneID="OEh-ap-BPG">
             <objects>
-                <viewController id="fCf-fl-Wkn" sceneMemberID="viewController">
+                <viewController id="fCf-fl-Wkn" customClass="qrCodeViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nln-fM-lT9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1146,6 +1146,9 @@
                             <constraint firstAttribute="trailing" secondItem="9Tf-Na-cYO" secondAttribute="trailing" constant="30" id="yRe-1h-dEM"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="CI8-qX-hVf" id="Igo-wn-egb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lPi-ur-8hK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

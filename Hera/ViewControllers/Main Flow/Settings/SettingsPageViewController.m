@@ -14,11 +14,13 @@
 #import "Network.h"
 #import "Foundation/Foundation.h"
 #import "dispatch/dispatch.h"
-
+#import "qrCodeViewController.h"
 @interface SettingsPageViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) NSArray *securitySettings;
 @property (strong, nonatomic) User *user;
+@property (strong, nonatomic) UIImage *qrImage;
+
 @end
 
 @implementation SettingsPageViewController
@@ -41,7 +43,8 @@
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
     if ([segue.identifier isEqualToString:@"qrCode"]) {
-        //TODO: Set up transfers
+        qrCodeViewController *controller = (qrCodeViewController*)segue.destinationViewController;
+        controller.qrImage = self.qrImage;
     }
 }
 
@@ -76,6 +79,7 @@
                     NSDictionary *qrDict = [NSDictionary dictionaryWithObjectsAndKeys: @"URI", URI, @"key", key, @"IV", IV, nil];
                     // TODO: PASS IMAGE INTO NEXT SEGUE
                     UIImage *image = [Crypto generateQRCodeWithData:qrDict];
+                    self.qrImage = image;
                     [self performSegueWithIdentifier:@"qrCode" sender:self];
 
                 }
