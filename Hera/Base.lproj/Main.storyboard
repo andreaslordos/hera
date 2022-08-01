@@ -959,7 +959,7 @@
         <!--Settings-->
         <scene sceneID="qAX-Em-1Xu">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="mXo-oY-Cl9" customClass="SettingsViewController" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="mXo-oY-Cl9" customClass="SettingsPageViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KFf-6a-gf3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -990,7 +990,7 @@
                                 <rect key="frame" x="0.0" y="56" width="414" height="737"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="securitySetting" rowHeight="40" id="2fj-HN-erX" customClass="SettingsTableViewCell">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="securitySetting" rowHeight="40" id="2fj-HN-erX" customClass="SettingTableViewCell">
                                         <rect key="frame" x="0.0" y="44.666666030883789" width="414" height="40"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2fj-HN-erX" id="cUR-6H-f8y">
@@ -1019,7 +1019,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="settingName" destination="PHS-BL-cQA" id="wPS-Rj-glH"/>
+                                            <outlet property="settingName" destination="PHS-BL-cQA" id="bt5-L5-hgr"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -1152,11 +1152,6 @@
             <point key="canvasLocation" x="2428.985507246377" y="4204.6875"/>
         </scene>
     </scenes>
-    <designables>
-        <designable name="HLD-pP-V4n">
-            <size key="intrinsicContentSize" width="338" height="338"/>
-        </designable>
-    </designables>
     <inferredMetricsTieBreakers>
         <segue reference="sgx-hH-FyB"/>
     </inferredMetricsTieBreakers>
@@ -1176,8 +1171,8 @@
         <image name="meditation" width="512" height="512"/>
         <image name="notification" width="512" height="512"/>
         <image name="plus" catalog="system" width="128" height="113"/>
-        <image name="qrcode" width="1148" height="1148"/>
         <image name="qrcode" catalog="system" width="128" height="114"/>
+        <image name="qrcode" width="1148" height="1148"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
