@@ -10,6 +10,7 @@
 #import "User+CoreDataClass.h"
 #import "Utilities.h"
 #import "Crypto.h"
+#import <CommonCrypto/CommonCryptor.h>
 
 @interface SettingsPageViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -56,7 +57,14 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.row == 4) {
         // selected transfer to a new device
-        [Crypto serializeUser:self.user];
+        NSData *serializedUser = [Crypto serializeUser:self.user];
+        NSString *key = [Crypto generateKeyWithLength:16];
+        NSString *IV = [Crypto generateIV];
+        NSData *encryptedUser = [Crypto AES256EncryptWithKey:key data:serializedUser iv:IV];
+        // TODO: POST TO DJANGO SERVER AND GET RESOURCE URI
+        NSDictionary *qrDict = [NSDictionary dictionaryWithObjectsAndKeys: @"URI", @"123", @"key", key, @"IV", IV, nil];
+        // TODO: PASS IMAGE INTO NEXT SEGUE
+        UIImage *image = [Crypto generateQRCodeWithData:qrDict];
         [self performSegueWithIdentifier:@"qrCode" sender:self];
     }
 }

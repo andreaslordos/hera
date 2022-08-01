@@ -8,6 +8,7 @@
 #import <Foundation/Foundation.h>
 #import "User+CoreDataClass.h"
 #import <CommonCrypto/CommonCryptor.h>
+#import "UIKit/UIKit.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -15,12 +16,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 +(NSData*)serializeUser:(User*)user;
 +(NSDictionary*)normalizeDates:(NSDictionary*)dict;
-+ (NSString *) generateKeyWithLength:(int)length;
-+ (NSData *) cryptOperation:(CCOperation)operation key:(NSString*)key data:(NSData*)data;
-+ (NSData *)AES256EncryptWithKey:(NSString*)key data:(NSData*)data;
-+ (NSData *)AES256DecryptWithKey:(NSString*)key data:(NSData*)data;
-
-//+(User*)deserializeJson:(NSDictionary*)json;
++(NSString *)generateKeyWithLength:(int)length;
++(NSData *)cryptOperation:(CCOperation)operation key:(NSString*)key data:(NSData*)data iv:(NSString*)iv;
++(NSData *)AES256EncryptWithKey:(NSString*)key data:(NSData*)data iv:(NSString*)iv;
++(NSData *)AES256DecryptWithKey:(NSString*)key data:(NSData*)data iv:(NSString*)iv;
++(NSData*)dictToJson:(NSDictionary*)dict;
++(UIImage*)generateQRCodeWithData:(NSDictionary*)dict;
++(NSString*)generateIV;
 @end
 
 NS_ASSUME_NONNULL_END

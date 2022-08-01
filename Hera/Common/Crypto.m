@@ -6,7 +6,6 @@
 //
 
 #import "Crypto.h"
-#import <Groot/Groot.h>
 #import "Utilities.h"
 #import "Cycle+CoreDataClass.h"
 #import "CycleCollectionFuture+CoreDataClass.h"
@@ -44,6 +43,12 @@
     return mDict;
 }
 
++(NSData*)dictToJson:(NSDictionary*)dict {
+    return [NSJSONSerialization dataWithJSONObject:dict
+                                           options:NSJSONWritingPrettyPrinted
+                                             error:nil];
+}
+
 +(NSData*)serializeUser:(User*)user {
     NSMutableDictionary *json = [NSMutableDictionary dictionary];
     
@@ -73,10 +78,7 @@
         [json setObject:cyclesArr forKey:keys[a]];
     }
 
-    NSError *error;
-    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:json
-                                                       options:NSJSONWritingPrettyPrinted
-                                                         error:&error];
+    NSData *jsonData = [self dictToJson:json];
     return jsonData;
 }
 
@@ -92,7 +94,7 @@
     return s;
 }
 
-+ (NSString*) genereteIV {
++ (NSString*) generateIV {
     int ivLength   = kCCBlockSizeAES128;
     NSMutableData  *ivData = [NSMutableData dataWithLength:kCCBlockSizeAES128];
     int iv = SecRandomCopyBytes(kSecRandomDefault, ivLength, ivData.mutableBytes);
@@ -147,5 +149,18 @@
     return [self cryptOperation:kCCDecrypt key:key data:data iv: iv];
 }
 
+
++ (UIImage*) generateQRCodeWithData:(NSDictionary*)dict {
+    CIFilter *filter = [CIFilter filterWithName:@"CIQRCodeGenerator"];
+
+    [filter setDefaults];
+
+    NSData *data = [self dictToJson:dict];
+    [filter setValue:data forKey:@"inputMessage"];
+
+    CIImage *outputImage = [filter outputImage];
+    
+    return [UIImage imageWithCIImage:outputImage];
+}
 
 @end
