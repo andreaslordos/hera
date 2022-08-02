@@ -1173,26 +1173,24 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2oW-tg-q4n">
                                 <rect key="frame" x="0.0" y="44" width="414" height="769"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zwE-22-RL0">
-                                        <rect key="frame" x="186" y="648" width="42" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstItem="zwE-22-RL0" firstAttribute="centerX" secondItem="2oW-tg-q4n" secondAttribute="centerX" id="2JK-dI-fro"/>
-                                    <constraint firstAttribute="bottom" secondItem="zwE-22-RL0" secondAttribute="bottom" constant="100" id="H9J-RW-mDm"/>
-                                </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zwE-22-RL0">
+                                <rect key="frame" x="30" y="692.66666666666663" width="354" height="20.333333333333371"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Kvx-UU-2RL"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="zwE-22-RL0" firstAttribute="leading" secondItem="Kvx-UU-2RL" secondAttribute="leading" constant="30" id="20y-qx-dWO"/>
                             <constraint firstItem="Kvx-UU-2RL" firstAttribute="trailing" secondItem="2oW-tg-q4n" secondAttribute="trailing" id="6mz-IL-6HU"/>
                             <constraint firstItem="2oW-tg-q4n" firstAttribute="leading" secondItem="Kvx-UU-2RL" secondAttribute="leading" id="8II-Hb-jAc"/>
+                            <constraint firstItem="zwE-22-RL0" firstAttribute="centerX" secondItem="L6E-9q-RfO" secondAttribute="centerX" id="IsM-59-pDZ"/>
+                            <constraint firstItem="Kvx-UU-2RL" firstAttribute="bottom" secondItem="zwE-22-RL0" secondAttribute="bottom" constant="100" id="UVs-wh-kjH"/>
+                            <constraint firstItem="Kvx-UU-2RL" firstAttribute="trailing" secondItem="zwE-22-RL0" secondAttribute="trailing" constant="30" id="XHz-XG-C52"/>
                             <constraint firstItem="2oW-tg-q4n" firstAttribute="top" secondItem="Kvx-UU-2RL" secondAttribute="top" id="j33-vt-U5b"/>
                             <constraint firstItem="Kvx-UU-2RL" firstAttribute="bottom" secondItem="2oW-tg-q4n" secondAttribute="bottom" id="tBH-Fj-TWu"/>
                         </constraints>
@@ -1208,11 +1206,6 @@
             <point key="canvasLocation" x="2429" y="4933"/>
         </scene>
     </scenes>
-    <designables>
-        <designable name="HLD-pP-V4n">
-            <size key="intrinsicContentSize" width="338" height="338"/>
-        </designable>
-    </designables>
     <inferredMetricsTieBreakers>
         <segue reference="d5S-ca-mSI"/>
     </inferredMetricsTieBreakers>
@@ -1232,8 +1225,8 @@
         <image name="meditation" width="512" height="512"/>
         <image name="notification" width="512" height="512"/>
         <image name="plus" catalog="system" width="128" height="113"/>
-        <image name="qrcode" catalog="system" width="128" height="114"/>
         <image name="qrcode" width="1148" height="1148"/>
+        <image name="qrcode" catalog="system" width="128" height="114"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>

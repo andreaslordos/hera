@@ -6,9 +6,9 @@
 //
 
 #import "qrScannerViewController.h"
+#import "SettingsPageViewController.h"
 
 @interface qrScannerViewController ()
-@property (weak, nonatomic) NSDictionary* QRdata;
 @end
 
 @implementation qrScannerViewController
@@ -81,7 +81,8 @@
     _QRdata = sender;
     [_captureSession stopRunning];
     _captureSession = nil;
-    [_videoPreviewLayer removeFromSuperlayer];
+    [self.delegate didScan:_QRdata]; // pass qr data back on to settings page
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 -(void)captureOutput:(AVCaptureOutput *)captureOutput didOutputMetadataObjects:(NSArray *)metadataObjects fromConnection:(AVCaptureConnection *)connection{

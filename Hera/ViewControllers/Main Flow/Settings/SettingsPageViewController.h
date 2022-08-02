@@ -6,10 +6,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "qrScannerViewController.h"
 NS_ASSUME_NONNULL_BEGIN
 
-@interface SettingsPageViewController : UIViewController<UITableViewDelegate, UITableViewDataSource>
+@interface SettingsPageViewController : UIViewController<UITableViewDelegate, UITableViewDataSource, qrScannerViewControllerDelegate>
+@property (weak, nonatomic) NSDictionary* QRdata;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -97,4 +97,9 @@
 - (IBAction)tappedScanner:(id)sender {
     [self performSegueWithIdentifier:@"scannerSegue" sender:self];
 }
+
+- (void)didScan:(NSDictionary *)dict {
+    self.QRdata = dict;
+    NSLog(@"%@", self.QRdata);
+}
 @end
