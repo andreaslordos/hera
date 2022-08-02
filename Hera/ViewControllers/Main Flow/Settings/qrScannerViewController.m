@@ -8,7 +8,7 @@
 #import "qrScannerViewController.h"
 
 @interface qrScannerViewController ()
-
+@property (weak, nonatomic) NSDictionary* QRdata;
 @end
 
 @implementation qrScannerViewController
@@ -19,6 +19,7 @@
     _lblStatus.text = @"Some text";
     _captureSession = nil;
     _isReading = NO;
+    _QRdata = nil;
     [self startQR];
 }
 
@@ -39,7 +40,7 @@
         }
     }
     else {
-        [self stopReading];
+        [self stopReading:nil];
     }
     _isReading = !_isReading;
 }
@@ -76,18 +77,23 @@
     return YES;
 }
 
--(void)stopReading{
-   [_captureSession stopRunning];
-   _captureSession = nil;
-   [_videoPreviewLayer removeFromSuperlayer];
+-(void)stopReading:(id)sender {
+    _QRdata = sender;
+    [_captureSession stopRunning];
+    _captureSession = nil;
+    [_videoPreviewLayer removeFromSuperlayer];
 }
 
 -(void)captureOutput:(AVCaptureOutput *)captureOutput didOutputMetadataObjects:(NSArray *)metadataObjects fromConnection:(AVCaptureConnection *)connection{
    if (metadataObjects != nil && [metadataObjects count] > 0) {
        AVMetadataMachineReadableCodeObject *metadataObj = [metadataObjects objectAtIndex:0];
        if ([[metadataObj type] isEqualToString:AVMetadataObjectTypeQRCode]) {
-           //metadataObj stringValue
-           [self performSelectorOnMainThread:@selector(stopReading) withObject:nil waitUntilDone:NO];
+           NSLog(@"%@", [metadataObj stringValue]);
+           // TODO: ADD CATCH CONDITION FOR WRONG FORMATTING OR INCORRECT READ
+           NSData *data = [[metadataObj stringValue] dataUsingEncoding:NSUTF8StringEncoding];
+           id jsonOutput = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+
+           [self performSelectorOnMainThread:@selector(stopReading:) withObject:jsonOutput waitUntilDone:NO];
            _isReading = NO;
        }
    }

@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (strong, nonatomic) IBOutlet UIView *viewforCamera;
 -(BOOL)startReading;
--(void)stopReading;
+-(void)stopReading:(id)sender;
 @property (nonatomic) BOOL isReading;
 @property (nonatomic, strong) AVCaptureSession *captureSession;
 @property (nonatomic, strong) AVCaptureVideoPreviewLayer *videoPreviewLayer;

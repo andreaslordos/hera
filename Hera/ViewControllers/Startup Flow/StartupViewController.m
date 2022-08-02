@@ -7,7 +7,6 @@
 
 #import "StartupViewController.h"
 #import "Utilities.h"
-#import "AuthenticateViewController.h"
 @interface StartupViewController ()
 
 @end
