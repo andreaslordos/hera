@@ -34,6 +34,7 @@
 		BFB540152894AF690077AA22 /* SettingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB540142894AF690077AA22 /* SettingTableViewCell.m */; };
 		BFB5401828987C410077AA22 /* Network.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB5401728987C410077AA22 /* Network.m */; };
 		BFB5401B28988A050077AA22 /* qrCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB5401A28988A050077AA22 /* qrCodeViewController.m */; };
+		BFB540202898A9660077AA22 /* qrScannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB5401F2898A9660077AA22 /* qrScannerViewController.m */; };
 		BFBD3D5228820D1C008743B8 /* StartupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFBD3D5128820D1C008743B8 /* StartupViewController.m */; };
 		BFBD3D5B2885CD40008743B8 /* LoginScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFBD3D5A2885CD40008743B8 /* LoginScreenViewController.m */; };
 		BFD0EB242891E2E6003A198C /* HeraTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFD0EB232891E2E6003A198C /* HeraTabBarController.m */; };
@@ -134,6 +135,9 @@
 		BFB5401728987C410077AA22 /* Network.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Network.m; sourceTree = "<group>"; };
 		BFB5401928988A050077AA22 /* qrCodeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = qrCodeViewController.h; sourceTree = "<group>"; };
 		BFB5401A28988A050077AA22 /* qrCodeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = qrCodeViewController.m; sourceTree = "<group>"; };
+		BFB5401C2898A7830077AA22 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		BFB5401E2898A9660077AA22 /* qrScannerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = qrScannerViewController.h; sourceTree = "<group>"; };
+		BFB5401F2898A9660077AA22 /* qrScannerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = qrScannerViewController.m; sourceTree = "<group>"; };
 		BFBD3D5028820D1C008743B8 /* StartupViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StartupViewController.h; sourceTree = "<group>"; };
 		BFBD3D5128820D1C008743B8 /* StartupViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StartupViewController.m; sourceTree = "<group>"; };
 		BFBD3D592885CD40008743B8 /* LoginScreenViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginScreenViewController.h; sourceTree = "<group>"; };
@@ -213,6 +217,7 @@
 		B4C8D0CB45FF41B26AFA7032 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BFB5401C2898A7830077AA22 /* AVFoundation.framework */,
 				7B11FF632FBF9EB7B982B28D /* Pods_Hera.framework */,
 				A07E095FA461189870EB3B7E /* Pods_Hera_HeraUITests.framework */,
 				7FD058C25D2CF928A6CAE9A4 /* Pods_HeraTests.framework */,
@@ -365,6 +370,8 @@
 				BFB540142894AF690077AA22 /* SettingTableViewCell.m */,
 				BFB5401928988A050077AA22 /* qrCodeViewController.h */,
 				BFB5401A28988A050077AA22 /* qrCodeViewController.m */,
+				BFB5401E2898A9660077AA22 /* qrScannerViewController.h */,
+				BFB5401F2898A9660077AA22 /* qrScannerViewController.m */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -697,6 +704,7 @@
 				BFD31854287E2279003E85F3 /* ViewController.m in Sources */,
 				BFBD3D5B2885CD40008743B8 /* LoginScreenViewController.m in Sources */,
 				BFB53FE72891E7960077AA22 /* EventCollection+CoreDataProperties.m in Sources */,
+				BFB540202898A9660077AA22 /* qrScannerViewController.m in Sources */,
 				BFD11BE0287E74140006E93E /* PeriodLengthViewController.m in Sources */,
 				BFD11BE6287F9B700006E93E /* Utilities.m in Sources */,
 				BFB53FE52891E7960077AA22 /* Event+CoreDataProperties.m in Sources */,
@@ -895,15 +903,15 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9D42E31291F33E5D132AC0AD /* Pods-Hera.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 3P2W72R536;
+				DEVELOPMENT_TEAM = 4TPXP6N79S;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Hera/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app requires access to your camera to scan QR codes";
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "The app uses Face ID to allow users to authenticate themselves";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -916,7 +924,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.andreaslordos.Hera;
+				PRODUCT_BUNDLE_IDENTIFIER = com.andreaslordos.Heraa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "Hera/ViewControllers/Main Flow/Cycle/Hera-Bridging-Header.h";
@@ -930,15 +938,15 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 97DD85EDE5D69E867BC3EE0C /* Pods-Hera.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 3P2W72R536;
+				DEVELOPMENT_TEAM = 4TPXP6N79S;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Hera/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app requires access to your camera to scan QR codes";
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "The app uses Face ID to allow users to authenticate themselves";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -951,7 +959,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.andreaslordos.Hera;
+				PRODUCT_BUNDLE_IDENTIFIER = com.andreaslordos.Heraa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "Hera/ViewControllers/Main Flow/Cycle/Hera-Bridging-Header.h";
