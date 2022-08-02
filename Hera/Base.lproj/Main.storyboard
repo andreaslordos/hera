@@ -1208,6 +1208,11 @@
             <point key="canvasLocation" x="2429" y="4933"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="HLD-pP-V4n">
+            <size key="intrinsicContentSize" width="338" height="338"/>
+        </designable>
+    </designables>
     <inferredMetricsTieBreakers>
         <segue reference="d5S-ca-mSI"/>
     </inferredMetricsTieBreakers>
@@ -1227,8 +1232,8 @@
         <image name="meditation" width="512" height="512"/>
         <image name="notification" width="512" height="512"/>
         <image name="plus" catalog="system" width="128" height="113"/>
-        <image name="qrcode" width="1148" height="1148"/>
         <image name="qrcode" catalog="system" width="128" height="114"/>
+        <image name="qrcode" width="1148" height="1148"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
