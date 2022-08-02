@@ -23,6 +23,7 @@
 @property (strong, nonatomic) User *user;
 - (IBAction)tappedScanner:(id)sender;
 @property (strong, nonatomic) UIImage *qrImage;
+@property (weak, nonatomic) NSString *url;
 @end
 
 @implementation SettingsPageViewController
@@ -33,7 +34,7 @@
     self.tableView.dataSource = self;
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
+    self.url = @"http://localhost:8000/application/";
     self.securitySettings = [NSArray arrayWithObjects:@"Face ID and Login", @"Keep History", @"Birth Control", @"Last Sync", @"Transfer Hera to a new device", nil];
     [self.tableView reloadData];
 }
@@ -46,9 +47,10 @@
         qrCodeViewController *controller = (qrCodeViewController*)segue.destinationViewController;
         controller.qrImage = self.qrImage;
     }
-//    else if ([segue.identifier isEqualToString:@"scannerSegue"]) {
-//        // do nothing
-//    }
+    else if ([segue.identifier isEqualToString:@"scannerSegue"]) {
+        qrScannerViewController *controller = (qrScannerViewController*)segue.destinationViewController;
+        controller.delegate = self;
+    }
 }
 
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
@@ -69,10 +71,8 @@
         NSString *key = [Crypto generateKeyWithLength:16];
         NSString *IV = [Crypto generateIV];
         NSData *encryptedUser = [Crypto AES256EncryptWithKey:key data:serializedUser iv:IV];
-        NSString *url = @"http://127.0.0.1:8000/application/";
-
         
-        [Network HttpPostToUrl:url encryptedUser:encryptedUser callback:^(NSError *error, BOOL success, NSString *accessToken) {
+        [Network HttpSetUserData:self.url encryptedUser:encryptedUser callback:^(NSError *error, BOOL success, NSString *accessToken) {
             if (success) {
                 NSLog(@"My response back from the server after an unknown amount of time");
                 NSString *URI = accessToken;
@@ -80,6 +80,7 @@
                 // TODO: PASS IMAGE INTO NEXT SEGUE
                 UIImage *image = [Crypto generateQRCodeWithData:qrDict];
                 self.qrImage = image;
+                
                 dispatch_async(dispatch_get_main_queue(), ^{
                     [self performSegueWithIdentifier:@"qrCode" sender:self];
                 });
@@ -89,8 +90,6 @@
                 NSLog(@"%@", error);
             }
         }];
-        
-        
     }
 }
 
@@ -101,5 +100,13 @@
 - (void)didScan:(NSDictionary *)dict {
     self.QRdata = dict;
     NSLog(@"%@", self.QRdata);
+    [Network HttpGetUserData:self.url URI:[self.QRdata objectForKey:@"URI"] callback:^(NSError * _Nonnull error, BOOL success, NSString * _Nonnull accessToken) {
+        if (success) {
+            NSLog(@"My response back from the server after an unknown amount of time");
+        }
+        else {
+            NSLog(@"%@", error);
+        }
+    }];
 }
 @end

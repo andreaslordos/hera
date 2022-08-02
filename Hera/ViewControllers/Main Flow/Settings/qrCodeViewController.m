@@ -16,6 +16,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.imageView setImage:self.qrImage];
+    [self.imageView.layer setMagnificationFilter:kCAFilterNearest]; // make qr code sharp / not blurry
     // Do any additional setup after loading the view.
 }
 
