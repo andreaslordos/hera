@@ -44,7 +44,6 @@
 		BFD11BE92880BF840006E93E /* NotificationPermsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFD11BE82880BF840006E93E /* NotificationPermsViewController.m */; };
 		BFD3184E287E2279003E85F3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BFD3184D287E2279003E85F3 /* AppDelegate.m */; };
 		BFD31851287E2279003E85F3 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BFD31850287E2279003E85F3 /* SceneDelegate.m */; };
-		BFD31854287E2279003E85F3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFD31853287E2279003E85F3 /* ViewController.m */; };
 		BFD31857287E2279003E85F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFD31855287E2279003E85F3 /* Main.storyboard */; };
 		BFD3185A287E2279003E85F3 /* Hera.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BFD31858287E2279003E85F3 /* Hera.xcdatamodeld */; };
 		BFD3185C287E227A003E85F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFD3185B287E227A003E85F3 /* Assets.xcassets */; };
@@ -157,8 +156,6 @@
 		BFD3184D287E2279003E85F3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		BFD3184F287E2279003E85F3 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		BFD31850287E2279003E85F3 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		BFD31852287E2279003E85F3 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		BFD31853287E2279003E85F3 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		BFD31856287E2279003E85F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BFD31859287E2279003E85F3 /* Hera.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Hera.xcdatamodel; sourceTree = "<group>"; };
 		BFD3185B287E227A003E85F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -426,8 +423,6 @@
 				BFD3184D287E2279003E85F3 /* AppDelegate.m */,
 				BFD3184F287E2279003E85F3 /* SceneDelegate.h */,
 				BFD31850287E2279003E85F3 /* SceneDelegate.m */,
-				BFD31852287E2279003E85F3 /* ViewController.h */,
-				BFD31853287E2279003E85F3 /* ViewController.m */,
 				BFD31855287E2279003E85F3 /* Main.storyboard */,
 				BFD3185B287E227A003E85F3 /* Assets.xcassets */,
 				BFD3185D287E227A003E85F3 /* LaunchScreen.storyboard */,
@@ -701,7 +696,6 @@
 				BFB53FDB2891E76E0077AA22 /* User+CoreDataProperties.m in Sources */,
 				BFB53FF82891E7CF0077AA22 /* Cycle+CoreDataClass.m in Sources */,
 				BF7863E0288F291C00417C36 /* get_predictions.m in Sources */,
-				BFD31854287E2279003E85F3 /* ViewController.m in Sources */,
 				BFBD3D5B2885CD40008743B8 /* LoginScreenViewController.m in Sources */,
 				BFB53FE72891E7960077AA22 /* EventCollection+CoreDataProperties.m in Sources */,
 				BFB540202898A9660077AA22 /* qrScannerViewController.m in Sources */,
