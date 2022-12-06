@@ -1,0 +1,4 @@
+${PODS_ROOT}/Target Support Files/Pods-Hera/Pods-Hera-frameworks.sh
+${BUILT_PRODUCTS_DIR}/FSCalendar/FSCalendar.framework
+${BUILT_PRODUCTS_DIR}/HGCircularSlider/HGCircularSlider.framework
+${BUILT_PRODUCTS_DIR}/MSCircularSlider/MSCircularSlider.framework

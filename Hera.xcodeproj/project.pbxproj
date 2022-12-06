@@ -1,0 +1,1130 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5C321321D3225D2D5537B069 /* Pods_Hera_HeraUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C9DA72493EC53F131196EB0 /* Pods_Hera_HeraUITests.framework */; };
+		BF078DBC287E511900608897 /* LastPeriodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF078DBB287E511900608897 /* LastPeriodViewController.m */; };
+		BF291A95289A5C0F0096AC84 /* Serialization.m in Sources */ = {isa = PBXBuildFile; fileRef = BF291A94289A5C0F0096AC84 /* Serialization.m */; };
+		BF7863C72885FEA600417C36 /* LoggingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7863C62885FEA600417C36 /* LoggingViewController.m */; };
+		BF7863CB28862B3E00417C36 /* cc.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7863CA28862B3E00417C36 /* cc.m */; };
+		BF7863CF28887CA600417C36 /* CalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7863CE28887CA600417C36 /* CalendarViewController.m */; };
+		BF7863D228887D8300417C36 /* cc_calendar.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7863D128887D8300417C36 /* cc_calendar.m */; };
+		BF7863DA2889B6A100417C36 /* CycleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7863D92889B6A100417C36 /* CycleViewController.swift */; };
+		BF7863DD288B59DD00417C36 /* DIYCalendarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7863DC288B59DD00417C36 /* DIYCalendarCell.m */; };
+		BF7863E0288F291C00417C36 /* get_predictions.m in Sources */ = {isa = PBXBuildFile; fileRef = BF7863DF288F291C00417C36 /* get_predictions.m */; };
+		BF9054A7287E2F5A0061001C /* TermsAndConditionsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9054A6287E2F5A0061001C /* TermsAndConditionsVC.m */; };
+		BFB53FDA2891E76E0077AA22 /* User+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB53FD82891E76E0077AA22 /* User+CoreDataClass.m */; };
+		BFB53FDB2891E76E0077AA22 /* User+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB53FD92891E76E0077AA22 /* User+CoreDataProperties.m */; };
+		BFB53FE42891E7960077AA22 /* Event+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB53FDE2891E7960077AA22 /* Event+CoreDataClass.m */; };
+		BFB53FE52891E7960077AA22 /* Event+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB53FDF2891E7960077AA22 /* Event+CoreDataProperties.m */; };
+		BFB53FE62891E7960077AA22 /* EventCollection+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB53FE22891E7960077AA22 /* EventCollection+CoreDataClass.m */; };
+		BFB53FE72891E7960077AA22 /* EventCollection+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB53FE32891E7960077AA22 /* EventCollection+CoreDataProperties.m */; };
+		BFB53FF42891E7CE0077AA22 /* CycleCollectionFuture+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB53FEA2891E7CE0077AA22 /* CycleCollectionFuture+CoreDataClass.m */; };
+		BFB53FF52891E7CE0077AA22 /* CycleCollectionFuture+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB53FEB2891E7CE0077AA22 /* CycleCollectionFuture+CoreDataProperties.m */; };
+		BFB53FF62891E7CE0077AA22 /* CycleCollectionPast+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB53FEE2891E7CE0077AA22 /* CycleCollectionPast+CoreDataClass.m */; };
+		BFB53FF72891E7CF0077AA22 /* CycleCollectionPast+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB53FEF2891E7CE0077AA22 /* CycleCollectionPast+CoreDataProperties.m */; };
+		BFB53FF82891E7CF0077AA22 /* Cycle+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB53FF22891E7CE0077AA22 /* Cycle+CoreDataClass.m */; };
+		BFB53FF92891E7CF0077AA22 /* Cycle+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB53FF32891E7CE0077AA22 /* Cycle+CoreDataProperties.m */; };
+		BFB54009289470FE0077AA22 /* Crypto.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB54008289470FE0077AA22 /* Crypto.m */; };
+		BFB540122894AF420077AA22 /* SettingsPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB540112894AF420077AA22 /* SettingsPageViewController.m */; };
+		BFB540152894AF690077AA22 /* SettingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB540142894AF690077AA22 /* SettingTableViewCell.m */; };
+		BFB5401828987C410077AA22 /* Network.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB5401728987C410077AA22 /* Network.m */; };
+		BFB5401B28988A050077AA22 /* qrCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB5401A28988A050077AA22 /* qrCodeViewController.m */; };
+		BFB540202898A9660077AA22 /* qrScannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFB5401F2898A9660077AA22 /* qrScannerViewController.m */; };
+		BFBD3D5228820D1C008743B8 /* StartupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFBD3D5128820D1C008743B8 /* StartupViewController.m */; };
+		BFBD3D5B2885CD40008743B8 /* LoginScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFBD3D5A2885CD40008743B8 /* LoginScreenViewController.m */; };
+		BFD0EB242891E2E6003A198C /* HeraTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFD0EB232891E2E6003A198C /* HeraTabBarController.m */; };
+		BFD11BE0287E74140006E93E /* PeriodLengthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFD11BDF287E74140006E93E /* PeriodLengthViewController.m */; };
+		BFD11BE3287F4C940006E93E /* FaceIdSetupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFD11BE2287F4C940006E93E /* FaceIdSetupViewController.m */; };
+		BFD11BE6287F9B700006E93E /* Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = BFD11BE5287F9B700006E93E /* Utilities.m */; };
+		BFD11BE92880BF840006E93E /* NotificationPermsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFD11BE82880BF840006E93E /* NotificationPermsViewController.m */; };
+		BFD3184E287E2279003E85F3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BFD3184D287E2279003E85F3 /* AppDelegate.m */; };
+		BFD31851287E2279003E85F3 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BFD31850287E2279003E85F3 /* SceneDelegate.m */; };
+		BFD31857287E2279003E85F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFD31855287E2279003E85F3 /* Main.storyboard */; };
+		BFD3185A287E2279003E85F3 /* Hera.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BFD31858287E2279003E85F3 /* Hera.xcdatamodeld */; };
+		BFD3185C287E227A003E85F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFD3185B287E227A003E85F3 /* Assets.xcassets */; };
+		BFD3185F287E227A003E85F3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFD3185D287E227A003E85F3 /* LaunchScreen.storyboard */; };
+		BFD31862287E227A003E85F3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BFD31861287E227A003E85F3 /* main.m */; };
+		BFD3186C287E227A003E85F3 /* HeraTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BFD3186B287E227A003E85F3 /* HeraTests.m */; };
+		BFD31876287E227A003E85F3 /* HeraUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = BFD31875287E227A003E85F3 /* HeraUITests.m */; };
+		BFD31878287E227A003E85F3 /* HeraUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BFD31877287E227A003E85F3 /* HeraUITestsLaunchTests.m */; };
+		E1DB888A293672E600B18CB8 /* PrivacySetupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1DB8889293672E600B18CB8 /* PrivacySetupViewController.m */; };
+		E1DB888D29367F2E00B18CB8 /* PrivacySetupTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E1DB888C29367F2E00B18CB8 /* PrivacySetupTableViewCell.m */; };
+		E66912AEEFA52606E0B5EEDB /* Pods_HeraTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50A727361A84531F59CA45B9 /* Pods_HeraTests.framework */; };
+		EF8F1539C8D03D8A38A90B3E /* Pods_Hera.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8210CE7EE48FCAA60716F4EC /* Pods_Hera.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BFD31868287E227A003E85F3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFD31841287E2279003E85F3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BFD31848287E2279003E85F3;
+			remoteInfo = Hera;
+		};
+		BFD31872287E227A003E85F3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFD31841287E2279003E85F3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BFD31848287E2279003E85F3;
+			remoteInfo = Hera;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1A3A34E070E2E8DEB2BD8720 /* Pods-HeraTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeraTests.release.xcconfig"; path = "Target Support Files/Pods-HeraTests/Pods-HeraTests.release.xcconfig"; sourceTree = "<group>"; };
+		1C9DA72493EC53F131196EB0 /* Pods_Hera_HeraUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hera_HeraUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B22D34AD6F9D0D33F9CC913 /* Pods-HeraTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeraTests.debug.xcconfig"; path = "Target Support Files/Pods-HeraTests/Pods-HeraTests.debug.xcconfig"; sourceTree = "<group>"; };
+		43A1B4BF8E0314F3CC47F6EA /* Pods-Hera-HeraUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hera-HeraUITests.release.xcconfig"; path = "Target Support Files/Pods-Hera-HeraUITests/Pods-Hera-HeraUITests.release.xcconfig"; sourceTree = "<group>"; };
+		50A727361A84531F59CA45B9 /* Pods_HeraTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HeraTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		79149D45EC805F9B7D2DC738 /* Pods-Hera.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hera.debug.xcconfig"; path = "Target Support Files/Pods-Hera/Pods-Hera.debug.xcconfig"; sourceTree = "<group>"; };
+		8210CE7EE48FCAA60716F4EC /* Pods_Hera.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Hera.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC012466376AA9C1886F9221 /* Pods-Hera.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hera.release.xcconfig"; path = "Target Support Files/Pods-Hera/Pods-Hera.release.xcconfig"; sourceTree = "<group>"; };
+		BF078DBA287E511900608897 /* LastPeriodViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LastPeriodViewController.h; sourceTree = "<group>"; };
+		BF078DBB287E511900608897 /* LastPeriodViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LastPeriodViewController.m; sourceTree = "<group>"; };
+		BF291A93289A5C0F0096AC84 /* Serialization.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Serialization.h; sourceTree = "<group>"; };
+		BF291A94289A5C0F0096AC84 /* Serialization.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Serialization.m; sourceTree = "<group>"; };
+		BF7863C52885FEA600417C36 /* LoggingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoggingViewController.h; sourceTree = "<group>"; };
+		BF7863C62885FEA600417C36 /* LoggingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoggingViewController.m; sourceTree = "<group>"; };
+		BF7863C928862B3E00417C36 /* cc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = cc.h; sourceTree = "<group>"; };
+		BF7863CA28862B3E00417C36 /* cc.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = cc.m; sourceTree = "<group>"; };
+		BF7863CD28887CA600417C36 /* CalendarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CalendarViewController.h; sourceTree = "<group>"; };
+		BF7863CE28887CA600417C36 /* CalendarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalendarViewController.m; sourceTree = "<group>"; };
+		BF7863D028887D8300417C36 /* cc_calendar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = cc_calendar.h; sourceTree = "<group>"; };
+		BF7863D128887D8300417C36 /* cc_calendar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = cc_calendar.m; sourceTree = "<group>"; };
+		BF7863D82889B6A100417C36 /* Hera-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Hera-Bridging-Header.h"; sourceTree = "<group>"; };
+		BF7863D92889B6A100417C36 /* CycleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CycleViewController.swift; sourceTree = "<group>"; };
+		BF7863DB288B59DD00417C36 /* DIYCalendarCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DIYCalendarCell.h; sourceTree = "<group>"; };
+		BF7863DC288B59DD00417C36 /* DIYCalendarCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DIYCalendarCell.m; sourceTree = "<group>"; };
+		BF7863DE288F291C00417C36 /* get_predictions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = get_predictions.h; sourceTree = "<group>"; };
+		BF7863DF288F291C00417C36 /* get_predictions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = get_predictions.m; sourceTree = "<group>"; };
+		BF9054A5287E2F5A0061001C /* TermsAndConditionsVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TermsAndConditionsVC.h; sourceTree = "<group>"; };
+		BF9054A6287E2F5A0061001C /* TermsAndConditionsVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TermsAndConditionsVC.m; sourceTree = "<group>"; };
+		BFB53FD62891E76E0077AA22 /* User+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "User+CoreDataProperties.h"; sourceTree = "<group>"; };
+		BFB53FD72891E76E0077AA22 /* User+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "User+CoreDataClass.h"; sourceTree = "<group>"; };
+		BFB53FD82891E76E0077AA22 /* User+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "User+CoreDataClass.m"; sourceTree = "<group>"; };
+		BFB53FD92891E76E0077AA22 /* User+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "User+CoreDataProperties.m"; sourceTree = "<group>"; };
+		BFB53FDC2891E7960077AA22 /* Event+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Event+CoreDataProperties.h"; sourceTree = "<group>"; };
+		BFB53FDD2891E7960077AA22 /* Event+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Event+CoreDataClass.h"; sourceTree = "<group>"; };
+		BFB53FDE2891E7960077AA22 /* Event+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Event+CoreDataClass.m"; sourceTree = "<group>"; };
+		BFB53FDF2891E7960077AA22 /* Event+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Event+CoreDataProperties.m"; sourceTree = "<group>"; };
+		BFB53FE02891E7960077AA22 /* EventCollection+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EventCollection+CoreDataProperties.h"; sourceTree = "<group>"; };
+		BFB53FE12891E7960077AA22 /* EventCollection+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EventCollection+CoreDataClass.h"; sourceTree = "<group>"; };
+		BFB53FE22891E7960077AA22 /* EventCollection+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "EventCollection+CoreDataClass.m"; sourceTree = "<group>"; };
+		BFB53FE32891E7960077AA22 /* EventCollection+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "EventCollection+CoreDataProperties.m"; sourceTree = "<group>"; };
+		BFB53FE82891E7CE0077AA22 /* CycleCollectionFuture+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CycleCollectionFuture+CoreDataProperties.h"; sourceTree = "<group>"; };
+		BFB53FE92891E7CE0077AA22 /* CycleCollectionFuture+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CycleCollectionFuture+CoreDataClass.h"; sourceTree = "<group>"; };
+		BFB53FEA2891E7CE0077AA22 /* CycleCollectionFuture+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CycleCollectionFuture+CoreDataClass.m"; sourceTree = "<group>"; };
+		BFB53FEB2891E7CE0077AA22 /* CycleCollectionFuture+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CycleCollectionFuture+CoreDataProperties.m"; sourceTree = "<group>"; };
+		BFB53FEC2891E7CE0077AA22 /* CycleCollectionPast+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CycleCollectionPast+CoreDataProperties.h"; sourceTree = "<group>"; };
+		BFB53FED2891E7CE0077AA22 /* CycleCollectionPast+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CycleCollectionPast+CoreDataClass.h"; sourceTree = "<group>"; };
+		BFB53FEE2891E7CE0077AA22 /* CycleCollectionPast+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CycleCollectionPast+CoreDataClass.m"; sourceTree = "<group>"; };
+		BFB53FEF2891E7CE0077AA22 /* CycleCollectionPast+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CycleCollectionPast+CoreDataProperties.m"; sourceTree = "<group>"; };
+		BFB53FF02891E7CE0077AA22 /* Cycle+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Cycle+CoreDataProperties.h"; sourceTree = "<group>"; };
+		BFB53FF12891E7CE0077AA22 /* Cycle+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Cycle+CoreDataClass.h"; sourceTree = "<group>"; };
+		BFB53FF22891E7CE0077AA22 /* Cycle+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Cycle+CoreDataClass.m"; sourceTree = "<group>"; };
+		BFB53FF32891E7CE0077AA22 /* Cycle+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Cycle+CoreDataProperties.m"; sourceTree = "<group>"; };
+		BFB54007289470FE0077AA22 /* Crypto.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Crypto.h; sourceTree = "<group>"; };
+		BFB54008289470FE0077AA22 /* Crypto.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Crypto.m; sourceTree = "<group>"; };
+		BFB540102894AF420077AA22 /* SettingsPageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingsPageViewController.h; sourceTree = "<group>"; };
+		BFB540112894AF420077AA22 /* SettingsPageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingsPageViewController.m; sourceTree = "<group>"; };
+		BFB540132894AF690077AA22 /* SettingTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingTableViewCell.h; sourceTree = "<group>"; };
+		BFB540142894AF690077AA22 /* SettingTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingTableViewCell.m; sourceTree = "<group>"; };
+		BFB5401628987C410077AA22 /* Network.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Network.h; sourceTree = "<group>"; };
+		BFB5401728987C410077AA22 /* Network.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Network.m; sourceTree = "<group>"; };
+		BFB5401928988A050077AA22 /* qrCodeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = qrCodeViewController.h; sourceTree = "<group>"; };
+		BFB5401A28988A050077AA22 /* qrCodeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = qrCodeViewController.m; sourceTree = "<group>"; };
+		BFB5401C2898A7830077AA22 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		BFB5401E2898A9660077AA22 /* qrScannerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = qrScannerViewController.h; sourceTree = "<group>"; };
+		BFB5401F2898A9660077AA22 /* qrScannerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = qrScannerViewController.m; sourceTree = "<group>"; };
+		BFBD3D5028820D1C008743B8 /* StartupViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StartupViewController.h; sourceTree = "<group>"; };
+		BFBD3D5128820D1C008743B8 /* StartupViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StartupViewController.m; sourceTree = "<group>"; };
+		BFBD3D592885CD40008743B8 /* LoginScreenViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginScreenViewController.h; sourceTree = "<group>"; };
+		BFBD3D5A2885CD40008743B8 /* LoginScreenViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginScreenViewController.m; sourceTree = "<group>"; };
+		BFD0EB222891E2E6003A198C /* HeraTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeraTabBarController.h; sourceTree = "<group>"; };
+		BFD0EB232891E2E6003A198C /* HeraTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeraTabBarController.m; sourceTree = "<group>"; };
+		BFD11BDE287E74140006E93E /* PeriodLengthViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PeriodLengthViewController.h; sourceTree = "<group>"; };
+		BFD11BDF287E74140006E93E /* PeriodLengthViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PeriodLengthViewController.m; sourceTree = "<group>"; };
+		BFD11BE1287F4C940006E93E /* FaceIdSetupViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FaceIdSetupViewController.h; sourceTree = "<group>"; };
+		BFD11BE2287F4C940006E93E /* FaceIdSetupViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FaceIdSetupViewController.m; sourceTree = "<group>"; };
+		BFD11BE4287F9B700006E93E /* Utilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Utilities.h; sourceTree = "<group>"; };
+		BFD11BE5287F9B700006E93E /* Utilities.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Utilities.m; sourceTree = "<group>"; };
+		BFD11BE72880BF840006E93E /* NotificationPermsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationPermsViewController.h; sourceTree = "<group>"; };
+		BFD11BE82880BF840006E93E /* NotificationPermsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationPermsViewController.m; sourceTree = "<group>"; };
+		BFD31849287E2279003E85F3 /* Hera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hera.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFD3184C287E2279003E85F3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		BFD3184D287E2279003E85F3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		BFD3184F287E2279003E85F3 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		BFD31850287E2279003E85F3 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		BFD31856287E2279003E85F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BFD31859287E2279003E85F3 /* Hera.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Hera.xcdatamodel; sourceTree = "<group>"; };
+		BFD3185B287E227A003E85F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BFD3185E287E227A003E85F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BFD31860287E227A003E85F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BFD31861287E227A003E85F3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BFD31867287E227A003E85F3 /* HeraTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HeraTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFD3186B287E227A003E85F3 /* HeraTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HeraTests.m; sourceTree = "<group>"; };
+		BFD31871287E227A003E85F3 /* HeraUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HeraUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFD31875287E227A003E85F3 /* HeraUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HeraUITests.m; sourceTree = "<group>"; };
+		BFD31877287E227A003E85F3 /* HeraUITestsLaunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HeraUITestsLaunchTests.m; sourceTree = "<group>"; };
+		DAA7FB611A68199344FAA385 /* Pods-Hera-HeraUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hera-HeraUITests.debug.xcconfig"; path = "Target Support Files/Pods-Hera-HeraUITests/Pods-Hera-HeraUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		E1DB8888293672E600B18CB8 /* PrivacySetupViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrivacySetupViewController.h; sourceTree = "<group>"; };
+		E1DB8889293672E600B18CB8 /* PrivacySetupViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PrivacySetupViewController.m; sourceTree = "<group>"; };
+		E1DB888B29367F2E00B18CB8 /* PrivacySetupTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrivacySetupTableViewCell.h; sourceTree = "<group>"; };
+		E1DB888C29367F2E00B18CB8 /* PrivacySetupTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PrivacySetupTableViewCell.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BFD31846287E2279003E85F3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF8F1539C8D03D8A38A90B3E /* Pods_Hera.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BFD31864287E227A003E85F3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E66912AEEFA52606E0B5EEDB /* Pods_HeraTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BFD3186E287E227A003E85F3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C321321D3225D2D5537B069 /* Pods_Hera_HeraUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4D85406E4BDD8D1BFD9D9597 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				79149D45EC805F9B7D2DC738 /* Pods-Hera.debug.xcconfig */,
+				AC012466376AA9C1886F9221 /* Pods-Hera.release.xcconfig */,
+				DAA7FB611A68199344FAA385 /* Pods-Hera-HeraUITests.debug.xcconfig */,
+				43A1B4BF8E0314F3CC47F6EA /* Pods-Hera-HeraUITests.release.xcconfig */,
+				2B22D34AD6F9D0D33F9CC913 /* Pods-HeraTests.debug.xcconfig */,
+				1A3A34E070E2E8DEB2BD8720 /* Pods-HeraTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B4C8D0CB45FF41B26AFA7032 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BFB5401C2898A7830077AA22 /* AVFoundation.framework */,
+				8210CE7EE48FCAA60716F4EC /* Pods_Hera.framework */,
+				1C9DA72493EC53F131196EB0 /* Pods_Hera_HeraUITests.framework */,
+				50A727361A84531F59CA45B9 /* Pods_HeraTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BF291A87289993F50096AC84 /* Startup Flow */ = {
+			isa = PBXGroup;
+			children = (
+				BFBD3D5028820D1C008743B8 /* StartupViewController.h */,
+				BFBD3D5128820D1C008743B8 /* StartupViewController.m */,
+				BFBD3D592885CD40008743B8 /* LoginScreenViewController.h */,
+				BFBD3D5A2885CD40008743B8 /* LoginScreenViewController.m */,
+			);
+			path = "Startup Flow";
+			sourceTree = "<group>";
+		};
+		BF291A91289A5AF00096AC84 /* Serialization */ = {
+			isa = PBXGroup;
+			children = (
+				BF291A93289A5C0F0096AC84 /* Serialization.h */,
+				BF291A94289A5C0F0096AC84 /* Serialization.m */,
+			);
+			path = Serialization;
+			sourceTree = "<group>";
+		};
+		BF291A92289A5B130096AC84 /* QR */ = {
+			isa = PBXGroup;
+			children = (
+				BFB5401928988A050077AA22 /* qrCodeViewController.h */,
+				BFB5401A28988A050077AA22 /* qrCodeViewController.m */,
+				BFB5401E2898A9660077AA22 /* qrScannerViewController.h */,
+				BFB5401F2898A9660077AA22 /* qrScannerViewController.m */,
+			);
+			path = QR;
+			sourceTree = "<group>";
+		};
+		BF7863C42885FE8E00417C36 /* Main Flow */ = {
+			isa = PBXGroup;
+			children = (
+				BFD0EB222891E2E6003A198C /* HeraTabBarController.h */,
+				BFD0EB232891E2E6003A198C /* HeraTabBarController.m */,
+				BFB5400F2894AED60077AA22 /* Settings */,
+				BF7863D32888B1C300417C36 /* Cycle */,
+				BF7863CC28887C8700417C36 /* Calendar */,
+				BF7863C828862AED00417C36 /* Logging */,
+			);
+			path = "Main Flow";
+			sourceTree = "<group>";
+		};
+		BF7863C828862AED00417C36 /* Logging */ = {
+			isa = PBXGroup;
+			children = (
+				BF7863C52885FEA600417C36 /* LoggingViewController.h */,
+				BF7863C62885FEA600417C36 /* LoggingViewController.m */,
+				BF7863C928862B3E00417C36 /* cc.h */,
+				BF7863CA28862B3E00417C36 /* cc.m */,
+			);
+			path = Logging;
+			sourceTree = "<group>";
+		};
+		BF7863CC28887C8700417C36 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				BF7863CD28887CA600417C36 /* CalendarViewController.h */,
+				BF7863CE28887CA600417C36 /* CalendarViewController.m */,
+				BF7863D028887D8300417C36 /* cc_calendar.h */,
+				BF7863D128887D8300417C36 /* cc_calendar.m */,
+				BF7863DB288B59DD00417C36 /* DIYCalendarCell.h */,
+				BF7863DC288B59DD00417C36 /* DIYCalendarCell.m */,
+				BF7863DE288F291C00417C36 /* get_predictions.h */,
+				BF7863DF288F291C00417C36 /* get_predictions.m */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
+		BF7863D32888B1C300417C36 /* Cycle */ = {
+			isa = PBXGroup;
+			children = (
+				BF7863D92889B6A100417C36 /* CycleViewController.swift */,
+				BF7863D82889B6A100417C36 /* Hera-Bridging-Header.h */,
+			);
+			path = Cycle;
+			sourceTree = "<group>";
+		};
+		BF9054A4287E2F220061001C /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				BF291A87289993F50096AC84 /* Startup Flow */,
+				BF7863C42885FE8E00417C36 /* Main Flow */,
+				BFD11BEE2880E4220006E93E /* Setup Flow */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		BFB53FC02891E69F0077AA22 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				BFB53FC32891E6B20077AA22 /* Cycles */,
+				BFB53FC22891E6AA0077AA22 /* Events */,
+				BFB53FC12891E6A40077AA22 /* User */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		BFB53FC12891E6A40077AA22 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				BFB53FD62891E76E0077AA22 /* User+CoreDataProperties.h */,
+				BFB53FD72891E76E0077AA22 /* User+CoreDataClass.h */,
+				BFB53FD82891E76E0077AA22 /* User+CoreDataClass.m */,
+				BFB53FD92891E76E0077AA22 /* User+CoreDataProperties.m */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		BFB53FC22891E6AA0077AA22 /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				BFB53FDC2891E7960077AA22 /* Event+CoreDataProperties.h */,
+				BFB53FDD2891E7960077AA22 /* Event+CoreDataClass.h */,
+				BFB53FDE2891E7960077AA22 /* Event+CoreDataClass.m */,
+				BFB53FDF2891E7960077AA22 /* Event+CoreDataProperties.m */,
+				BFB53FE02891E7960077AA22 /* EventCollection+CoreDataProperties.h */,
+				BFB53FE12891E7960077AA22 /* EventCollection+CoreDataClass.h */,
+				BFB53FE22891E7960077AA22 /* EventCollection+CoreDataClass.m */,
+				BFB53FE32891E7960077AA22 /* EventCollection+CoreDataProperties.m */,
+			);
+			path = Events;
+			sourceTree = "<group>";
+		};
+		BFB53FC32891E6B20077AA22 /* Cycles */ = {
+			isa = PBXGroup;
+			children = (
+				BFB53FE82891E7CE0077AA22 /* CycleCollectionFuture+CoreDataProperties.h */,
+				BFB53FE92891E7CE0077AA22 /* CycleCollectionFuture+CoreDataClass.h */,
+				BFB53FEA2891E7CE0077AA22 /* CycleCollectionFuture+CoreDataClass.m */,
+				BFB53FEB2891E7CE0077AA22 /* CycleCollectionFuture+CoreDataProperties.m */,
+				BFB53FEC2891E7CE0077AA22 /* CycleCollectionPast+CoreDataProperties.h */,
+				BFB53FED2891E7CE0077AA22 /* CycleCollectionPast+CoreDataClass.h */,
+				BFB53FEE2891E7CE0077AA22 /* CycleCollectionPast+CoreDataClass.m */,
+				BFB53FEF2891E7CE0077AA22 /* CycleCollectionPast+CoreDataProperties.m */,
+				BFB53FF02891E7CE0077AA22 /* Cycle+CoreDataProperties.h */,
+				BFB53FF12891E7CE0077AA22 /* Cycle+CoreDataClass.h */,
+				BFB53FF22891E7CE0077AA22 /* Cycle+CoreDataClass.m */,
+				BFB53FF32891E7CE0077AA22 /* Cycle+CoreDataProperties.m */,
+			);
+			path = Cycles;
+			sourceTree = "<group>";
+		};
+		BFB540062894703C0077AA22 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				BFD11BE5287F9B700006E93E /* Utilities.m */,
+				BFD11BE4287F9B700006E93E /* Utilities.h */,
+				BFB54007289470FE0077AA22 /* Crypto.h */,
+				BFB54008289470FE0077AA22 /* Crypto.m */,
+				BFB5401628987C410077AA22 /* Network.h */,
+				BFB5401728987C410077AA22 /* Network.m */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		BFB5400F2894AED60077AA22 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				BF291A92289A5B130096AC84 /* QR */,
+				BF291A91289A5AF00096AC84 /* Serialization */,
+				BFB540102894AF420077AA22 /* SettingsPageViewController.h */,
+				BFB540112894AF420077AA22 /* SettingsPageViewController.m */,
+				BFB540132894AF690077AA22 /* SettingTableViewCell.h */,
+				BFB540142894AF690077AA22 /* SettingTableViewCell.m */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		BFD11BEE2880E4220006E93E /* Setup Flow */ = {
+			isa = PBXGroup;
+			children = (
+				BF9054A5287E2F5A0061001C /* TermsAndConditionsVC.h */,
+				BF9054A6287E2F5A0061001C /* TermsAndConditionsVC.m */,
+				BF078DBA287E511900608897 /* LastPeriodViewController.h */,
+				BF078DBB287E511900608897 /* LastPeriodViewController.m */,
+				BFD11BDE287E74140006E93E /* PeriodLengthViewController.h */,
+				BFD11BDF287E74140006E93E /* PeriodLengthViewController.m */,
+				BFD11BE1287F4C940006E93E /* FaceIdSetupViewController.h */,
+				BFD11BE2287F4C940006E93E /* FaceIdSetupViewController.m */,
+				BFD11BE72880BF840006E93E /* NotificationPermsViewController.h */,
+				BFD11BE82880BF840006E93E /* NotificationPermsViewController.m */,
+				E1DB8888293672E600B18CB8 /* PrivacySetupViewController.h */,
+				E1DB8889293672E600B18CB8 /* PrivacySetupViewController.m */,
+				E1DB888B29367F2E00B18CB8 /* PrivacySetupTableViewCell.h */,
+				E1DB888C29367F2E00B18CB8 /* PrivacySetupTableViewCell.m */,
+			);
+			path = "Setup Flow";
+			sourceTree = "<group>";
+		};
+		BFD31840287E2279003E85F3 = {
+			isa = PBXGroup;
+			children = (
+				BFD3184B287E2279003E85F3 /* Hera */,
+				BFD3186A287E227A003E85F3 /* HeraTests */,
+				BFD31874287E227A003E85F3 /* HeraUITests */,
+				BFD3184A287E2279003E85F3 /* Products */,
+				4D85406E4BDD8D1BFD9D9597 /* Pods */,
+				B4C8D0CB45FF41B26AFA7032 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		BFD3184A287E2279003E85F3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BFD31849287E2279003E85F3 /* Hera.app */,
+				BFD31867287E227A003E85F3 /* HeraTests.xctest */,
+				BFD31871287E227A003E85F3 /* HeraUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BFD3184B287E2279003E85F3 /* Hera */ = {
+			isa = PBXGroup;
+			children = (
+				BFB540062894703C0077AA22 /* Common */,
+				BFB53FC02891E69F0077AA22 /* Entities */,
+				BF9054A4287E2F220061001C /* ViewControllers */,
+				BFD3184C287E2279003E85F3 /* AppDelegate.h */,
+				BFD3184D287E2279003E85F3 /* AppDelegate.m */,
+				BFD3184F287E2279003E85F3 /* SceneDelegate.h */,
+				BFD31850287E2279003E85F3 /* SceneDelegate.m */,
+				BFD31855287E2279003E85F3 /* Main.storyboard */,
+				BFD3185B287E227A003E85F3 /* Assets.xcassets */,
+				BFD3185D287E227A003E85F3 /* LaunchScreen.storyboard */,
+				BFD31860287E227A003E85F3 /* Info.plist */,
+				BFD31861287E227A003E85F3 /* main.m */,
+				BFD31858287E2279003E85F3 /* Hera.xcdatamodeld */,
+			);
+			path = Hera;
+			sourceTree = "<group>";
+		};
+		BFD3186A287E227A003E85F3 /* HeraTests */ = {
+			isa = PBXGroup;
+			children = (
+				BFD3186B287E227A003E85F3 /* HeraTests.m */,
+			);
+			path = HeraTests;
+			sourceTree = "<group>";
+		};
+		BFD31874287E227A003E85F3 /* HeraUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BFD31875287E227A003E85F3 /* HeraUITests.m */,
+				BFD31877287E227A003E85F3 /* HeraUITestsLaunchTests.m */,
+			);
+			path = HeraUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BFD31848287E2279003E85F3 /* Hera */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BFD3187B287E227A003E85F3 /* Build configuration list for PBXNativeTarget "Hera" */;
+			buildPhases = (
+				20595FB4D781967844A986A4 /* [CP] Check Pods Manifest.lock */,
+				BFD31845287E2279003E85F3 /* Sources */,
+				BFD31846287E2279003E85F3 /* Frameworks */,
+				BFD31847287E2279003E85F3 /* Resources */,
+				F62D393F0457B7B25CCE37CE /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Hera;
+			productName = Hera;
+			productReference = BFD31849287E2279003E85F3 /* Hera.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BFD31866287E227A003E85F3 /* HeraTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BFD3187E287E227A003E85F3 /* Build configuration list for PBXNativeTarget "HeraTests" */;
+			buildPhases = (
+				6160B36CECA98A0E39F49E8B /* [CP] Check Pods Manifest.lock */,
+				BFD31863287E227A003E85F3 /* Sources */,
+				BFD31864287E227A003E85F3 /* Frameworks */,
+				BFD31865287E227A003E85F3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BFD31869287E227A003E85F3 /* PBXTargetDependency */,
+			);
+			name = HeraTests;
+			productName = HeraTests;
+			productReference = BFD31867287E227A003E85F3 /* HeraTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BFD31870287E227A003E85F3 /* HeraUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BFD31881287E227A003E85F3 /* Build configuration list for PBXNativeTarget "HeraUITests" */;
+			buildPhases = (
+				496402CE31CC9AC6C645D610 /* [CP] Check Pods Manifest.lock */,
+				BFD3186D287E227A003E85F3 /* Sources */,
+				BFD3186E287E227A003E85F3 /* Frameworks */,
+				BFD3186F287E227A003E85F3 /* Resources */,
+				FDB841D60259E91AF560B7A5 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BFD31873287E227A003E85F3 /* PBXTargetDependency */,
+			);
+			name = HeraUITests;
+			productName = HeraUITests;
+			productReference = BFD31871287E227A003E85F3 /* HeraUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFD31841287E2279003E85F3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					BFD31848287E2279003E85F3 = {
+						CreatedOnToolsVersion = 13.4.1;
+						LastSwiftMigration = 1340;
+					};
+					BFD31866287E227A003E85F3 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = BFD31848287E2279003E85F3;
+					};
+					BFD31870287E227A003E85F3 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = BFD31848287E2279003E85F3;
+					};
+				};
+			};
+			buildConfigurationList = BFD31844287E2279003E85F3 /* Build configuration list for PBXProject "Hera" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BFD31840287E2279003E85F3;
+			productRefGroup = BFD3184A287E2279003E85F3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BFD31848287E2279003E85F3 /* Hera */,
+				BFD31866287E227A003E85F3 /* HeraTests */,
+				BFD31870287E227A003E85F3 /* HeraUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BFD31847287E2279003E85F3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFD3185F287E227A003E85F3 /* LaunchScreen.storyboard in Resources */,
+				BFD3185C287E227A003E85F3 /* Assets.xcassets in Resources */,
+				BFD31857287E2279003E85F3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BFD31865287E227A003E85F3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BFD3186F287E227A003E85F3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		20595FB4D781967844A986A4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Hera-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		496402CE31CC9AC6C645D610 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Hera-HeraUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6160B36CECA98A0E39F49E8B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HeraTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F62D393F0457B7B25CCE37CE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Hera/Pods-Hera-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Hera/Pods-Hera-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Hera/Pods-Hera-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FDB841D60259E91AF560B7A5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Hera-HeraUITests/Pods-Hera-HeraUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Hera-HeraUITests/Pods-Hera-HeraUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Hera-HeraUITests/Pods-Hera-HeraUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BFD31845287E2279003E85F3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF7863D228887D8300417C36 /* cc_calendar.m in Sources */,
+				BFD31862287E227A003E85F3 /* main.m in Sources */,
+				BFB540122894AF420077AA22 /* SettingsPageViewController.m in Sources */,
+				BF9054A7287E2F5A0061001C /* TermsAndConditionsVC.m in Sources */,
+				BFB53FDB2891E76E0077AA22 /* User+CoreDataProperties.m in Sources */,
+				E1DB888A293672E600B18CB8 /* PrivacySetupViewController.m in Sources */,
+				BFB53FF82891E7CF0077AA22 /* Cycle+CoreDataClass.m in Sources */,
+				BF7863E0288F291C00417C36 /* get_predictions.m in Sources */,
+				BFBD3D5B2885CD40008743B8 /* LoginScreenViewController.m in Sources */,
+				BFB53FE72891E7960077AA22 /* EventCollection+CoreDataProperties.m in Sources */,
+				BFB540202898A9660077AA22 /* qrScannerViewController.m in Sources */,
+				BFD11BE0287E74140006E93E /* PeriodLengthViewController.m in Sources */,
+				BFD11BE6287F9B700006E93E /* Utilities.m in Sources */,
+				BFB53FE52891E7960077AA22 /* Event+CoreDataProperties.m in Sources */,
+				BFB53FF42891E7CE0077AA22 /* CycleCollectionFuture+CoreDataClass.m in Sources */,
+				BFBD3D5228820D1C008743B8 /* StartupViewController.m in Sources */,
+				BF7863DD288B59DD00417C36 /* DIYCalendarCell.m in Sources */,
+				BF078DBC287E511900608897 /* LastPeriodViewController.m in Sources */,
+				BF291A95289A5C0F0096AC84 /* Serialization.m in Sources */,
+				BF7863DA2889B6A100417C36 /* CycleViewController.swift in Sources */,
+				BFB53FE62891E7960077AA22 /* EventCollection+CoreDataClass.m in Sources */,
+				BFB54009289470FE0077AA22 /* Crypto.m in Sources */,
+				BFB5401B28988A050077AA22 /* qrCodeViewController.m in Sources */,
+				BFB53FF72891E7CF0077AA22 /* CycleCollectionPast+CoreDataProperties.m in Sources */,
+				BFD3185A287E2279003E85F3 /* Hera.xcdatamodeld in Sources */,
+				BFB53FE42891E7960077AA22 /* Event+CoreDataClass.m in Sources */,
+				BFD11BE3287F4C940006E93E /* FaceIdSetupViewController.m in Sources */,
+				BFB53FF62891E7CE0077AA22 /* CycleCollectionPast+CoreDataClass.m in Sources */,
+				BFB53FDA2891E76E0077AA22 /* User+CoreDataClass.m in Sources */,
+				BFB540152894AF690077AA22 /* SettingTableViewCell.m in Sources */,
+				BF7863C72885FEA600417C36 /* LoggingViewController.m in Sources */,
+				BFD3184E287E2279003E85F3 /* AppDelegate.m in Sources */,
+				BFD0EB242891E2E6003A198C /* HeraTabBarController.m in Sources */,
+				BF7863CF28887CA600417C36 /* CalendarViewController.m in Sources */,
+				BFB53FF52891E7CE0077AA22 /* CycleCollectionFuture+CoreDataProperties.m in Sources */,
+				BF7863CB28862B3E00417C36 /* cc.m in Sources */,
+				BFB5401828987C410077AA22 /* Network.m in Sources */,
+				E1DB888D29367F2E00B18CB8 /* PrivacySetupTableViewCell.m in Sources */,
+				BFD11BE92880BF840006E93E /* NotificationPermsViewController.m in Sources */,
+				BFB53FF92891E7CF0077AA22 /* Cycle+CoreDataProperties.m in Sources */,
+				BFD31851287E2279003E85F3 /* SceneDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BFD31863287E227A003E85F3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFD3186C287E227A003E85F3 /* HeraTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BFD3186D287E227A003E85F3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFD31878287E227A003E85F3 /* HeraUITestsLaunchTests.m in Sources */,
+				BFD31876287E227A003E85F3 /* HeraUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BFD31869287E227A003E85F3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BFD31848287E2279003E85F3 /* Hera */;
+			targetProxy = BFD31868287E227A003E85F3 /* PBXContainerItemProxy */;
+		};
+		BFD31873287E227A003E85F3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BFD31848287E2279003E85F3 /* Hera */;
+			targetProxy = BFD31872287E227A003E85F3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BFD31855287E2279003E85F3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BFD31856287E2279003E85F3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BFD3185D287E227A003E85F3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BFD3185E287E227A003E85F3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BFD31879287E227A003E85F3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		BFD3187A287E227A003E85F3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BFD3187C287E227A003E85F3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 79149D45EC805F9B7D2DC738 /* Pods-Hera.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3P2W72R536;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Hera/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app requires access to your camera to scan QR codes";
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "The app uses Face ID to allow users to authenticate themselves";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.andreaslordos.Heraa;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Hera/ViewControllers/Main Flow/Cycle/Hera-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BFD3187D287E227A003E85F3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AC012466376AA9C1886F9221 /* Pods-Hera.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3P2W72R536;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Hera/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app requires access to your camera to scan QR codes";
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "The app uses Face ID to allow users to authenticate themselves";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.andreaslordos.Heraa;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Hera/ViewControllers/Main Flow/Cycle/Hera-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		BFD3187F287E227A003E85F3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2B22D34AD6F9D0D33F9CC913 /* Pods-HeraTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4TPXP6N79S;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.andreaslordos.HeraTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Hera.app/Hera";
+			};
+			name = Debug;
+		};
+		BFD31880287E227A003E85F3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A3A34E070E2E8DEB2BD8720 /* Pods-HeraTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4TPXP6N79S;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.andreaslordos.HeraTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Hera.app/Hera";
+			};
+			name = Release;
+		};
+		BFD31882287E227A003E85F3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DAA7FB611A68199344FAA385 /* Pods-Hera-HeraUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4TPXP6N79S;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.andreaslordos.HeraUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Hera;
+			};
+			name = Debug;
+		};
+		BFD31883287E227A003E85F3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 43A1B4BF8E0314F3CC47F6EA /* Pods-Hera-HeraUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4TPXP6N79S;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.andreaslordos.HeraUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Hera;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BFD31844287E2279003E85F3 /* Build configuration list for PBXProject "Hera" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BFD31879287E227A003E85F3 /* Debug */,
+				BFD3187A287E227A003E85F3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BFD3187B287E227A003E85F3 /* Build configuration list for PBXNativeTarget "Hera" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BFD3187C287E227A003E85F3 /* Debug */,
+				BFD3187D287E227A003E85F3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BFD3187E287E227A003E85F3 /* Build configuration list for PBXNativeTarget "HeraTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BFD3187F287E227A003E85F3 /* Debug */,
+				BFD31880287E227A003E85F3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BFD31881287E227A003E85F3 /* Build configuration list for PBXNativeTarget "HeraUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BFD31882287E227A003E85F3 /* Debug */,
+				BFD31883287E227A003E85F3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		BFD31858287E2279003E85F3 /* Hera.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				BFD31859287E2279003E85F3 /* Hera.xcdatamodel */,
+			);
+			currentVersion = BFD31859287E2279003E85F3 /* Hera.xcdatamodel */;
+			path = Hera.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = BFD31841287E2279003E85F3 /* Project object */;
+}
